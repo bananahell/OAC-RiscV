@@ -1,0 +1,379 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "graphic" (version "1.4"))
+(pin
+	(input)
+	(rect 104 128 288 144)
+	(text "INPUT" (rect 141 0 169 10)(font "Arial" (font_size 6)))
+	(text "Instruction[31..0]" (rect 5 0 89 12)(font "Arial" ))
+	(pt 184 8)
+	(drawing
+		(line (pt 100 12)(pt 125 12))
+		(line (pt 100 4)(pt 125 4))
+		(line (pt 129 8)(pt 184 8))
+		(line (pt 100 12)(pt 100 4))
+		(line (pt 125 4)(pt 129 8))
+		(line (pt 125 12)(pt 129 8))
+	)
+	(text "VCC" (rect 144 7 164 17)(font "Arial" (font_size 6)))
+)
+(connector
+	(pt 536 136)
+	(pt 536 184)
+	(bus)
+)
+(connector
+	(text "Instruction[30..25]" (rect 546 168 664 187)(font "Intel Clear" (font_size 9)))
+	(pt 656 184)
+	(pt 536 184)
+	(bus)
+)
+(connector
+	(text "Instruction[31]" (rect 546 120 640 139)(font "Intel Clear" (font_size 9)))
+	(pt 536 136)
+	(pt 640 136)
+)
+(connector
+	(pt 520 136)
+	(pt 520 288)
+	(bus)
+)
+(connector
+	(text "Instruction[24..21]" (rect 530 272 648 291)(font "Intel Clear" (font_size 9)))
+	(pt 520 288)
+	(pt 640 288)
+	(bus)
+)
+(connector
+	(pt 520 136)
+	(pt 536 136)
+	(bus)
+)
+(connector
+	(pt 640 272)
+	(pt 640 288)
+	(bus)
+)
+(connector
+	(pt 504 136)
+	(pt 504 352)
+)
+(connector
+	(text "Instruction[20]" (rect 514 336 608 355)(font "Intel Clear" (font_size 9)))
+	(pt 504 352)
+	(pt 608 352)
+)
+(connector
+	(pt 504 136)
+	(pt 520 136)
+	(bus)
+)
+(connector
+	(pt 608 344)
+	(pt 608 352)
+)
+(connector
+	(pt 488 136)
+	(pt 488 424)
+	(bus)
+)
+(connector
+	(text "Instruction[19..12]" (rect 498 408 616 427)(font "Intel Clear" (font_size 9)))
+	(pt 488 424)
+	(pt 608 424)
+	(bus)
+)
+(connector
+	(pt 488 136)
+	(pt 504 136)
+	(bus)
+)
+(connector
+	(pt 608 416)
+	(pt 608 424)
+	(bus)
+)
+(connector
+	(pt 608 424)
+	(pt 608 440)
+	(bus)
+)
+(connector
+	(pt 472 136)
+	(pt 472 472)
+	(bus)
+)
+(connector
+	(text "Instruction[11..8]" (rect 482 456 591 475)(font "Intel Clear" (font_size 9)))
+	(pt 472 472)
+	(pt 584 472)
+	(bus)
+)
+(connector
+	(pt 472 136)
+	(pt 488 136)
+	(bus)
+)
+(connector
+	(pt 584 464)
+	(pt 584 472)
+	(bus)
+)
+(connector
+	(pt 584 472)
+	(pt 584 488)
+	(bus)
+)
+(connector
+	(pt 456 136)
+	(pt 456 520)
+)
+(connector
+	(text "Instruction[7]" (rect 482 504 568 523)(font "Intel Clear" (font_size 9)))
+	(pt 456 520)
+	(pt 568 520)
+)
+(connector
+	(text "Instruction[31..0]" (rect 298 120 407 139)(font "Intel Clear" (font_size 9)))
+	(pt 288 136)
+	(pt 456 136)
+	(bus)
+)
+(connector
+	(pt 456 136)
+	(pt 472 136)
+	(bus)
+)
+(connector
+	(pt 568 512)
+	(pt 568 520)
+)
+(connector
+	(pt 568 520)
+	(pt 568 536)
+)
+(connector
+	(text "iType[11]" (rect 650 16 710 35)(font "Intel Clear" (font_size 9)))
+	(pt 712 32)
+	(pt 640 32)
+)
+(connector
+	(text "sType[11]" (rect 650 40 712 55)(font "Arial" (font_size 9)))
+	(pt 712 56)
+	(pt 640 56)
+)
+(connector
+	(pt 640 32)
+	(pt 640 56)
+)
+(connector
+	(text "sbType[12]" (rect 650 64 720 79)(font "Arial" (font_size 9)))
+	(pt 720 80)
+	(pt 640 80)
+)
+(connector
+	(pt 640 56)
+	(pt 640 80)
+)
+(connector
+	(text "ujType[20]" (rect 650 88 716 103)(font "Arial" (font_size 9)))
+	(pt 720 104)
+	(pt 640 104)
+)
+(connector
+	(pt 640 80)
+	(pt 640 104)
+)
+(connector
+	(text "uType[31]" (rect 650 112 712 127)(font "Arial" (font_size 9)))
+	(pt 712 128)
+	(pt 640 128)
+)
+(connector
+	(pt 640 104)
+	(pt 640 128)
+)
+(connector
+	(pt 640 128)
+	(pt 640 136)
+)
+(connector
+	(text "iType[10..5]" (rect 666 136 739 151)(font "Arial" (font_size 9)))
+	(pt 744 152)
+	(pt 656 152)
+	(bus)
+)
+(connector
+	(text "sType[10..5]" (rect 666 160 743 175)(font "Arial" (font_size 9)))
+	(pt 744 176)
+	(pt 656 176)
+	(bus)
+)
+(connector
+	(pt 656 152)
+	(pt 656 176)
+	(bus)
+)
+(connector
+	(pt 656 176)
+	(pt 656 184)
+	(bus)
+)
+(connector
+	(text "sbType[10..5]" (rect 666 184 752 199)(font "Arial" (font_size 9)))
+	(pt 752 200)
+	(pt 656 200)
+	(bus)
+)
+(connector
+	(pt 656 184)
+	(pt 656 200)
+	(bus)
+)
+(connector
+	(text "ujType[10..5]" (rect 666 208 747 223)(font "Arial" (font_size 9)))
+	(pt 752 224)
+	(pt 656 224)
+	(bus)
+)
+(connector
+	(pt 656 200)
+	(pt 656 224)
+	(bus)
+)
+(connector
+	(pt 656 224)
+	(pt 656 248)
+	(bus)
+)
+(connector
+	(text "uType[30..25]" (rect 666 232 752 247)(font "Arial" (font_size 9)))
+	(pt 752 248)
+	(pt 656 248)
+	(bus)
+)
+(connector
+	(text "iType[4..1]" (rect 650 256 714 271)(font "Arial" (font_size 9)))
+	(pt 720 272)
+	(pt 640 272)
+	(bus)
+)
+(connector
+	(text "ujType[4..1]" (rect 650 280 723 295)(font "Arial" (font_size 9)))
+	(pt 728 296)
+	(pt 640 296)
+	(bus)
+)
+(connector
+	(pt 640 288)
+	(pt 640 296)
+	(bus)
+)
+(connector
+	(pt 640 296)
+	(pt 640 320)
+	(bus)
+)
+(connector
+	(text "uType[24..21]" (rect 650 304 736 319)(font "Arial" (font_size 9)))
+	(pt 736 320)
+	(pt 640 320)
+	(bus)
+)
+(connector
+	(text "iType[0]" (rect 618 328 667 343)(font "Arial" (font_size 9)))
+	(pt 672 344)
+	(pt 608 344)
+)
+(connector
+	(text "ujType[11]" (rect 618 352 684 367)(font "Arial" (font_size 9)))
+	(pt 688 368)
+	(pt 608 368)
+)
+(connector
+	(pt 608 352)
+	(pt 608 368)
+)
+(connector
+	(pt 608 368)
+	(pt 608 392)
+)
+(connector
+	(text "uType[20]" (rect 618 376 680 391)(font "Arial" (font_size 9)))
+	(pt 680 392)
+	(pt 608 392)
+)
+(connector
+	(text "ujType[19..12]" (rect 618 400 707 415)(font "Arial" (font_size 9)))
+	(pt 704 416)
+	(pt 608 416)
+	(bus)
+)
+(connector
+	(text "uType[19..12]" (rect 618 424 704 439)(font "Arial" (font_size 9)))
+	(pt 704 440)
+	(pt 608 440)
+	(bus)
+)
+(connector
+	(text "sType[4..1]" (rect 594 448 663 463)(font "Arial" (font_size 9)))
+	(pt 664 464)
+	(pt 584 464)
+	(bus)
+)
+(connector
+	(text "sbType[4..1]" (rect 594 472 671 487)(font "Arial" (font_size 9)))
+	(pt 680 488)
+	(pt 584 488)
+	(bus)
+)
+(connector
+	(text "sType[0]" (rect 578 496 633 515)(font "Intel Clear" (font_size 9)))
+	(pt 640 512)
+	(pt 568 512)
+)
+(connector
+	(text "sbType[11]" (rect 578 520 648 535)(font "Arial" (font_size 9)))
+	(pt 648 536)
+	(pt 568 536)
+)
+(junction (pt 536 136))
+(junction (pt 520 136))
+(junction (pt 504 136))
+(junction (pt 488 136))
+(junction (pt 472 136))
+(junction (pt 456 136))
+(junction (pt 640 56))
+(junction (pt 640 80))
+(junction (pt 640 104))
+(junction (pt 640 128))
+(junction (pt 656 176))
+(junction (pt 656 184))
+(junction (pt 656 200))
+(junction (pt 656 224))
+(junction (pt 640 288))
+(junction (pt 640 296))
+(junction (pt 608 352))
+(junction (pt 608 368))
+(junction (pt 608 424))
+(junction (pt 584 472))
+(junction (pt 568 520))
