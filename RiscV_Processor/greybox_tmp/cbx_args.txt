@@ -1,0 +1,12 @@
+LPM_SIZE=5
+LPM_TYPE=LPM_MUX
+LPM_WIDTH=32
+LPM_WIDTHS=3
+DEVICE_FAMILY="Cyclone V"
+data
+data
+data
+data
+data
+sel
+result
