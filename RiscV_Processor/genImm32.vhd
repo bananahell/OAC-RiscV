@@ -3,14 +3,14 @@ USE ieee.std_logic_1164.all;
 
 LIBRARY work;
 
-ENTITY genImm32 IS
+ENTITY genImm32_vhd IS
   PORT (
     instr : IN STD_LOGIC_VECTOR(31 DOWNTO 0);  -- instrução completa
     result_imm : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)  -- já selecionado
   );
-END genImm32;
+END genImm32_vhd;
 
-ARCHITECTURE bdf_type OF genImm32 IS
+ARCHITECTURE bdf_type OF genImm32_vhd IS
 
 SIGNAL I_type : STD_LOGIC_VECTOR(31 DOWNTO 0);  -- calculados e usados no mux
 SIGNAL S_type : STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -22,17 +22,21 @@ SIGNAL selector : STD_LOGIC_VECTOR(2 DOWNTO 0);  -- seleciona o mux
 
 SIGNAL zero_bit : STD_LOGIC := '0';
 SIGNAL zero_bit_twelve : STD_LOGIC_VECTOR(11 DOWNTO 0) := "000000000000";
+SIGNAL zero_bit_thirtytwo : STD_LOGIC_VECTOR(31 DOWNTO 0) := "00000000000000000000000000000000";
 
 -- mux de 5 entradas de 32 bits
-COMPONENT mux_32bit_5in
+COMPONENT mux8_32bits_vhd
   PORT (
-    data0x : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    data1x : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    data2x : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    data3x : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    data4x : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    sel : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
-    result : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+    A :  IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
+    B :  IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
+    C :  IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
+    D :  IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
+    E :  IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
+    F :  IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
+    G :  IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
+    H :  IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
+    Sel :  IN  STD_LOGIC_VECTOR(2 DOWNTO 0);
+    Result :  OUT  STD_LOGIC_VECTOR(31 DOWNTO 0)
   );
 END COMPONENT;
 
@@ -108,7 +112,7 @@ BEGIN
   SB_type(12) <= instr(31);  -- sinal
   SB_type(11) <= instr(7);
   SB_type(10 DOWNTO 5) <= instr(30 DOWNTO 25);
-  SB_type(4 DOWNTO 1) <= instr(24 DOWNTO 21);
+  SB_type(4 DOWNTO 1) <= instr(11 DOWNTO 8);
   SB_type(0) <= zero_bit;
 
   UJ_type(31) <= instr(31);
@@ -134,19 +138,22 @@ BEGIN
   U_type(11 DOWNTO 0) <= zero_bit_twelve;
 
   selector(2) <= instr(3);
-  selector(1) <= ((instr(5) AND NOT(instr(4))) AND NOT(instr(2))) OR
-                   ((instr(5) AND instr(4)) AND instr(2));
+  selector(1) <= (((instr(6) AND instr(5)) AND NOT(instr(4))) AND NOT(instr(2))) OR
+                 ((instr(5) AND instr(4)) AND instr(2));
   selector(0) <= ((NOT(instr(6)) AND instr(5)) AND NOT(instr(4))) OR
-                   (((NOT(instr(6)) AND instr(5)) AND instr(4)) AND instr(2));
+                 ((instr(5) AND instr(4)) AND instr(2));
 
-  b2v_inst : mux_32bit_5in
+  b2v_inst : mux8_32bits_vhd
   PORT MAP (
-    data0x => I_type,  -- 000
-    data1x => S_type,  -- 001
-    data2x => SB_type, -- 010
-    data3x => U_type,  -- 011
-    data4x => UJ_type, -- 100
-    sel => selector,
-    result => result_imm);
+    A => I_type,  -- 000
+    B => S_type,  -- 001
+    C => SB_type, -- 010
+    D => U_type,  -- 011
+    E => UJ_type, -- 100
+    F => zero_bit_thirtytwo,
+    G => zero_bit_thirtytwo,
+    H => zero_bit_thirtytwo,
+    Sel => selector,
+    Result => result_imm);
 
 END bdf_type;

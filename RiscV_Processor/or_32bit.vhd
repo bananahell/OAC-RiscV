@@ -3,7 +3,7 @@ USE ieee.std_logic_1164.all;
 
 LIBRARY work;
 
-ENTITY or_32bit IS
+ENTITY or_32bit_vhd IS
   PORT (
     Input1 :  IN  STD_LOGIC;
     Input2 :  IN  STD_LOGIC;
@@ -39,9 +39,9 @@ ENTITY or_32bit IS
     Input32 :  IN  STD_LOGIC;
     Result :  OUT  STD_LOGIC
   );
-END or_32bit;
+END or_32bit_vhd;
 
-ARCHITECTURE bdf_type OF or_32bit IS
+ARCHITECTURE bdf_type OF or_32bit_vhd IS
 
 BEGIN
 

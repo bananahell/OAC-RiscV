@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RiscV_Processor
-Wed Apr 21 22:57:14 2021
+Wed Apr 28 23:57:12 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,14 +13,12 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis IP Cores Summary
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: mux_32bit_5in:b2v_inst|LPM_MUX:LPM_MUX_component
- 12. Port Connectivity Checks: "mux_32bit_5in:b2v_inst"
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Port Connectivity Checks: "genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst"
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -47,10 +45,10 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Apr 21 22:57:14 2021       ;
+; Analysis & Synthesis Status     ; Successful - Wed Apr 28 23:57:12 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; RiscV_Processor                             ;
-; Top-level Entity Name           ; genImm32                                    ;
+; Top-level Entity Name           ; RiscV_Processor                             ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 0                                           ;
@@ -73,8 +71,9 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; genImm32           ; RiscV_Processor    ;
+; Top-level entity name                                                           ; RiscV_Processor    ; RiscV_Processor    ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation                             ; All                ;                    ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
 ; Enable compact report table                                                     ; Off                ; Off                ;
@@ -170,69 +169,90 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                       ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                   ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
-; genImm32.vhd                     ; yes             ; User VHDL File               ; C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/genImm32.vhd      ;         ;
-; mux_32bit_5in.vhd                ; yes             ; User Wizard-Generated File   ; C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux_32bit_5in.vhd ;         ;
-; lpm_mux.tdf                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.tdf                             ;         ;
-; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                          ;         ;
-; muxlut.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/muxlut.inc                              ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/bypassff.inc                            ;         ;
-; altshift.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altshift.inc                            ;         ;
-; db/mux_t1e.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/db/mux_t1e.tdf    ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                               ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                     ; Library ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------+---------+
+; RiscV_Processor.bdf              ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/RiscV_Processor.bdf ;         ;
+; mux8_32bits.vhd                  ; yes             ; User VHDL File                     ; C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux8_32bits.vhd     ;         ;
+; mux4_32bits.vhd                  ; yes             ; User VHDL File                     ; C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux4_32bits.vhd     ;         ;
+; mux2_32bits.vhd                  ; yes             ; User VHDL File                     ; C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux2_32bits.vhd     ;         ;
+; mux2_1bit.vhd                    ; yes             ; User VHDL File                     ; C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux2_1bit.vhd       ;         ;
+; genImm32.vhd                     ; yes             ; User VHDL File                     ; C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/genImm32.vhd        ;         ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                                                                   ;
-+---------------------------------------------+-------------------------------------------------------------------------------------------------+
-; Resource                                    ; Usage                                                                                           ;
-+---------------------------------------------+-------------------------------------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 26                                                                                              ;
-;                                             ;                                                                                                 ;
-; Combinational ALUT usage for logic          ; 39                                                                                              ;
-;     -- 7 input functions                    ; 0                                                                                               ;
-;     -- 6 input functions                    ; 13                                                                                              ;
-;     -- 5 input functions                    ; 4                                                                                               ;
-;     -- 4 input functions                    ; 9                                                                                               ;
-;     -- <=3 input functions                  ; 13                                                                                              ;
-;                                             ;                                                                                                 ;
-; Dedicated logic registers                   ; 0                                                                                               ;
-;                                             ;                                                                                                 ;
-; I/O pins                                    ; 64                                                                                              ;
-;                                             ;                                                                                                 ;
-; Total DSP Blocks                            ; 0                                                                                               ;
-;                                             ;                                                                                                 ;
-; Maximum fan-out node                        ; mux_32bit_5in:b2v_inst|lpm_mux:LPM_MUX_component|mux_t1e:auto_generated|l3_w12_n0_mux_dataout~0 ;
-; Maximum fan-out                             ; 19                                                                                              ;
-; Total fan-out                               ; 268                                                                                             ;
-; Average fan-out                             ; 1.60                                                                                            ;
-+---------------------------------------------+-------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                      ;
++---------------------------------------------+--------------------+
+; Resource                                    ; Usage              ;
++---------------------------------------------+--------------------+
+; Estimate of Logic utilization (ALMs needed) ; 22                 ;
+;                                             ;                    ;
+; Combinational ALUT usage for logic          ; 35                 ;
+;     -- 7 input functions                    ; 0                  ;
+;     -- 6 input functions                    ; 8                  ;
+;     -- 5 input functions                    ; 13                 ;
+;     -- 4 input functions                    ; 3                  ;
+;     -- <=3 input functions                  ; 11                 ;
+;                                             ;                    ;
+; Dedicated logic registers                   ; 0                  ;
+;                                             ;                    ;
+; I/O pins                                    ; 64                 ;
+;                                             ;                    ;
+; Total DSP Blocks                            ; 0                  ;
+;                                             ;                    ;
+; Maximum fan-out node                        ; pin_name1[3]~input ;
+; Maximum fan-out                             ; 22                 ;
+; Total fan-out                               ; 254                ;
+; Average fan-out                             ; 1.56               ;
++---------------------------------------------+--------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                           ;
-+-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------+---------------+--------------+
-; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                               ; Entity Name   ; Library Name ;
-+-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------+---------------+--------------+
-; |genImm32                         ; 39 (2)              ; 0 (0)                     ; 0                 ; 0          ; 64   ; 0            ; |genImm32                                                                         ; genImm32      ; work         ;
-;    |mux_32bit_5in:b2v_inst|       ; 37 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |genImm32|mux_32bit_5in:b2v_inst                                                  ; mux_32bit_5in ; work         ;
-;       |lpm_mux:LPM_MUX_component| ; 37 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |genImm32|mux_32bit_5in:b2v_inst|lpm_mux:LPM_MUX_component                        ; lpm_mux       ; work         ;
-;          |mux_t1e:auto_generated| ; 37 (37)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |genImm32|mux_32bit_5in:b2v_inst|lpm_mux:LPM_MUX_component|mux_t1e:auto_generated ; mux_t1e       ; work         ;
-+-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------+---------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                               ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                            ; Entity Name     ; Library Name ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |RiscV_Processor                       ; 35 (0)              ; 0 (0)                     ; 0                 ; 0          ; 64   ; 0            ; |RiscV_Processor                                                                                               ; RiscV_Processor ; work         ;
+;    |genImm32_vhd:inst1|                ; 35 (2)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1                                                                            ; genImm32_vhd    ; work         ;
+;       |mux8_32bits_vhd:b2v_inst|       ; 33 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst                                                   ; mux8_32bits_vhd ; work         ;
+;          |mux2_32bits_vhd:b2v_inst|    ; 33 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst                          ; mux2_32bits_vhd ; work         ;
+;             |mux2_1bit_vhd:b2v_inst10| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst10 ; mux2_1bit_vhd   ; work         ;
+;             |mux2_1bit_vhd:b2v_inst11| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst11 ; mux2_1bit_vhd   ; work         ;
+;             |mux2_1bit_vhd:b2v_inst12| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst12 ; mux2_1bit_vhd   ; work         ;
+;             |mux2_1bit_vhd:b2v_inst13| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst13 ; mux2_1bit_vhd   ; work         ;
+;             |mux2_1bit_vhd:b2v_inst14| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst14 ; mux2_1bit_vhd   ; work         ;
+;             |mux2_1bit_vhd:b2v_inst15| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst15 ; mux2_1bit_vhd   ; work         ;
+;             |mux2_1bit_vhd:b2v_inst16| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst16 ; mux2_1bit_vhd   ; work         ;
+;             |mux2_1bit_vhd:b2v_inst17| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst17 ; mux2_1bit_vhd   ; work         ;
+;             |mux2_1bit_vhd:b2v_inst18| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst18 ; mux2_1bit_vhd   ; work         ;
+;             |mux2_1bit_vhd:b2v_inst19| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst19 ; mux2_1bit_vhd   ; work         ;
+;             |mux2_1bit_vhd:b2v_inst1|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst1  ; mux2_1bit_vhd   ; work         ;
+;             |mux2_1bit_vhd:b2v_inst20| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst20 ; mux2_1bit_vhd   ; work         ;
+;             |mux2_1bit_vhd:b2v_inst21| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst21 ; mux2_1bit_vhd   ; work         ;
+;             |mux2_1bit_vhd:b2v_inst22| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst22 ; mux2_1bit_vhd   ; work         ;
+;             |mux2_1bit_vhd:b2v_inst23| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst23 ; mux2_1bit_vhd   ; work         ;
+;             |mux2_1bit_vhd:b2v_inst24| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst24 ; mux2_1bit_vhd   ; work         ;
+;             |mux2_1bit_vhd:b2v_inst25| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst25 ; mux2_1bit_vhd   ; work         ;
+;             |mux2_1bit_vhd:b2v_inst26| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst26 ; mux2_1bit_vhd   ; work         ;
+;             |mux2_1bit_vhd:b2v_inst27| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst27 ; mux2_1bit_vhd   ; work         ;
+;             |mux2_1bit_vhd:b2v_inst28| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst28 ; mux2_1bit_vhd   ; work         ;
+;             |mux2_1bit_vhd:b2v_inst29| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst29 ; mux2_1bit_vhd   ; work         ;
+;             |mux2_1bit_vhd:b2v_inst2|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst2  ; mux2_1bit_vhd   ; work         ;
+;             |mux2_1bit_vhd:b2v_inst30| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst30 ; mux2_1bit_vhd   ; work         ;
+;             |mux2_1bit_vhd:b2v_inst3|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst3  ; mux2_1bit_vhd   ; work         ;
+;             |mux2_1bit_vhd:b2v_inst4|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst4  ; mux2_1bit_vhd   ; work         ;
+;             |mux2_1bit_vhd:b2v_inst5|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst5  ; mux2_1bit_vhd   ; work         ;
+;             |mux2_1bit_vhd:b2v_inst69| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst69 ; mux2_1bit_vhd   ; work         ;
+;             |mux2_1bit_vhd:b2v_inst6|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst6  ; mux2_1bit_vhd   ; work         ;
+;             |mux2_1bit_vhd:b2v_inst7|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst7  ; mux2_1bit_vhd   ; work         ;
+;             |mux2_1bit_vhd:b2v_inst8|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst8  ; mux2_1bit_vhd   ; work         ;
+;             |mux2_1bit_vhd:b2v_inst9|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst9  ; mux2_1bit_vhd   ; work         ;
+;             |mux2_1bit_vhd:b2v_inst|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst   ; mux2_1bit_vhd   ; work         ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                ;
-+--------+--------------+---------+--------------+--------------+----------------------------------+-------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                  ; IP Include File   ;
-+--------+--------------+---------+--------------+--------------+----------------------------------+-------------------+
-; Altera ; LPM_MUX      ; 20.1    ; N/A          ; N/A          ; |genImm32|mux_32bit_5in:b2v_inst ; mux_32bit_5in.vhd ;
-+--------+--------------+---------+--------------+--------------+----------------------------------+-------------------+
 
 
 +------------------------------------------------------+
@@ -250,44 +270,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------+
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |genImm32|mux_32bit_5in:b2v_inst|lpm_mux:LPM_MUX_component|mux_t1e:auto_generated|l3_w12_n0_mux_dataout ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |genImm32|mux_32bit_5in:b2v_inst|lpm_mux:LPM_MUX_component|mux_t1e:auto_generated|l3_w1_n0_mux_dataout  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------+
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |RiscV_Processor|genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst18|Result ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mux_32bit_5in:b2v_inst|LPM_MUX:LPM_MUX_component ;
-+------------------------+-----------+----------------------------------------------------------+
-; Parameter Name         ; Value     ; Type                                                     ;
-+------------------------+-----------+----------------------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON        ; AUTO_CARRY                                               ;
-; IGNORE_CARRY_BUFFERS   ; OFF       ; IGNORE_CARRY                                             ;
-; AUTO_CASCADE_CHAINS    ; ON        ; AUTO_CASCADE                                             ;
-; IGNORE_CASCADE_BUFFERS ; OFF       ; IGNORE_CASCADE                                           ;
-; LPM_WIDTH              ; 32        ; Signed Integer                                           ;
-; LPM_SIZE               ; 5         ; Signed Integer                                           ;
-; LPM_WIDTHS             ; 3         ; Signed Integer                                           ;
-; LPM_PIPELINE           ; 0         ; Signed Integer                                           ;
-; CBXI_PARAMETER         ; mux_t1e   ; Untyped                                                  ;
-; DEVICE_FAMILY          ; Cyclone V ; Untyped                                                  ;
-+------------------------+-----------+----------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------+
-; Port Connectivity Checks: "mux_32bit_5in:b2v_inst" ;
-+---------------+-------+----------+-----------------+
-; Port          ; Type  ; Severity ; Details         ;
-+---------------+-------+----------+-----------------+
-; data2x[0]     ; Input ; Info     ; Stuck at GND    ;
-; data3x[11..0] ; Input ; Info     ; Stuck at GND    ;
-; data4x[0]     ; Input ; Info     ; Stuck at GND    ;
-+---------------+-------+----------+-----------------+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst" ;
++----------+-------+----------+-------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                   ;
++----------+-------+----------+-------------------------------------------+
+; c[0]     ; Input ; Info     ; Stuck at GND                              ;
+; d[11..0] ; Input ; Info     ; Stuck at GND                              ;
+; e[0]     ; Input ; Info     ; Stuck at GND                              ;
+; f        ; Input ; Info     ; Stuck at GND                              ;
+; g        ; Input ; Info     ; Stuck at GND                              ;
+; h        ; Input ; Info     ; Stuck at GND                              ;
++----------+-------+----------+-------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -295,17 +298,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 39                          ;
-;     normal            ; 39                          ;
-;         2 data inputs ; 1                           ;
-;         3 data inputs ; 12                          ;
-;         4 data inputs ; 9                           ;
-;         5 data inputs ; 4                           ;
-;         6 data inputs ; 13                          ;
+; arriav_lcell_comb     ; 35                          ;
+;     normal            ; 35                          ;
+;         3 data inputs ; 11                          ;
+;         4 data inputs ; 3                           ;
+;         5 data inputs ; 13                          ;
+;         6 data inputs ; 8                           ;
 ; boundary_port         ; 64                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.59                        ;
+; Average LUT depth     ; 1.54                        ;
 +-----------------------+-----------------------------+
 
 
@@ -324,50 +326,61 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Apr 21 22:57:05 2021
+    Info: Processing started: Wed Apr 28 23:57:02 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RiscV_Processor -c RiscV_Processor
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file genimm32.vhd
-    Info (12022): Found design unit 1: genImm32-bdf_type File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/genImm32.vhd Line: 13
-    Info (12023): Found entity 1: genImm32 File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/genImm32.vhd Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file riscv_processor.bdf
     Info (12023): Found entity 1: RiscV_Processor
-Info (12021): Found 2 design units, including 1 entities, in source file mux_32bit_5in.vhd
-    Info (12022): Found design unit 1: mux_32bit_5in-SYN File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux_32bit_5in.vhd Line: 57
-    Info (12023): Found entity 1: mux_32bit_5in File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux_32bit_5in.vhd Line: 43
-Info (12021): Found 1 design units, including 1 entities, in source file teste.bdf
-    Info (12023): Found entity 1: teste
-Info (12127): Elaborating entity "genImm32" for the top level hierarchy
+Info (12021): Found 2 design units, including 1 entities, in source file riscv_processor.vhd
+    Info (12022): Found design unit 1: RiscV_Processor_vhd-bdf_type File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 33
+    Info (12023): Found entity 1: RiscV_Processor_vhd File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 25
+Info (12021): Found 2 design units, including 1 entities, in source file or_32bit.vhd
+    Info (12022): Found design unit 1: or_32bit_vhd-bdf_type File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/or_32bit.vhd Line: 44
+    Info (12023): Found entity 1: or_32bit_vhd File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/or_32bit.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file mux8_32bits.vhd
+    Info (12022): Found design unit 1: mux8_32bits_vhd-bdf_type File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux8_32bits.vhd Line: 21
+    Info (12023): Found entity 1: mux8_32bits_vhd File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux8_32bits.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file mux4_32bits.vhd
+    Info (12022): Found design unit 1: mux4_32bits_vhd-bdf_type File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux4_32bits.vhd Line: 17
+    Info (12023): Found entity 1: mux4_32bits_vhd File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux4_32bits.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file mux4_1bit.vhd
+    Info (12022): Found design unit 1: mux4_1bit_vhd-bdf_type File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux4_1bit.vhd Line: 17
+    Info (12023): Found entity 1: mux4_1bit_vhd File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux4_1bit.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file mux2_32bits.vhd
+    Info (12022): Found design unit 1: mux2_32bits_vhd-bdf_type File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux2_32bits.vhd Line: 15
+    Info (12023): Found entity 1: mux2_32bits_vhd File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux2_32bits.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file mux2_1bit.vhd
+    Info (12022): Found design unit 1: mux2_1bit_vhd-bdf_type File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux2_1bit.vhd Line: 15
+    Info (12023): Found entity 1: mux2_1bit_vhd File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux2_1bit.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file genimm32.vhd
+    Info (12022): Found design unit 1: genImm32_vhd-bdf_type File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/genImm32.vhd Line: 13
+    Info (12023): Found entity 1: genImm32_vhd File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/genImm32.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file fulladder_1bit.vhd
+    Info (12022): Found design unit 1: fulladder_1bit_vhd-bdf_type File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/fulladder_1bit.vhd Line: 16
+    Info (12023): Found entity 1: fulladder_1bit_vhd File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/fulladder_1bit.vhd Line: 6
+Info (12127): Elaborating entity "RiscV_Processor" for the top level hierarchy
+Info (12128): Elaborating entity "genImm32_vhd" for hierarchy "genImm32_vhd:inst1"
 Warning (10540): VHDL Signal Declaration warning at genImm32.vhd(23): used explicit default value for signal "zero_bit" because signal was never assigned a value File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/genImm32.vhd Line: 23
 Warning (10540): VHDL Signal Declaration warning at genImm32.vhd(24): used explicit default value for signal "zero_bit_twelve" because signal was never assigned a value File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/genImm32.vhd Line: 24
-Info (12128): Elaborating entity "mux_32bit_5in" for hierarchy "mux_32bit_5in:b2v_inst" File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/genImm32.vhd Line: 142
-Info (12128): Elaborating entity "LPM_MUX" for hierarchy "mux_32bit_5in:b2v_inst|LPM_MUX:LPM_MUX_component" File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux_32bit_5in.vhd Line: 237
-Info (12130): Elaborated megafunction instantiation "mux_32bit_5in:b2v_inst|LPM_MUX:LPM_MUX_component" File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux_32bit_5in.vhd Line: 237
-Info (12133): Instantiated megafunction "mux_32bit_5in:b2v_inst|LPM_MUX:LPM_MUX_component" with the following parameter: File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux_32bit_5in.vhd Line: 237
-    Info (12134): Parameter "LPM_WIDTH" = "32"
-    Info (12134): Parameter "LPM_SIZE" = "5"
-    Info (12134): Parameter "LPM_WIDTHS" = "3"
-    Info (12134): Parameter "LPM_PIPELINE" = "0"
-    Info (12134): Parameter "LPM_TYPE" = "LPM_MUX"
-    Info (12134): Parameter "LPM_HINT" = "UNUSED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mux_t1e.tdf
-    Info (12023): Found entity 1: mux_t1e File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/db/mux_t1e.tdf Line: 23
-Info (12128): Elaborating entity "mux_t1e" for hierarchy "mux_32bit_5in:b2v_inst|LPM_MUX:LPM_MUX_component|mux_t1e:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
+Warning (10540): VHDL Signal Declaration warning at genImm32.vhd(25): used explicit default value for signal "zero_bit_thirtytwo" because signal was never assigned a value File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/genImm32.vhd Line: 25
+Info (12128): Elaborating entity "mux8_32bits_vhd" for hierarchy "genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst" File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/genImm32.vhd Line: 146
+Info (12128): Elaborating entity "mux2_32bits_vhd" for hierarchy "genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst" File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux8_32bits.vhd Line: 48
+Info (12128): Elaborating entity "mux2_1bit_vhd" for hierarchy "genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux2_32bits_vhd:b2v_inst|mux2_1bit_vhd:b2v_inst" File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux2_32bits.vhd Line: 30
+Info (12128): Elaborating entity "mux4_32bits_vhd" for hierarchy "genImm32_vhd:inst1|mux8_32bits_vhd:b2v_inst|mux4_32bits_vhd:b2v_inst1" File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux8_32bits.vhd Line: 55
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "instr[0]" File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/genImm32.vhd Line: 8
-    Warning (15610): No output dependent on input pin "instr[1]" File: C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/genImm32.vhd Line: 8
-Info (21057): Implemented 103 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "pin_name1[1]"
+    Warning (15610): No output dependent on input pin "pin_name1[0]"
+Info (21057): Implemented 99 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 32 input pins
     Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 39 logic cells
+    Info (21061): Implemented 35 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4859 megabytes
-    Info: Processing ended: Wed Apr 21 22:57:14 2021
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Peak virtual memory: 4850 megabytes
+    Info: Processing ended: Wed Apr 28 23:57:12 2021
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:20
 
 

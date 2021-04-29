@@ -1,0 +1,100 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions
+and other software and tools, and any partner logic
+functions, and any output files from any of the foregoing
+(including device programming or simulation files), and any
+associated documentation or information are expressly subject
+to the terms and conditions of the Intel Program License
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 56 56 208 240)
+	(text "alu_1bit_vhd" (rect 13 8 62 27)(font "Intel Clear" (font_size 8)))
+	(text "inst" (rect 16 160 32 177)(font "Intel Clear" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "A" (rect 0 8 8 27)(font "Intel Clear" (font_size 8)))
+		(text "A" (rect 24 56 32 75)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 72)(pt 16 72))
+	)
+	(port
+		(pt 0 88)
+		(input)
+		(text "Ainvert" (rect 0 8 42 27)(font "Intel Clear" (font_size 8)))
+		(text "Ainvert" (rect 24 72 66 91)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 88)(pt 16 88))
+	)
+	(port
+		(pt 0 104)
+		(input)
+		(text "B" (rect 0 8 8 27)(font "Intel Clear" (font_size 8)))
+		(text "B" (rect 24 88 32 107)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 104)(pt 16 104))
+	)
+	(port
+		(pt 0 40)
+		(input)
+		(text "Sel[1..0]" (rect 0 8 49 27)(font "Intel Clear" (font_size 8)))
+		(text "Sel[1..0]" (rect 24 32 73 51)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 40)(pt 16 40)(line_width 3))
+	)
+	(port
+		(pt 0 120)
+		(input)
+		(text "Binvert" (rect 0 8 42 27)(font "Intel Clear" (font_size 8)))
+		(text "Binvert" (rect 24 104 66 123)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 120)(pt 16 120))
+	)
+	(port
+		(pt 0 152)
+		(input)
+		(text "Less" (rect 0 8 25 27)(font "Intel Clear" (font_size 8)))
+		(text "Less" (rect 24 136 49 155)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 152)(pt 16 152))
+	)
+	(port
+		(pt 0 136)
+		(input)
+		(text "Cin" (rect 0 8 18 27)(font "Intel Clear" (font_size 8)))
+		(text "Cin" (rect 24 120 42 139)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 136)(pt 16 136))
+	)
+	(port
+		(pt 152 40)
+		(output)
+		(text "Result" (rect 16 8 52 27)(font "Intel Clear" (font_size 8)))
+		(text "Result" (rect 96 32 132 51)(font "Intel Clear" (font_size 8)))
+		(line (pt 152 40)(pt 136 40))
+	)
+	(port
+		(pt 152 72)
+		(output)
+		(text "Cout" (rect 16 8 43 27)(font "Intel Clear" (font_size 8)))
+		(text "Cout" (rect 104 64 131 83)(font "Intel Clear" (font_size 8)))
+		(line (pt 152 72)(pt 136 72))
+	)
+	(port
+		(pt 152 56)
+		(output)
+		(text "Set" (rect 16 8 36 27)(font "Intel Clear" (font_size 8)))
+		(text "Set" (rect 112 48 132 67)(font "Intel Clear" (font_size 8)))
+		(line (pt 152 56)(pt 136 56))
+	)
+	(drawing
+		(rectangle (rect 16 32 136 160))
+	)
+)

@@ -1,0 +1,61 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions
+and other software and tools, and any partner logic
+functions, and any output files from any of the foregoing
+(including device programming or simulation files), and any
+associated documentation or information are expressly subject
+to the terms and conditions of the Intel Program License
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 64 64 240 160)
+	(text "mux2_32bits_vhd" (rect 5 0 84 19)(font "Intel Clear" (font_size 8)))
+	(text "inst" (rect 8 75 24 92)(font "Intel Clear" ))
+	(port
+		(pt 72 96)
+		(input)
+		(text "Sel" (rect 0 0 18 19)(font "Intel Clear" (font_size 8)))
+		(text "Sel" (rect 56 56 75 74)(font "Intel Clear" (font_size 8))(vertical))
+		(line (pt 72 96)(pt 72 80))
+	)
+	(port
+		(pt 0 40)
+		(input)
+		(text "A[31..0]" (rect 0 0 47 19)(font "Intel Clear" (font_size 8)))
+		(text "A[31..0]" (rect 16 32 63 51)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 40)(pt 16 40)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "B[31..0]" (rect 0 0 47 19)(font "Intel Clear" (font_size 8)))
+		(text "B[31..0]" (rect 16 56 63 75)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 176 48)
+		(output)
+		(text "Result[31..0]" (rect 0 0 75 19)(font "Intel Clear" (font_size 8)))
+		(text "Result[31..0]" (rect 96 40 171 59)(font "Intel Clear" (font_size 8)))
+		(line (pt 176 48)(pt 160 48)(line_width 3))
+	)
+	(drawing
+		(line (pt 64 32)(pt 64 80))
+		(line (pt 64 80)(pt 80 72))
+		(line (pt 80 72)(pt 80 40))
+		(line (pt 80 40)(pt 64 32))
+	)
+)

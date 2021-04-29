@@ -3,7 +3,7 @@ USE ieee.std_logic_1164.all;
 
 LIBRARY work;
 
-ENTITY fulladder_1bit IS
+ENTITY fulladder_1bit_vhd IS
   PORT (
     A :  IN  STD_LOGIC;
     B :  IN  STD_LOGIC;
@@ -11,9 +11,9 @@ ENTITY fulladder_1bit IS
     Cout :  OUT  STD_LOGIC;
     Sum :  OUT  STD_LOGIC
   );
-END fulladder_1bit;
+END fulladder_1bit_vhd;
 
-ARCHITECTURE bdf_type OF fulladder_1bit IS
+ARCHITECTURE bdf_type OF fulladder_1bit_vhd IS
 
 BEGIN
 
