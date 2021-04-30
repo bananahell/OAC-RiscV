@@ -12,7 +12,7 @@
 # 
 # vcom -93 -work work {C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/alu.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:05:48 on Apr 29,2021
+# Start time: 17:26:02 on Apr 30,2021
 # vcom -reportprogress 300 -93 -work work C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/alu.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -20,23 +20,23 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity alu_vhd
 # -- Compiling architecture bdf_type of alu_vhd
-# End time: 19:05:48 on Apr 29,2021, Elapsed time: 0:00:00
+# End time: 17:26:02 on Apr 30,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:05:48 on Apr 29,2021
+# Start time: 17:26:02 on Apr 30,2021
 # vcom -reportprogress 300 -93 -work work C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity RiscV_Processor
 # -- Compiling architecture bdf_type of RiscV_Processor
-# End time: 19:05:48 on Apr 29,2021, Elapsed time: 0:00:00
+# End time: 17:26:02 on Apr 30,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_alu.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:05:48 on Apr 29,2021
+# Start time: 17:26:02 on Apr 30,2021
 # vcom -reportprogress 300 -93 -work work C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_alu.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -46,12 +46,12 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity testbench_alu
 # -- Compiling architecture testbench_alu_arch of testbench_alu
-# End time: 19:05:48 on Apr 29,2021, Elapsed time: 0:00:00
+# End time: 17:26:02 on Apr 30,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  testbench_alu
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" testbench_alu 
-# Start time: 19:05:48 on Apr 29,2021
+# Start time: 17:26:02 on Apr 30,2021
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -71,6 +71,6 @@
 # .main_pane.objects.interior.cs.body.tree
 # run -all
 # ** Note: alu done
-#    Time: 5 us  Iteration: 0  Instance: /testbench_alu
-# End time: 19:22:26 on Apr 29,2021, Elapsed time: 0:16:38
+#    Time: 14 us  Iteration: 0  Instance: /testbench_alu
+# End time: 17:26:28 on Apr 30,2021, Elapsed time: 0:00:26
 # Errors: 0, Warnings: 1

@@ -82,24 +82,51 @@ BEGIN
     ASSERT (Zout = 2) REPORT "Assert 7 (SRL)" SEVERITY ERROR;
 
     opcode  <= "0111"  ;
-    Ain <= x"11111101";
+    Ain <= x"FEFFFFF0";
     Bin <= x"00000001";
     WAIT FOR 1 us ;
-    ASSERT (Zout = x"11111110") REPORT "Assert 8 (SRA)" SEVERITY ERROR;
+    ASSERT (Zout = x"FF7FFFF8") REPORT "Assert 8 (SRA)" SEVERITY ERROR;
+
+    opcode  <= "1000"  ;
+    Ain <= x"F1111101";
+    Bin <= x"00000001";
+    WAIT FOR 1 us ;
+    ASSERT (Zout = x"00000001") REPORT "Assert 9 (SLT)" SEVERITY ERROR;
+
+    opcode  <= "1001"  ;
+    Ain <= x"F1111101";
+    Bin <= x"00000001";
+    WAIT FOR 1 us ;
+    ASSERT (Zout = x"00000000") REPORT "Assert 10 (SLTU)" SEVERITY ERROR;
+
+    opcode  <= "1010"  ;
+    Ain <= x"F1111101";
+    Bin <= x"00000001";
+    WAIT FOR 1 us ;
+    ASSERT (Zout = x"00000000") REPORT "Assert 11 (SGE)" SEVERITY ERROR;
+
+    opcode  <= "1011"  ;
+    Ain <= x"F1111101";
+    Bin <= x"00000001";
+    WAIT FOR 1 us ;
+    ASSERT (Zout = x"00000001") REPORT "Assert 12 (SGEU)" SEVERITY ERROR;
+
+    opcode  <= "1100"  ;
+    Ain <= x"F1111101";
+    Bin <= x"F1111101";
+    WAIT FOR 1 us ;
+    ASSERT (Zout = x"00000001") REPORT "Assert 13 (SEQ)" SEVERITY ERROR;
+
+    opcode  <= "1101"  ;
+    Ain <= x"F1111101";
+    Bin <= x"00000001";
+    WAIT FOR 1 us ;
+    ASSERT (Zout = x"00000001") REPORT "Assert 14 (SNE)" SEVERITY ERROR;
 
 -- 5 us, repeat pattern in loop.
     REPORT "alu done" SEVERITY NOTE;
     WAIT;
 
   END PROCESS;
-
-      --WHEN "1000" => Zout <= Ain SLT Bin;
-      --WHEN "1001" => Zout <= Ain SLTU Bin;
-      --WHEN "1010" => Zout <= Ain SGE Bin;
-      --WHEN "1011" => Zout <= Ain SGEU Bin;
-      --WHEN "1100" => Zout <= Ain SEQ Bin;
-      --WHEN "1101" => Zout <= Ain SNE Bin;
-      --WHEN "1110" =>
-      --WHEN "1111" =>
 
 END;

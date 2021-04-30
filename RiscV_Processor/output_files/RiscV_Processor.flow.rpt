@@ -1,5 +1,5 @@
 Flow report for RiscV_Processor
-Thu Apr 29 19:59:24 2021
+Fri Apr 30 17:22:15 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -38,24 +38,29 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+---------------------------------------------------------------------------+
-; Flow Summary                                                              ;
-+-----------------------------+---------------------------------------------+
-; Flow Status                 ; Flow Failed - Thu Apr 29 19:59:24 2021      ;
-; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name               ; RiscV_Processor                             ;
-; Top-level Entity Name       ; RiscV_Processor                             ;
-; Family                      ; Cyclone V                                   ;
-; Device                      ; 5CGXFC7C7F23C8                              ;
-; Timing Models               ; Final                                       ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Flow Summary                                                                  ;
++---------------------------------+---------------------------------------------+
+; Flow Status                     ; Successful - Fri Apr 30 17:22:15 2021       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; RiscV_Processor                             ;
+; Top-level Entity Name           ; RiscV_Processor                             ;
+; Family                          ; Cyclone V                                   ;
+; Device                          ; 5CGXFC7C7F23C8                              ;
+; Timing Models                   ; Final                                       ;
+; Logic utilization (in ALMs)     ; 276 / 56,480 ( < 1 % )                      ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 101 / 268 ( 38 % )                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0 / 7,024,640 ( 0 % )                       ;
+; Total DSP Blocks                ; 0 / 156 ( 0 % )                             ;
+; Total HSSI RX PCSs              ; 0 / 6 ( 0 % )                               ;
+; Total HSSI PMA RX Deserializers ; 0 / 6 ( 0 % )                               ;
+; Total HSSI TX PCSs              ; 0 / 6 ( 0 % )                               ;
+; Total HSSI PMA TX Serializers   ; 0 / 6 ( 0 % )                               ;
+; Total PLLs                      ; 0 / 13 ( 0 % )                              ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
++---------------------------------+---------------------------------------------+
 
 
 +-----------------------------------------+
@@ -63,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/29/2021 19:59:17 ;
+; Start date & time ; 04/30/2021 17:21:11 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; RiscV_Processor     ;
 +-------------------+---------------------+
@@ -74,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+------------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                    ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+------------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 228800468856297.161973715605300          ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 91756275014.161981407109404              ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                       ; --            ; --          ; testbench_alu                     ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                       ; --            ; --          ; testbench_genImm                  ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                      ; --            ; --          ; eda_board_design_timing           ;
@@ -109,8 +114,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4825 MB             ; 00:00:18                           ;
-; Total                ; 00:00:08     ; --                      ; --                  ; 00:00:18                           ;
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4838 MB             ; 00:00:21                           ;
+; Fitter               ; 00:00:35     ; 1.0                     ; 6709 MB             ; 00:01:20                           ;
+; Assembler            ; 00:00:08     ; 1.0                     ; 4836 MB             ; 00:00:08                           ;
+; Timing Analyzer      ; 00:00:06     ; 1.2                     ; 5197 MB             ; 00:00:07                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4726 MB             ; 00:00:01                           ;
+; Total                ; 00:01:00     ; --                      ; --                  ; 00:01:57                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -120,6 +129,10 @@ https://fpgasoftware.intel.com/eula.
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
 ; Analysis & Synthesis ; BJ114            ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; BJ114            ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; BJ114            ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; BJ114            ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; BJ114            ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -127,6 +140,10 @@ https://fpgasoftware.intel.com/eula.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off RiscV_Processor -c RiscV_Processor
+quartus_fit --read_settings_files=off --write_settings_files=off RiscV_Processor -c RiscV_Processor
+quartus_asm --read_settings_files=off --write_settings_files=off RiscV_Processor -c RiscV_Processor
+quartus_sta RiscV_Processor -c RiscV_Processor
+quartus_eda --read_settings_files=off --write_settings_files=off RiscV_Processor -c RiscV_Processor
 
 
 
