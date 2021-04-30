@@ -10,92 +10,59 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux8_32bits.vhd}
+# vcom -93 -work work {C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/alu.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:58:12 on Apr 28,2021
-# vcom -reportprogress 300 -93 -work work C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux8_32bits.vhd 
+# Start time: 19:05:48 on Apr 29,2021
+# vcom -reportprogress 300 -93 -work work C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/alu.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity mux8_32bits_vhd
-# -- Compiling architecture bdf_type of mux8_32bits_vhd
-# End time: 23:58:12 on Apr 28,2021, Elapsed time: 0:00:00
+# -- Loading package NUMERIC_STD
+# -- Compiling entity alu_vhd
+# -- Compiling architecture bdf_type of alu_vhd
+# End time: 19:05:48 on Apr 29,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux4_32bits.vhd}
+# vcom -93 -work work {C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:58:12 on Apr 28,2021
-# vcom -reportprogress 300 -93 -work work C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux4_32bits.vhd 
+# Start time: 19:05:48 on Apr 29,2021
+# vcom -reportprogress 300 -93 -work work C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity mux4_32bits_vhd
-# -- Compiling architecture bdf_type of mux4_32bits_vhd
-# End time: 23:58:12 on Apr 28,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux2_32bits.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:58:12 on Apr 28,2021
-# vcom -reportprogress 300 -93 -work work C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux2_32bits.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity mux2_32bits_vhd
-# -- Compiling architecture bdf_type of mux2_32bits_vhd
-# End time: 23:58:12 on Apr 28,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux2_1bit.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:58:12 on Apr 28,2021
-# vcom -reportprogress 300 -93 -work work C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux2_1bit.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity mux2_1bit_vhd
-# -- Compiling architecture bdf_type of mux2_1bit_vhd
-# End time: 23:58:12 on Apr 28,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/genImm32.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:58:12 on Apr 28,2021
-# vcom -reportprogress 300 -93 -work work C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/genImm32.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity genImm32_vhd
-# -- Compiling architecture bdf_type of genImm32_vhd
-# End time: 23:58:12 on Apr 28,2021, Elapsed time: 0:00:00
+# -- Compiling entity RiscV_Processor
+# -- Compiling architecture bdf_type of RiscV_Processor
+# End time: 19:05:48 on Apr 29,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vcom -93 -work work {C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_genImm.vhd}
+# vcom -93 -work work {C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_alu.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:58:12 on Apr 28,2021
-# vcom -reportprogress 300 -93 -work work C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_genImm.vhd 
+# Start time: 19:05:48 on Apr 29,2021
+# vcom -reportprogress 300 -93 -work work C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_alu.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package std_logic_textio
 # -- Loading package std_logic_arith
 # -- Loading package STD_LOGIC_UNSIGNED
-# -- Compiling entity testbench_genImm
-# -- Compiling architecture testbench_genImm_arch of testbench_genImm
-# End time: 23:58:12 on Apr 28,2021, Elapsed time: 0:00:00
+# -- Compiling entity testbench_alu
+# -- Compiling architecture testbench_alu_arch of testbench_alu
+# End time: 19:05:48 on Apr 29,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  testbench_genImm
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" testbench_genImm 
-# Start time: 23:58:13 on Apr 28,2021
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  testbench_alu
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" testbench_alu 
+# Start time: 19:05:48 on Apr 29,2021
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.std_logic_textio(body)
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
-# Loading work.testbench_genimm(testbench_genimm_arch)
-# Loading work.genimm32_vhd(bdf_type)
-# Loading work.mux8_32bits_vhd(bdf_type)
-# Loading work.mux2_32bits_vhd(bdf_type)
-# Loading work.mux2_1bit_vhd(bdf_type)
-# Loading work.mux4_32bits_vhd(bdf_type)
+# Loading work.testbench_alu(testbench_alu_arch)
+# Loading ieee.numeric_std(body)
+# Loading work.alu_vhd(bdf_type)
+# ** Warning: (vsim-8683) Uninitialized out port /testbench_alu/DUT/zeroOut has no driver.
+# This port will contribute value (U) to the signal network.
 # 
 # add wave *
 # view structure
@@ -103,7 +70,7 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# ** Note: genImm done
-#    Time: 10 us  Iteration: 0  Instance: /testbench_genimm
-# End time: 23:58:26 on Apr 28,2021, Elapsed time: 0:00:13
-# Errors: 0, Warnings: 0
+# ** Note: alu done
+#    Time: 5 us  Iteration: 0  Instance: /testbench_alu
+# End time: 19:22:26 on Apr 29,2021, Elapsed time: 0:16:38
+# Errors: 0, Warnings: 1

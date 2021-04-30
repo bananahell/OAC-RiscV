@@ -9,255 +9,134 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/simulation/modelsim
-Egenimm32_vhd
-Z1 w1619659095
-Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 4
-R0
-Z4 8C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/genImm32.vhd
-Z5 FC:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/genImm32.vhd
-l0
-L6 1
-VUzRL3_YgBMV`7;>Z>V<:K1
-!s100 Y^Q4n4>HPPn9WEgb5iEW41
-Z6 OV;C;2020.1;71
-31
-Z7 !s110 1619665092
-!i10b 1
-Z8 !s108 1619665092.000000
-Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/genImm32.vhd|
-Z10 !s107 C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/genImm32.vhd|
-!i113 1
-Z11 o-93 -work work
-Z12 tExplicit 1 CvgOpt 0
-Abdf_type
-R2
-R3
-DEx4 work 12 genimm32_vhd 0 22 UzRL3_YgBMV`7;>Z>V<:K1
-!i122 4
-l43
-L13 147
-VMXKYeRcLW:TJU4;HZlJzH1
-!s100 i3ia=FCA<R8SO@57VRM2E1
-R6
-31
-R7
-!i10b 1
-R8
-R9
-R10
-!i113 1
-R11
-R12
-Emux2_1bit_vhd
-R1
-R2
-R3
-!i122 3
-R0
-Z13 8C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux2_1bit.vhd
-Z14 FC:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux2_1bit.vhd
-l0
-L6 1
-V722ZF]ZFz1U7H0NG1im0a2
-!s100 Z^`h@AdfEQPziOOz>LV3G2
-R6
-31
-R7
-!i10b 1
-R8
-Z15 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux2_1bit.vhd|
-Z16 !s107 C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux2_1bit.vhd|
-!i113 1
-R11
-R12
-Abdf_type
-R2
-R3
-DEx4 work 13 mux2_1bit_vhd 0 22 722ZF]ZFz1U7H0NG1im0a2
-!i122 3
-l17
-L15 7
-VON6QlPz<]EHo8PX4UEoMi1
-!s100 nDQ>jYNiB2;ZgPKQl`Vol0
-R6
-31
-R7
-!i10b 1
-R8
-R15
-R16
-!i113 1
-R11
-R12
-Emux2_32bits_vhd
-R1
-R2
-R3
-!i122 2
-R0
-Z17 8C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux2_32bits.vhd
-Z18 FC:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux2_32bits.vhd
-l0
-L6 1
-V4F<[E3]FcC<EOb[BjfikR0
-!s100 aKWfn2>4bjBRD8:d1D8<?3
-R6
-31
-R7
-!i10b 1
-R8
-Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux2_32bits.vhd|
-Z20 !s107 C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux2_32bits.vhd|
-!i113 1
-R11
-R12
-Abdf_type
-R2
-R3
-DEx4 work 15 mux2_32bits_vhd 0 22 4F<[E3]FcC<EOb[BjfikR0
-!i122 2
-l28
-L15 242
-VJETV5FN:_1GWz><<3]`LU2
-!s100 NDAD>BZde2`Ta5Lae_im;3
-R6
-31
-R7
-!i10b 1
-R8
-R19
-R20
-!i113 1
-R11
-R12
-Emux4_32bits_vhd
-Z21 w1619659127
-R2
-R3
-!i122 1
-R0
-Z22 8C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux4_32bits.vhd
-Z23 FC:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux4_32bits.vhd
-l0
-L6 1
-VcRFNEd:Q<3DUz_zz5VE^E3
-!s100 FYEDec8k7ig^iPmXV_LQA1
-R6
-31
-R7
-!i10b 1
-R8
-Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux4_32bits.vhd|
-Z25 !s107 C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux4_32bits.vhd|
-!i113 1
-R11
-R12
-Abdf_type
-R2
-R3
-DEx4 work 15 mux4_32bits_vhd 0 22 cRFNEd:Q<3DUz_zz5VE^E3
-!i122 1
-l31
-L17 38
-V=NW^`ITHgoB@^BUamTmcF3
-!s100 ]LHNhbma[kh=hMdR4B@^c2
-R6
-31
-R7
-!i10b 1
-R8
-R24
-R25
-!i113 1
-R11
-R12
-Emux8_32bits_vhd
-Z26 w1619659153
-R2
-R3
+Ealu_vhd
+Z1 w1619733419
+Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 !i122 0
 R0
-Z27 8C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux8_32bits.vhd
-Z28 FC:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux8_32bits.vhd
-l0
-L6 1
-VAG=l1T3OCZYz2Y0LP2kQD2
-!s100 81RJ@b=A24;FAB2JEQ0ca1
-R6
-31
-R7
-!i10b 1
-R8
-Z29 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux8_32bits.vhd|
-Z30 !s107 C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/mux8_32bits.vhd|
-!i113 1
-R11
-R12
-Abdf_type
-R2
-R3
-DEx4 work 15 mux8_32bits_vhd 0 22 AG=l1T3OCZYz2Y0LP2kQD2
-!i122 0
-l46
-L21 53
-ViGXz2P3;mJTSU88RUb<Eb2
-!s100 293Lg2mih_YLPHEId0:Qb1
-R6
-31
-R7
-!i10b 1
-R8
-R29
-R30
-!i113 1
-R11
-R12
-Etestbench_genimm
-Z31 w1619661497
-Z32 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
-Z33 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
-Z34 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
-R2
-R3
-!i122 5
-R0
-Z35 8C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_genImm.vhd
-Z36 FC:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_genImm.vhd
+Z5 8C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/alu.vhd
+Z6 FC:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/alu.vhd
 l0
 L7 1
-VOmL5oM85T8>]b>n=YNNJ71
-!s100 5[7C=YjMMoKVYJmzD_HK]3
-R6
+VE@7J<V>H?VQ_B17iJUU@X2
+!s100 67Cd_c8e]o:zeFo0HifjE3
+Z7 OV;C;2020.1;71
 31
-R7
+Z8 !s110 1619733948
 !i10b 1
-R8
-Z37 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_genImm.vhd|
-!s107 C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_genImm.vhd|
+Z9 !s108 1619733948.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/alu.vhd|
+Z11 !s107 C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/alu.vhd|
 !i113 1
-R11
-R12
-Atestbench_genimm_arch
-R32
-R33
-R34
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Abdf_type
 R2
 R3
-DEx4 work 16 testbench_genimm 0 22 OmL5oM85T8>]b>n=YNNJ71
-!i122 5
-l18
-L10 64
-VNkX?YBWAQ2ZOWO``BVjQn0
-!s100 K2AJ5bh45h>jV^0e`Pbj^3
-R6
-31
+R4
+DEx4 work 7 alu_vhd 0 22 E@7J<V>H?VQ_B17iJUU@X2
+!i122 0
+l19
+L17 28
+VN:SljF[lF35DmX>Z2zea90
+!s100 WaPjaaj1ENa72Q46jY:RQ3
 R7
-!i10b 1
+31
 R8
-R37
-Z38 !s107 C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_genImm.vhd|
-!i113 1
+!i10b 1
+R9
+R10
 R11
+!i113 1
 R12
+R13
+Eriscv_processor
+Z14 w1619733185
+R3
+R2
+!i122 1
+R0
+Z15 8C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd
+Z16 FC:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd
+l0
+L6 1
+V>CgFgCnAUgoP5FN[C6H_70
+!s100 XB<BklP8VWgQQc=_FWGe43
+R7
+31
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd|
+Z18 !s107 C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd|
+!i113 1
+R12
+R13
+Abdf_type
+R3
+R2
+DEx4 work 15 riscv_processor 0 22 >CgFgCnAUgoP5FN[C6H_70
+!i122 1
+l27
+L16 22
+VD:GX@bF`AL^aZgk1CO^Em1
+!s100 `^3JTeIBDQIh0NThBkj<Y1
+R7
+31
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 1
+R12
+R13
+Etestbench_alu
+Z19 w1619733932
+Z20 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z21 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z22 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
+R3
+R2
+!i122 2
+R0
+Z23 8C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_alu.vhd
+Z24 FC:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_alu.vhd
+l0
+L8 1
+VgV8elhd4=<RRD4e0lMn[g0
+!s100 hUZ[1;3M7]Ng1;G@2i4e>0
+R7
+31
+R8
+!i10b 1
+R9
+Z25 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_alu.vhd|
+!s107 C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_alu.vhd|
+!i113 1
+R12
+R13
+Atestbench_alu_arch
+R20
+R21
+R22
+R3
+R2
+DEx4 work 13 testbench_alu 0 22 gV8elhd4=<RRD4e0lMn[g0
+!i122 2
+l28
+L11 66
+VH569:a4I0Y[]7P5L<WP7W3
+!s100 Z=@aC@m1HP8W18CUnMLli2
+R7
+31
+R8
+!i10b 1
+R9
+R25
+Z26 !s107 C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_alu.vhd|
+!i113 1
+R12
+R13
