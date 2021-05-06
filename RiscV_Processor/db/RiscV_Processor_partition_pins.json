@@ -132,7 +132,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "pin_name1[1]",
+					"name" : "pin_name5",
+					"strict" : false
+				},
+				{
+					"name" : "pin_name1[2]",
 					"strict" : false
 				},
 				{
@@ -148,7 +152,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "pin_name2[31]",
+					"name" : "pin_name3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_name3[4]",
 					"strict" : false
 				},
 				{
@@ -256,7 +264,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "pin_name3[4]",
+					"name" : "pin_name3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_name3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pin_name2[31]",
 					"strict" : false
 				},
 				{
@@ -276,15 +292,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "pin_name3[1]",
+					"name" : "pin_name2[30]",
 					"strict" : false
 				},
 				{
-					"name" : "pin_name3[2]",
+					"name" : "pin_name2[28]",
 					"strict" : false
 				},
 				{
-					"name" : "pin_name3[3]",
+					"name" : "pin_name2[29]",
 					"strict" : false
 				},
 				{
@@ -301,18 +317,6 @@
 				},
 				{
 					"name" : "pin_name2[19]",
-					"strict" : false
-				},
-				{
-					"name" : "pin_name2[30]",
-					"strict" : false
-				},
-				{
-					"name" : "pin_name2[28]",
-					"strict" : false
-				},
-				{
-					"name" : "pin_name2[29]",
 					"strict" : false
 				},
 				{
@@ -396,7 +400,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "pin_name1[2]",
+					"name" : "pin_name1[1]",
 					"strict" : false
 				},
 				{

@@ -41,43 +41,55 @@ BEGIN
       WHEN "1000" =>
         IF SIGNED(Ain) < SIGNED(Bin) THEN
           Zout <= x"00000001";
+          zeroOut <= '1';
         ELSE
           Zout <= x"00000000";
+          zeroOut <= '0';
         END IF;
 
       WHEN "1001" =>
         IF UNSIGNED(Ain) < UNSIGNED(Bin) THEN
           Zout <= x"00000001";
+          zeroOut <= '1';
         ELSE
           Zout <= x"00000000";
+          zeroOut <= '0';
         END IF;
 
       WHEN "1010" =>
         IF SIGNED(Ain) < SIGNED(Bin) THEN
           Zout <= x"00000000";
+          zeroOut <= '0';
         ELSE
           Zout <= x"00000001";
+          zeroOut <= '1';
         END IF;
 
       WHEN "1011" =>
         IF UNSIGNED(Ain) < UNSIGNED(Bin) THEN
           Zout <= x"00000000";
+          zeroOut <= '0';
         ELSE
           Zout <= x"00000001";
+          zeroOut <= '1';
         END IF;
 
       WHEN "1100" =>
         IF UNSIGNED(Ain) = UNSIGNED(Bin) THEN
           Zout <= x"00000001";
+          zeroOut <= '1';
         ELSE
           Zout <= x"00000000";
+          zeroOut <= '0';
         END IF;
 
       WHEN "1101" =>
         IF UNSIGNED(Ain) = UNSIGNED(Bin) THEN
           Zout <= x"00000000";
+          zeroOut <= '0';
         ELSE
           Zout <= x"00000001";
+          zeroOut <= '1';
         END IF;
 
       --WHEN "1110" =>

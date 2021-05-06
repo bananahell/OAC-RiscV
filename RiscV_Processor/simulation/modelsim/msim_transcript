@@ -10,34 +10,34 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/alu.vhd}
+# vcom -93 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/alu.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:26:02 on Apr 30,2021
-# vcom -reportprogress 300 -93 -work work C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/alu.vhd 
+# Start time: 15:19:02 on May 06,2021
+# vcom -reportprogress 300 -93 -work work C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/alu.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
 # -- Compiling entity alu_vhd
 # -- Compiling architecture bdf_type of alu_vhd
-# End time: 17:26:02 on Apr 30,2021, Elapsed time: 0:00:00
+# End time: 15:19:02 on May 06,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd}
+# vcom -93 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:26:02 on Apr 30,2021
-# vcom -reportprogress 300 -93 -work work C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd 
+# Start time: 15:19:03 on May 06,2021
+# vcom -reportprogress 300 -93 -work work C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity RiscV_Processor
 # -- Compiling architecture bdf_type of RiscV_Processor
-# End time: 17:26:02 on Apr 30,2021, Elapsed time: 0:00:00
+# End time: 15:19:03 on May 06,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vcom -93 -work work {C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_alu.vhd}
+# vcom -93 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_alu.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:26:02 on Apr 30,2021
-# vcom -reportprogress 300 -93 -work work C:/Users/Pedro Nogueira/Documents/projects/quartus/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_alu.vhd 
+# Start time: 15:19:03 on May 06,2021
+# vcom -reportprogress 300 -93 -work work C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_alu.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -46,12 +46,12 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity testbench_alu
 # -- Compiling architecture testbench_alu_arch of testbench_alu
-# End time: 17:26:02 on Apr 30,2021, Elapsed time: 0:00:00
+# End time: 15:19:03 on May 06,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  testbench_alu
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" testbench_alu 
-# Start time: 17:26:02 on Apr 30,2021
+# Start time: 15:19:03 on May 06,2021
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -61,8 +61,6 @@
 # Loading work.testbench_alu(testbench_alu_arch)
 # Loading ieee.numeric_std(body)
 # Loading work.alu_vhd(bdf_type)
-# ** Warning: (vsim-8683) Uninitialized out port /testbench_alu/DUT/zeroOut has no driver.
-# This port will contribute value (U) to the signal network.
 # 
 # add wave *
 # view structure
@@ -72,5 +70,5 @@
 # run -all
 # ** Note: alu done
 #    Time: 14 us  Iteration: 0  Instance: /testbench_alu
-# End time: 17:26:28 on Apr 30,2021, Elapsed time: 0:00:26
-# Errors: 0, Warnings: 1
+# End time: 15:19:45 on May 06,2021, Elapsed time: 0:00:42
+# Errors: 0, Warnings: 0
