@@ -5,12 +5,11 @@ LIBRARY work;
 
 ENTITY fulladder_1bit_vhd IS
   PORT (
-    A :  IN  STD_LOGIC;
-    B :  IN  STD_LOGIC;
-    Cin :  IN  STD_LOGIC;
-    Cout :  OUT  STD_LOGIC;
-    Sum :  OUT  STD_LOGIC
-  );
+    A : IN STD_LOGIC;
+    B : IN STD_LOGIC;
+    Cin : IN STD_LOGIC;
+    Cout : OUT STD_LOGIC;
+    Sum : OUT STD_LOGIC);
 END fulladder_1bit_vhd;
 
 ARCHITECTURE bdf_type OF fulladder_1bit_vhd IS

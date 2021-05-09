@@ -1,17 +1,16 @@
-LIBRARY IEEE;
+LIBRARY ieee;
 USE ieee.numeric_std.all;
-USE IEEE.std_logic_1164.all;
+USE ieee.std_logic_1164.all;
 
 LIBRARY work;
 
 ENTITY alu_vhd IS
   PORT (
-    opcode : IN STD_LOGIC_VECTOR(3 downto 0);
-    Ain : IN STD_LOGIC_VECTOR(31 downto 0);
-    Bin : IN STD_LOGIC_VECTOR(31 downto 0);
-    Zout : OUT STD_LOGIC_VECTOR(31 downto 0);
-    zeroOut : OUT STD_LOGIC
-  );
+    opcode : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+    Ain : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    Bin : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    Zout : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    zeroOut : OUT STD_LOGIC);
 END alu_vhd;
 
 ARCHITECTURE bdf_type OF alu_vhd IS
@@ -95,9 +94,9 @@ BEGIN
       --WHEN "1110" =>
       --WHEN "1111" =>
 
-      WHEN others => Zout <= "00000000000000000000000000000000";
+      WHEN OTHERS => Zout <= "00000000000000000000000000000000";
 
     END CASE;
-  END process;
+  END PROCESS;
 
 END bdf_type;

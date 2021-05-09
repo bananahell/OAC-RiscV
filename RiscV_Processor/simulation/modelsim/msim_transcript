@@ -12,7 +12,7 @@
 # 
 # vcom -93 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/alu.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:19:02 on May 06,2021
+# Start time: 16:32:52 on May 09,2021
 # vcom -reportprogress 300 -93 -work work C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/alu.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -20,47 +20,114 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity alu_vhd
 # -- Compiling architecture bdf_type of alu_vhd
-# End time: 15:19:02 on May 06,2021, Elapsed time: 0:00:00
+# End time: 16:32:52 on May 09,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:19:03 on May 06,2021
+# Start time: 16:32:52 on May 09,2021
 # vcom -reportprogress 300 -93 -work work C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity RiscV_Processor
 # -- Compiling architecture bdf_type of RiscV_Processor
-# End time: 15:19:03 on May 06,2021, Elapsed time: 0:00:00
+# End time: 16:32:53 on May 09,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux8_32bits.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:32:53 on May 09,2021
+# vcom -reportprogress 300 -93 -work work C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux8_32bits.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux8_32bits_vhd
+# -- Compiling architecture bdf_type of mux8_32bits_vhd
+# End time: 16:32:53 on May 09,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux4_32bits.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:32:53 on May 09,2021
+# vcom -reportprogress 300 -93 -work work C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux4_32bits.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux4_32bits_vhd
+# -- Compiling architecture bdf_type of mux4_32bits_vhd
+# End time: 16:32:53 on May 09,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux2_32bits.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:32:53 on May 09,2021
+# vcom -reportprogress 300 -93 -work work C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux2_32bits.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2_32bits_vhd
+# -- Compiling architecture bdf_type of mux2_32bits_vhd
+# End time: 16:32:53 on May 09,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux2_1bit.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:32:53 on May 09,2021
+# vcom -reportprogress 300 -93 -work work C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux2_1bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2_1bit_vhd
+# -- Compiling architecture bdf_type of mux2_1bit_vhd
+# End time: 16:32:53 on May 09,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/genImm32.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:32:53 on May 09,2021
+# vcom -reportprogress 300 -93 -work work C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/genImm32.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity genImm32_vhd
+# -- Compiling architecture bdf_type of genImm32_vhd
+# End time: 16:32:53 on May 09,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/teste.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:32:53 on May 09,2021
+# vcom -reportprogress 300 -93 -work work C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/teste.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity teste_vhd
+# -- Compiling architecture bdf_type of teste_vhd
+# End time: 16:32:53 on May 09,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vcom -93 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_alu.vhd}
+# vcom -93 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_teste.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:19:03 on May 06,2021
-# vcom -reportprogress 300 -93 -work work C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_alu.vhd 
+# Start time: 16:32:53 on May 09,2021
+# vcom -reportprogress 300 -93 -work work C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_teste.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package std_logic_textio
 # -- Loading package std_logic_arith
 # -- Loading package STD_LOGIC_UNSIGNED
-# -- Compiling entity testbench_alu
-# -- Compiling architecture testbench_alu_arch of testbench_alu
-# End time: 15:19:03 on May 06,2021, Elapsed time: 0:00:00
+# -- Compiling entity testbench_teste
+# -- Compiling architecture testbench_teste_arch of testbench_teste
+# End time: 16:32:53 on May 09,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  testbench_alu
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" testbench_alu 
-# Start time: 15:19:03 on May 06,2021
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  testbench_teste
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" testbench_teste 
+# Start time: 16:32:53 on May 09,2021
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.std_logic_textio(body)
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
-# Loading work.testbench_alu(testbench_alu_arch)
+# Loading work.testbench_teste(testbench_teste_arch)
 # Loading ieee.numeric_std(body)
-# Loading work.alu_vhd(bdf_type)
+# Loading work.teste_vhd(bdf_type)
 # 
 # add wave *
 # view structure
@@ -68,7 +135,7 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# ** Note: alu done
-#    Time: 14 us  Iteration: 0  Instance: /testbench_alu
-# End time: 15:19:45 on May 06,2021, Elapsed time: 0:00:42
+# ** Note: teste done
+#    Time: 4 ms  Iteration: 0  Instance: /testbench_teste
+# End time: 16:47:15 on May 09,2021, Elapsed time: 0:14:22
 # Errors: 0, Warnings: 0
