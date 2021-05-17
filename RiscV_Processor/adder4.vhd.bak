@@ -1,0 +1,22 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+LIBRARY work;
+
+entity somador is
+  generic (WSIZE : natural := 32);
+  port (
+    A: in std_logic_vector(WSIZE -1 downto 0);
+    Z: out std_logic_vector(WSIZE -1 downto 0));
+end entity somador;
+
+architecture bdf_type of somador is
+-- O somador deve somar A + B = Z
+-- Components
+begin
+
+  Z <= TO_UNSIGNED(A) + 4;
+
+end bdf_type;

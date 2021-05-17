@@ -20,26 +20,19 @@ SIGNAL read_address : STD_LOGIC_VECTOR(address'RANGE);
 BEGIN
 
   PROCESS
-  FILE file_pointer : TEXT;
-  VARIABLE line_content : STRING(1 to 32);
+  FILE file_pointer : TEXT OPEN READ_MODE IS "code.txt";
+  VARIABLE line_content : BIT_VECTOR(31 DOWNTO 0);
   VARIABLE line_num : LINE;
   VARIABLE i : INTEGER := 0;
   VARIABLE j : INTEGER := 0;
-  VARIABLE char : CHARACTER:='0';
+  VARIABLE char : CHARACTER := '0';
 
   BEGIN
-    FILE_OPEN(file_pointer, "code.bin", READ_MODE);
+    i := 0;
     WHILE NOT ENDFILE(file_pointer) LOOP
       READLINE(file_pointer, line_num);
       READ(line_num, line_content);
-      FOR j IN 1 TO 32 LOOP
-        char := line_content(j);
-        IF (char = '0') THEN
-          ram(i)(32-j) <= '0';
-        ELSE
-          ram(i)(32-j) <= '1';
-        END IF;
-      END LOOP;
+      ram(i) <= TO_STDLOGICVECTOR(line_content);
       i := i + 1;
     END LOOP;
 

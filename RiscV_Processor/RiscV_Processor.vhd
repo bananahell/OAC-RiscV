@@ -4,43 +4,107 @@ USE ieee.std_logic_1164.all;
 LIBRARY work;
 
 ENTITY RiscV_Processor IS
-  PORT (
-    teste_pin_1 : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-    teste_pin_2 : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-    teste_pin_3 : IN STD_LOGIC;
-    teste_pin_4 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-    teste_pin_5 : OUT STD_LOGIC;
-    genImm32_pin_1 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    genImm32_pin_2 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    alu_pin_1 : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-    alu_pin_2 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    alu_pin_3 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    alu_pin_4 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    alu_pin_5 : OUT STD_LOGIC;
-    mem_reg_pin_1 : IN STD_LOGIC;
-    mem_reg_pin_2 : IN STD_LOGIC;
-    mem_reg_pin_3 : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-    mem_reg_pin_4 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    mem_reg_pin_5 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    mem_instr_pin_1 : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-    mem_instr_pin_2 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
 END RiscV_Processor;
 
 ARCHITECTURE bdf_type OF RiscV_Processor IS
 
-COMPONENT teste_vhd
-  PORT (
-    Ain : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-    Bin : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-    Cin: IN STD_LOGIC;
-    Sout : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-    Cout : OUT STD_LOGIC);
-END COMPONENT;
+
+
+
+
+-- mem
+SIGNAL instruction_signal : STD_LOGIC_VECTOR(31 DOWNTO 0);
+-- immgen
+SIGNAL immOut_signal : STD_LOGIC_VECTOR(31 DOWNTO 0);
+-- alu
+SIGNAL Ain_signal : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL Bin_signal : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL Zout_signal : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL zeroOut_signal : STD_LOGIC;
+SIGNAL aluOP_signal : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL aluOPout_signal : STD_LOGIC_VECTOR(3 DOWNTO 0);
+-- control
+SIGNAL branch_signal : STD_LOGIC;
+SIGNAL memRead_signal : STD_LOGIC;
+SIGNAL memToReg_signal : STD_LOGIC;
+SIGNAL memWrite_signal : STD_LOGIC;
+SIGNAL aluSrc_signal : STD_LOGIC;
+SIGNAL regWrite_signal : STD_LOGIC;
+SIGNAL jump_signal : STD_LOGIC;
+SIGNAL jal_signal : STD_LOGIC;
+SIGNAL luictr_signal : STD_LOGIC;
+-- pc
+SIGNAL addr_in_signal : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL rst_signal : STD_LOGIC;
+SIGNAL clk_signal : STD_LOGIC;
+SIGNAL addr_out_signal : STD_LOGIC_VECTOR(31 DOWNTO 0);
+-- adders
+SIGNAL adderOut_signal : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL adder4Out_signal : STD_LOGIC_VECTOR(31 DOWNTO 0);
+
+
+
+
+
+
+
 
 COMPONENT genImm32_vhd
   PORT (
-    instr : IN STD_LOGIC_VECTOR (31 DOWNTO 0) ;
+    instr : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
     result_imm : OUT STD_LOGIC_VECTOR (31 DOWNTO 0));
+END COMPONENT;
+
+COMPONENT control_alu_vhd
+  PORT (
+    ulaOp : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+    funct7 : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+    funct3 : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+    opOut : OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
+END COMPONENT;
+
+COMPONENT control_vhd
+  PORT (
+    op : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+    aluOp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    branch : OUT STD_LOGIC;
+    memRead : OUT STD_LOGIC;
+    memToReg : OUT STD_LOGIC;
+    memWrite : OUT STD_LOGIC;
+    aluSrc : OUT STD_LOGIC;
+    regWrite : OUT STD_LOGIC;
+    jump : OUT STD_LOGIC;
+    jal : OUT STD_LOGIC;
+    luiCtr : OUT STD_LOGIC);
+END COMPONENT;
+
+COMPONENT mux2_32bits_vhd
+  PORT (
+    Sel : IN STD_LOGIC;
+    A : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    B : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    Result : OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
+END COMPONENT;
+
+COMPONENT adder_vhd
+  PORT (
+    A : IN STD_LOGIC_VECTOR(WSIZE -1 DOWNTO 0);
+    B : IN STD_LOGIC_VECTOR(WSIZE -1 DOWNTO 0);
+    Z : OUT STD_LOGIC_VECTOR(WSIZE -1 DOWNTO 0));
+END COMPONENT;
+
+COMPONENT adder4_vhd
+  PORT (
+    A : IN STD_LOGIC_VECTOR(WSIZE -1 DOWNTO 0);
+    Z : OUT STD_LOGIC_VECTOR(WSIZE -1 DOWNTO 0));
+END COMPONENT;
+
+COMPONENT pc_vhd
+  PORT (
+    addr_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    rst : IN STD_LOGIC;
+    clk : IN STD_LOGIC;
+    addr_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
 END COMPONENT;
 
 COMPONENT alu_vhd
@@ -52,55 +116,86 @@ COMPONENT alu_vhd
     zeroOut : OUT STD_LOGIC);
 END COMPONENT;
 
-COMPONENT mem_reg_vhd
-  PORT (
-    clock : IN STD_LOGIC;
-    we : IN STD_LOGIC;
-    address : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-    data_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    data_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
-END COMPONENT;
 
-COMPONENT mem_instr_vhd
-  PORT (
-    address : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-    data_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
-END COMPONENT;
+
+
+
+
+
 
 BEGIN
 
-  b2v_inst1 : teste_vhd
+  b2v_inst01 : control_vhd
   PORT MAP (
-    Ain => teste_pin_1,
-    Bin => teste_pin_2,
-    Cin => teste_pin_3,
-    Sout => teste_pin_4,
-    Cout => teste_pin_5);
+    op => instruction_signal(6 DOWNTO 0),
+    aluOp => aluOp_signal,
+    branch => branch_signal,
+    memRead => memRead_signal,
+    memToReg => memToReg_signal,
+    memWrite => memWrite_signal,
+    aluSrc => aluSrc_signal,
+    regWrite => regWrite_signal,
+    jump => jump_signal,
+    jal => jal_signal,
+    luiCtr => luiCtr_signal);
 
-  b2v_inst2 : genImm32_vhd
+  b2v_inst02 : genImm32_vhd
   PORT MAP (
-    instr => genImm32_pin_1,
-    result_imm => genImm32_pin_2);
+    instr => instruction_signal,
+    result_imm => immOut_signal);
 
-  b2v_inst3 : alu_vhd
+  b2v_inst03 : alu_vhd
   PORT MAP (
-    opcode => alu_pin_1,
-    Ain => alu_pin_2,
-    Bin => alu_pin_3,
-    Zout => alu_pin_4,
-    zeroOut => alu_pin_5);
+    opcode => aluOPout_signal,
+    Ain => Ain_signal,
+    Bin => Bin_signal,
+    Zout => Zout_signal,
+    zeroOut => zeroOut_signal);
 
-  b2v_inst4 : mem_reg_vhd
+  b2v_inst04 : control_alu_vhd
   PORT MAP (
-    clock => mem_reg_pin_1,
-    we => mem_reg_pin_2,
-    address => mem_reg_pin_3,
-    data_in => mem_reg_pin_4,
-    data_out => mem_reg_pin_5);
+    ulaOp => aluOp_signal,
+    funct7 => instruction_signal(31 DOWNTO 25),
+    funct3 => instruction_signal(14 DOWNTO 12),
+    opOut => aluOPout_signal);
 
-  b2v_inst5 : mem_instr_vhd
+  b2v_inst05 : pc_vhd
   PORT MAP (
-    address => mem_instr_pin_1,
-    data_out => mem_instr_pin_2);
+    addr_in => addr_in_signal,
+    rst => rst_signal,
+    clk => clk_signal,
+    addr_out => addr_out_signal);
+
+  b2v_inst06 : adder_vhd
+  PORT MAP (
+    A => addr_out_signal,
+    B => immOut_signal,
+    Z => adderOut_signal);
+
+  b2v_inst07 : adder4_vhd
+  PORT MAP (
+    A => addr_out_signal,
+    Z => adder4Out_signal);
+
+  b2v_inst08 : mux2_32bits_vhd  -- mux A
+  PORT MAP (
+    Sel => branch_signal AND zeroOut_signal,
+    A => adder4Out_signal,
+    B => adderOut_signal,
+    Result => addr_in_signal);
+
+  b2v_inst09 : mux2_32bits_vhd  -- mux B
+  PORT MAP (
+    Sel => aluSrc_signal
+    A => ,                                             -- TODO
+    B => ,                                             -- TODO
+    Result => Bin_signal);
+
+  b2v_inst10 : mux2_32bits_vhd  -- mux C
+  PORT MAP (
+    Sel => memToReg_signal
+    A => Zout_signal,
+    B => ,                                             -- TODO
+    Result => );                                             -- TODO
 
 END bdf_type;

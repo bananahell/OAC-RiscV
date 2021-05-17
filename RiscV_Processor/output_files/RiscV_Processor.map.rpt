@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RiscV_Processor
-Sun May 09 20:03:57 2021
+Tue May 11 16:23:09 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Sun May 09 20:03:57 2021           ;
+; Analysis & Synthesis Status ; Failed - Tue May 11 16:23:09 2021           ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; RiscV_Processor                             ;
 ; Top-level Entity Name       ; RiscV_Processor                             ;
@@ -57,7 +57,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                          ; 5CGTFD9E5F35C7     ;                    ;
+; Device                                                                          ; 5CSEMA4U23C6       ;                    ;
 ; Top-level entity name                                                           ; RiscV_Processor    ; RiscV_Processor    ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Maximum processors allowed for parallel compilation                             ; All                ;                    ;
@@ -162,7 +162,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun May 09 20:03:49 2021
+    Info: Processing started: Tue May 11 16:23:01 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RiscV_Processor -c RiscV_Processor
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file or_32bit.bdf
@@ -207,8 +207,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file mem_reg
     Info (12022): Found design unit 1: mem_reg_vhd-bdf_type File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd Line: 16
     Info (12023): Found entity 1: mem_reg_vhd File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file mem_instr.vhd
-    Info (12022): Found design unit 1: mem_instr-bdf_type File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 14
-    Info (12023): Found entity 1: mem_instr File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 8
+    Info (12022): Found design unit 1: mem_instr_vhd-bdf_type File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 14
+    Info (12023): Found entity 1: mem_instr_vhd File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file genimm32.vhd
     Info (12022): Found design unit 1: genImm32_vhd-bdf_type File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/genImm32.vhd Line: 12
     Info (12023): Found entity 1: genImm32_vhd File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/genImm32.vhd Line: 6
@@ -234,11 +234,18 @@ Info (10041): Inferred latch for "zeroOut" at alu.vhd(20) File: C:/Users/Pedro N
 Info (12128): Elaborating entity "mem_reg_vhd" for hierarchy "mem_reg_vhd:b2v_inst4" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 93
 Warning (10541): VHDL Signal Declaration warning at mem_reg.vhd(20): used implicit default value for signal "read_address" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd Line: 20
 Warning (10873): Using initial value X (don't care) for net "ram.raddr_a" at mem_reg.vhd(19) File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd Line: 19
-Error (12006): Node instance "b2v_inst5" instantiates undefined entity "mem_instr_vhd". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 101
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 6 warnings
+Info (12128): Elaborating entity "mem_instr_vhd" for hierarchy "mem_instr_vhd:b2v_inst5" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 101
+Warning (10543): VHDL Variable Declaration warning at mem_instr.vhd(38): used default initial value for variable "c" because variable was never assigned a value or an initial value expression. Use of default initial value may introduce unintended design optimizations. File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 38
+Warning (10543): VHDL Variable Declaration warning at mem_instr.vhd(21): used default initial value for variable "c" because variable was never assigned a value or an initial value expression. Use of default initial value may introduce unintended design optimizations. File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 21
+Error (10536): VHDL Loop Statement error at mem_instr.vhd(26): loop must terminate within 10,000 iterations File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 26
+Error (10657): VHDL Subprogram error at mem_instr.vhd(39):  failed to elaborate call to subprogram "get_file_length" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 39
+Error (10658): VHDL Operator error at mem_instr.vhd(39): failed to evaluate call to operator ""-"" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 39
+Error (10657): VHDL Subprogram error at mem_instr.vhd(52):  failed to elaborate call to subprogram "get_data" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 52
+Error (12152): Can't elaborate user hierarchy "mem_instr_vhd:b2v_inst5" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 101
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 5 errors, 8 warnings
     Error: Peak virtual memory: 4837 megabytes
-    Error: Processing ended: Sun May 09 20:03:57 2021
+    Error: Processing ended: Tue May 11 16:23:09 2021
     Error: Elapsed time: 00:00:08
-    Error: Total CPU time (on all processors): 00:00:19
+    Error: Total CPU time (on all processors): 00:00:18
 
 
