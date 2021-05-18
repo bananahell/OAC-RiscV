@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RiscV_Processor
-Tue May 18 07:23:51 2021
+Tue May 18 07:56:54 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,10 +13,11 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -43,14 +44,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue May 18 07:23:51 2021       ;
+; Analysis & Synthesis Status     ; Successful - Tue May 18 07:56:54 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; RiscV_Processor                             ;
-; Top-level Entity Name           ; mem_instr                                   ;
+; Top-level Entity Name           ; mem_reg                                     ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 44                                          ;
+; Total registers                 ; 992                                         ;
+; Total pins                      ; 71                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -69,7 +70,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA4U23C6       ;                    ;
-; Top-level entity name                                                           ; mem_instr          ; RiscV_Processor    ;
+; Top-level entity name                                                           ; mem_reg            ; RiscV_Processor    ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Maximum processors allowed for parallel compilation                             ; All                ;                    ;
 ; VHDL Show LMF Mapping Messages                                                  ; Off                ;                    ;
@@ -161,47 +162,50 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                         ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                  ; Library ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------+---------+
-; mem_instr.vhd                    ; yes             ; User VHDL File  ; C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                       ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------+---------+
+; mem_reg.vhd                      ; yes             ; User VHDL File  ; C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary              ;
-+---------------------------------------------+------------+
-; Resource                                    ; Usage      ;
-+---------------------------------------------+------------+
-; Estimate of Logic utilization (ALMs needed) ; 0          ;
-;                                             ;            ;
-; Combinational ALUT usage for logic          ; 0          ;
-;     -- 7 input functions                    ; 0          ;
-;     -- 6 input functions                    ; 0          ;
-;     -- 5 input functions                    ; 0          ;
-;     -- 4 input functions                    ; 0          ;
-;     -- <=3 input functions                  ; 0          ;
-;                                             ;            ;
-; Dedicated logic registers                   ; 0          ;
-;                                             ;            ;
-; I/O pins                                    ; 44         ;
-;                                             ;            ;
-; Total DSP Blocks                            ; 0          ;
-;                                             ;            ;
-; Maximum fan-out node                        ; address[0] ;
-; Maximum fan-out                             ; 1          ;
-; Total fan-out                               ; 44         ;
-; Average fan-out                             ; 0.50       ;
-+---------------------------------------------+------------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 768         ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 319         ;
+;     -- 7 input functions                    ; 224         ;
+;     -- 6 input functions                    ; 95          ;
+;     -- 5 input functions                    ; 0           ;
+;     -- 4 input functions                    ; 0           ;
+;     -- <=3 input functions                  ; 0           ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 992         ;
+;                                             ;             ;
+; I/O pins                                    ; 71          ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; clock~input ;
+; Maximum fan-out                             ; 992         ;
+; Total fan-out                               ; 5217        ;
+; Average fan-out                             ; 3.59        ;
++---------------------------------------------+-------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -209,9 +213,50 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |mem_instr                 ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 44   ; 0            ; |mem_instr          ; mem_instr   ; work         ;
+; |mem_reg                   ; 319 (319)           ; 992 (992)                 ; 0                 ; 0          ; 71   ; 0            ; |mem_reg            ; mem_reg     ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                   ;
++----------------------------------------+---------------------------------------------+
+; Register name                          ; Reason for Removal                          ;
++----------------------------------------+---------------------------------------------+
+; breg~38                                ; Stuck at GND due to stuck port clock_enable ;
+; breg~39                                ; Stuck at GND due to stuck port clock_enable ;
+; breg~40                                ; Stuck at GND due to stuck port clock_enable ;
+; breg~41                                ; Stuck at GND due to stuck port clock_enable ;
+; breg~42                                ; Stuck at GND due to stuck port clock_enable ;
+; breg~43                                ; Stuck at GND due to stuck port clock_enable ;
+; breg~44                                ; Stuck at GND due to stuck port clock_enable ;
+; breg~45                                ; Stuck at GND due to stuck port clock_enable ;
+; breg~46                                ; Stuck at GND due to stuck port clock_enable ;
+; breg~47                                ; Stuck at GND due to stuck port clock_enable ;
+; breg~48                                ; Stuck at GND due to stuck port clock_enable ;
+; breg~49                                ; Stuck at GND due to stuck port clock_enable ;
+; breg~50                                ; Stuck at GND due to stuck port clock_enable ;
+; breg~51                                ; Stuck at GND due to stuck port clock_enable ;
+; breg~52                                ; Stuck at GND due to stuck port clock_enable ;
+; breg~53                                ; Stuck at GND due to stuck port clock_enable ;
+; breg~54                                ; Stuck at GND due to stuck port clock_enable ;
+; breg~55                                ; Stuck at GND due to stuck port clock_enable ;
+; breg~56                                ; Stuck at GND due to stuck port clock_enable ;
+; breg~57                                ; Stuck at GND due to stuck port clock_enable ;
+; breg~58                                ; Stuck at GND due to stuck port clock_enable ;
+; breg~59                                ; Stuck at GND due to stuck port clock_enable ;
+; breg~60                                ; Stuck at GND due to stuck port clock_enable ;
+; breg~61                                ; Stuck at GND due to stuck port clock_enable ;
+; breg~62                                ; Stuck at GND due to stuck port clock_enable ;
+; breg~63                                ; Stuck at GND due to stuck port clock_enable ;
+; breg~64                                ; Stuck at GND due to stuck port clock_enable ;
+; breg~65                                ; Stuck at GND due to stuck port clock_enable ;
+; breg~66                                ; Stuck at GND due to stuck port clock_enable ;
+; breg~67                                ; Stuck at GND due to stuck port clock_enable ;
+; breg~68                                ; Stuck at GND due to stuck port clock_enable ;
+; breg~69                                ; Stuck at GND due to stuck port clock_enable ;
+; Total Number of Removed Registers = 32 ;                                             ;
++----------------------------------------+---------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -219,12 +264,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 992   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 992   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -234,13 +279,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
-; boundary_port         ; 44                          ;
+; arriav_ff             ; 992                         ;
+;     ENA               ; 992                         ;
+; arriav_lcell_comb     ; 319                         ;
+;     extend            ; 224                         ;
+;         7 data inputs ; 224                         ;
+;     normal            ; 95                          ;
+;         6 data inputs ; 95                          ;
+; boundary_port         ; 71                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 2.50                        ;
 +-----------------------+-----------------------------+
 
 
@@ -259,68 +308,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue May 18 07:23:43 2021
+    Info: Processing started: Tue May 18 07:56:45 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RiscV_Processor -c RiscV_Processor
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file mem_instr.vhd
-    Info (12022): Found design unit 1: mem_instr-bdf_type File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 14
-    Info (12023): Found entity 1: mem_instr File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 8
-Info (12127): Elaborating entity "mem_instr" for the top level hierarchy
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "data_out[0]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 11
-    Warning (13410): Pin "data_out[1]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 11
-    Warning (13410): Pin "data_out[2]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 11
-    Warning (13410): Pin "data_out[3]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 11
-    Warning (13410): Pin "data_out[4]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 11
-    Warning (13410): Pin "data_out[5]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 11
-    Warning (13410): Pin "data_out[6]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 11
-    Warning (13410): Pin "data_out[7]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 11
-    Warning (13410): Pin "data_out[8]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 11
-    Warning (13410): Pin "data_out[9]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 11
-    Warning (13410): Pin "data_out[10]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 11
-    Warning (13410): Pin "data_out[11]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 11
-    Warning (13410): Pin "data_out[12]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 11
-    Warning (13410): Pin "data_out[13]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 11
-    Warning (13410): Pin "data_out[14]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 11
-    Warning (13410): Pin "data_out[15]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 11
-    Warning (13410): Pin "data_out[16]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 11
-    Warning (13410): Pin "data_out[17]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 11
-    Warning (13410): Pin "data_out[18]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 11
-    Warning (13410): Pin "data_out[19]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 11
-    Warning (13410): Pin "data_out[20]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 11
-    Warning (13410): Pin "data_out[21]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 11
-    Warning (13410): Pin "data_out[22]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 11
-    Warning (13410): Pin "data_out[23]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 11
-    Warning (13410): Pin "data_out[24]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 11
-    Warning (13410): Pin "data_out[25]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 11
-    Warning (13410): Pin "data_out[26]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 11
-    Warning (13410): Pin "data_out[27]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 11
-    Warning (13410): Pin "data_out[28]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 11
-    Warning (13410): Pin "data_out[29]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 11
-    Warning (13410): Pin "data_out[30]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 11
-    Warning (13410): Pin "data_out[31]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file mem_reg.vhd
+    Info (12022): Found design unit 1: mem_reg-bdf_type File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd Line: 16
+    Info (12023): Found entity 1: mem_reg File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd Line: 7
+Info (12127): Elaborating entity "mem_reg" for the top level hierarchy
+Warning (10492): VHDL Process Statement warning at mem_reg.vhd(35): signal "we" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd Line: 35
+Warning (10492): VHDL Process Statement warning at mem_reg.vhd(35): signal "address_signal" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd Line: 35
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "breg" is uninferred due to asynchronous read logic File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd Line: 25
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 12 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "address[0]" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 10
-    Warning (15610): No output dependent on input pin "address[1]" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 10
-    Warning (15610): No output dependent on input pin "address[2]" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 10
-    Warning (15610): No output dependent on input pin "address[3]" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 10
-    Warning (15610): No output dependent on input pin "address[4]" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 10
-    Warning (15610): No output dependent on input pin "address[5]" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 10
-    Warning (15610): No output dependent on input pin "address[6]" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 10
-    Warning (15610): No output dependent on input pin "address[7]" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 10
-    Warning (15610): No output dependent on input pin "address[8]" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 10
-    Warning (15610): No output dependent on input pin "address[9]" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 10
-    Warning (15610): No output dependent on input pin "address[10]" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 10
-    Warning (15610): No output dependent on input pin "address[11]" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd Line: 10
-Info (21057): Implemented 44 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 12 input pins
+Info (21057): Implemented 1382 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 39 input pins
     Info (21059): Implemented 32 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 46 warnings
-    Info: Peak virtual memory: 4838 megabytes
-    Info: Processing ended: Tue May 18 07:23:51 2021
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:19
+    Info (21061): Implemented 1311 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4844 megabytes
+    Info: Processing ended: Tue May 18 07:56:54 2021
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:20
 
 
