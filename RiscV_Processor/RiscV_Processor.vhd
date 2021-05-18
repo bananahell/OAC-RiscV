@@ -49,13 +49,13 @@ SIGNAL adder4Out_signal : STD_LOGIC_VECTOR(31 DOWNTO 0);
 
 
 
-COMPONENT genImm32_vhd
+COMPONENT genImm
   PORT (
     instr : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
     result_imm : OUT STD_LOGIC_VECTOR (31 DOWNTO 0));
 END COMPONENT;
 
-COMPONENT control_alu_vhd
+COMPONENT control_alu
   PORT (
     ulaOp : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
     funct7 : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
@@ -63,7 +63,7 @@ COMPONENT control_alu_vhd
     opOut : OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
 END COMPONENT;
 
-COMPONENT control_vhd
+COMPONENT control
   PORT (
     op : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
     aluOp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
@@ -78,7 +78,7 @@ COMPONENT control_vhd
     luiCtr : OUT STD_LOGIC);
 END COMPONENT;
 
-COMPONENT mux2_32bits_vhd
+COMPONENT mux2_32bits
   PORT (
     Sel : IN STD_LOGIC;
     A : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -86,20 +86,20 @@ COMPONENT mux2_32bits_vhd
     Result : OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
 END COMPONENT;
 
-COMPONENT adder_vhd
+COMPONENT adder
   PORT (
     A : IN STD_LOGIC_VECTOR(WSIZE -1 DOWNTO 0);
     B : IN STD_LOGIC_VECTOR(WSIZE -1 DOWNTO 0);
     Z : OUT STD_LOGIC_VECTOR(WSIZE -1 DOWNTO 0));
 END COMPONENT;
 
-COMPONENT adder4_vhd
+COMPONENT adder4x
   PORT (
     A : IN STD_LOGIC_VECTOR(WSIZE -1 DOWNTO 0);
     Z : OUT STD_LOGIC_VECTOR(WSIZE -1 DOWNTO 0));
 END COMPONENT;
 
-COMPONENT pc_vhd
+COMPONENT pc
   PORT (
     addr_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     rst : IN STD_LOGIC;
@@ -107,7 +107,7 @@ COMPONENT pc_vhd
     addr_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
 END COMPONENT;
 
-COMPONENT alu_vhd
+COMPONENT alu
   PORT (
     opcode : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     Ain : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -125,7 +125,7 @@ END COMPONENT;
 
 BEGIN
 
-  b2v_inst01 : control_vhd
+  b2v_inst01 : control
   PORT MAP (
     op => instruction_signal(6 DOWNTO 0),
     aluOp => aluOp_signal,
@@ -139,12 +139,12 @@ BEGIN
     jal => jal_signal,
     luiCtr => luiCtr_signal);
 
-  b2v_inst02 : genImm32_vhd
+  b2v_inst02 : genImm
   PORT MAP (
     instr => instruction_signal,
     result_imm => immOut_signal);
 
-  b2v_inst03 : alu_vhd
+  b2v_inst03 : alu
   PORT MAP (
     opcode => aluOPout_signal,
     Ain => Ain_signal,
@@ -152,46 +152,46 @@ BEGIN
     Zout => Zout_signal,
     zeroOut => zeroOut_signal);
 
-  b2v_inst04 : control_alu_vhd
+  b2v_inst04 : control_alu
   PORT MAP (
     ulaOp => aluOp_signal,
     funct7 => instruction_signal(31 DOWNTO 25),
     funct3 => instruction_signal(14 DOWNTO 12),
     opOut => aluOPout_signal);
 
-  b2v_inst05 : pc_vhd
+  b2v_inst05 : pc
   PORT MAP (
     addr_in => addr_in_signal,
     rst => rst_signal,
     clk => clk_signal,
     addr_out => addr_out_signal);
 
-  b2v_inst06 : adder_vhd
+  b2v_inst06 : adder
   PORT MAP (
     A => addr_out_signal,
     B => immOut_signal,
     Z => adderOut_signal);
 
-  b2v_inst07 : adder4_vhd
+  b2v_inst07 : adder4x
   PORT MAP (
     A => addr_out_signal,
     Z => adder4Out_signal);
 
-  b2v_inst08 : mux2_32bits_vhd  -- mux A
+  b2v_inst08 : mux2_32bits  -- mux A
   PORT MAP (
     Sel => branch_signal AND zeroOut_signal,
     A => adder4Out_signal,
     B => adderOut_signal,
     Result => addr_in_signal);
 
-  b2v_inst09 : mux2_32bits_vhd  -- mux B
+  b2v_inst09 : mux2_32bits  -- mux B
   PORT MAP (
     Sel => aluSrc_signal
     A => ,                                             -- TODO
     B => ,                                             -- TODO
     Result => Bin_signal);
 
-  b2v_inst10 : mux2_32bits_vhd  -- mux C
+  b2v_inst10 : mux2_32bits  -- mux C
   PORT MAP (
     Sel => memToReg_signal
     A => Zout_signal,

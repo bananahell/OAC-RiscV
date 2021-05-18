@@ -4,16 +4,16 @@ USE ieee.std_logic_1164.all;
 
 LIBRARY work;
 
-ENTITY teste_vhd IS
+ENTITY teste IS
   PORT (
     Ain : IN STD_LOGIC_VECTOR(3 downto 0);
     Bin : IN STD_LOGIC_VECTOR(3 downto 0);
     Cin: IN STD_LOGIC;
     Sout : OUT STD_LOGIC_VECTOR(3 downto 0);
     Cout : OUT STD_LOGIC);
-END teste_vhd;
+END teste;
 
-ARCHITECTURE bdf_type OF teste_vhd IS
+ARCHITECTURE bdf_type OF teste IS
 
 SIGNAL p : STD_LOGIC_VECTOR(3 DOWNTO 0) := "0000";
 SIGNAL g : STD_LOGIC_VECTOR(3 DOWNTO 0) := "0000";

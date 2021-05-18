@@ -4,15 +4,15 @@ USE ieee.numeric_std.all;
 
 LIBRARY work;
 
-ENTITY pc_vhd IS
+ENTITY pc IS
   PORT (
     addr_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     rst : IN STD_LOGIC;
     clk : IN STD_LOGIC;
     addr_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
-END ENTITY pc_vhd;
+END ENTITY pc;
 
-ARCHITECTURE bdf_type OF pc_vhd IS
+ARCHITECTURE bdf_type OF pc IS
 
 BEGIN
 

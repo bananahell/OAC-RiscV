@@ -13,7 +13,7 @@ ARCHITECTURE testbench_genImm_arch OF testbench_genImm IS
   SIGNAL instr : STD_LOGIC_VECTOR (31 DOWNTO 0);
   SIGNAL result_imm : STD_LOGIC_VECTOR (31 DOWNTO 0);
 
-  COMPONENT genImm32_vhd
+  COMPONENT genImm32
     PORT (
       instr : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
       result_imm : OUT STD_LOGIC_VECTOR (31 DOWNTO 0));
@@ -21,13 +21,11 @@ ARCHITECTURE testbench_genImm_arch OF testbench_genImm IS
 
 BEGIN
 
-  DUT  : genImm32_vhd
+  DUT : genImm32
     PORT MAP (
       instr => instr,
       result_imm => result_imm);
 
--- "Repeater Pattern" Repeat Never
--- Start Time = 0 ns, End Time = 10 us, Period = 1 us
   PROCESS
   BEGIN
     instr <= x"000002b3";
@@ -70,7 +68,6 @@ BEGIN
     WAIT FOR 1 us;
     ASSERT (result_imm = x"0000000C") REPORT "Assert 10 (UJ type)" SEVERITY ERROR;
 
--- 10 us, repeat pattern IN loop.
     REPORT "genImm done" SEVERITY NOTE;
     WAIT;
   END PROCESS;

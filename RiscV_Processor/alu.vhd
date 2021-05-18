@@ -4,16 +4,16 @@ USE ieee.std_logic_1164.all;
 
 LIBRARY work;
 
-ENTITY alu_vhd IS
+ENTITY alu IS
   PORT (
     opcode : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     Ain : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     Bin : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     Zout : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     zeroOut : OUT STD_LOGIC);
-END alu_vhd;
+END alu;
 
-ARCHITECTURE bdf_type OF alu_vhd IS
+ARCHITECTURE bdf_type OF alu IS
 
 BEGIN
 

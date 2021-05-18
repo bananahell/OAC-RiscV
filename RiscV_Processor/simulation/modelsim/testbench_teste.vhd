@@ -16,7 +16,7 @@ ARCHITECTURE testbench_teste_arch OF testbench_teste IS
   SIGNAL Sout : STD_LOGIC_VECTOR(3 downto 0);
   SIGNAL Cout : STD_LOGIC;
 
-  COMPONENT teste_vhd
+  COMPONENT teste
     PORT (
       Ain : IN STD_LOGIC_VECTOR(3 downto 0);
       Bin : IN STD_LOGIC_VECTOR(3 downto 0);
@@ -27,7 +27,7 @@ ARCHITECTURE testbench_teste_arch OF testbench_teste IS
 
 BEGIN
 
-  DUT  : teste_vhd
+  DUT : teste
     PORT MAP (
       Ain => Ain,
       Bin => Bin,
@@ -35,8 +35,6 @@ BEGIN
       Sout => Sout,
       Cout => Cout);
 
--- "Repeater Pattern" Repeat Never
--- Start Time = 0 ms, End Time = 1 ms, Period = 1 ms
   PROCESS
   BEGIN
 
@@ -64,7 +62,6 @@ BEGIN
     WAIT FOR 1 ms;
     ASSERT (Sout = "0001" AND Cout = '1') REPORT "Assert 4 (soma com cin com overflow)" SEVERITY ERROR;
 
--- 1 ms, repeat pattern in loop.
     REPORT "teste done" SEVERITY NOTE;
     WAIT;
   END PROCESS;

@@ -16,7 +16,7 @@ ARCHITECTURE testbench_alu_arch OF testbench_alu IS
   SIGNAL Zout : STD_LOGIC_VECTOR(31 DOWNTO 0);
   SIGNAL zeroOut : STD_LOGIC;
 
-  COMPONENT alu_vhd
+  COMPONENT alu
     PORT (
       opcode : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
       Ain : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -27,7 +27,7 @@ ARCHITECTURE testbench_alu_arch OF testbench_alu IS
 
 BEGIN
 
-  DUT  : alu_vhd
+  DUT : alu
     PORT MAP (
       opcode => opcode,
       Ain => Ain,
@@ -35,8 +35,6 @@ BEGIN
       Zout => Zout,
       zeroOut => zeroOut);
 
--- "Repeater Pattern" Repeat Never
--- Start Time = 0 ns, End Time = 5 us, Period = 1 us
   PROCESS
   BEGIN
 
@@ -124,7 +122,6 @@ BEGIN
     WAIT FOR 1 us;
     ASSERT (Zout = x"00000001" AND zeroOut = '1') REPORT "Assert 14 (SNE)" SEVERITY ERROR;
 
--- 5 us, repeat pattern in loop.
     REPORT "alu done" SEVERITY NOTE;
     WAIT;
 

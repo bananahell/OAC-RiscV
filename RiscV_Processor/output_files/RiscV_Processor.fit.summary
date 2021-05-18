@@ -1,20 +1,20 @@
-Fitter Status : Successful - Sun May 09 20:00:38 2021
+Fitter Status : Successful - Tue May 18 07:08:07 2021
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : RiscV_Processor
-Top-level Entity Name : RiscV_Processor
+Top-level Entity Name : mem_instr
 Family : Cyclone V
-Device : 5CGTFD9E5F35C7
+Device : 5CSEMA4U23C6
 Timing Models : Final
-Logic utilization (in ALMs) : 302 / 113,560 ( < 1 % )
+Logic utilization (in ALMs) : 1 / 15,880 ( < 1 % )
 Total registers : 0
-Total pins : 253 / 616 ( 41 % )
+Total pins : 40 / 314 ( 13 % )
 Total virtual pins : 0
-Total block memory bits : 256 / 12,492,800 ( < 1 % )
-Total RAM Blocks : 1 / 1,220 ( < 1 % )
-Total DSP Blocks : 0 / 342 ( 0 % )
-Total HSSI RX PCSs : 0 / 12 ( 0 % )
-Total HSSI PMA RX Deserializers : 0 / 12 ( 0 % )
-Total HSSI TX PCSs : 0 / 12 ( 0 % )
-Total HSSI PMA TX Serializers : 0 / 12 ( 0 % )
-Total PLLs : 0 / 20 ( 0 % )
+Total block memory bits : 0 / 2,764,800 ( 0 % )
+Total RAM Blocks : 0 / 270 ( 0 % )
+Total DSP Blocks : 0 / 84 ( 0 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0 / 5 ( 0 % )
 Total DLLs : 0 / 4 ( 0 % )

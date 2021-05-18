@@ -5,14 +5,14 @@ USE ieee.stt_logic_vector.all;
 
 LIBRARY work;
 
-ENTITY adder_vhd IS
+ENTITY adder IS
   PORT (
     A : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     B : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     Z : OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
-END ENTITY adder_vhd;
+END ENTITY adder;
 
-ARCHITECTURE bdf_type OF adder_vhd IS
+ARCHITECTURE bdf_type OF adder IS
 -- O adder deve somar A + B = Z
 BEGIN
 

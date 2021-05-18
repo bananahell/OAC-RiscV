@@ -3,16 +3,16 @@ USE ieee.std_logic_1164.all;
 
 LIBRARY work;
 
-ENTITY control_alu_vhd IS
+ENTITY control_alu IS
   GENERIC (data_width : NATURAL := 32);
   PORT (
     ulaOp : IN STD_LOGIC_VECTOR(6 DOWNTO 0);  -- Vetor de 7 bits
     funct7 : IN STD_LOGIC_VECTOR(6 DOWNTO 0);  -- Vetor de 7 bits
     funct3 : IN STD_LOGIC_VECTOR(2 DOWNTO 0);  -- Vetor de 3 bits
     opOut : OUT STD_LOGIC_VECTOR(3 DOWNTO 0));  -- Vetor de 4 bits
-END ENTITY control_alu_vhd;
+END ENTITY control_alu;
 
-ARCHITECTURE bdf_type OF control_alu_vhd IS  -- Gera o OP da ULA com base no opcode, funct3 e funct7
+ARCHITECTURE bdf_type OF control_alu IS  -- Gera o OP da ULA com base no opcode, funct3 e funct7
 
 BEGIN
 

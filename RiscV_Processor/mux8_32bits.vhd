@@ -3,7 +3,7 @@ USE ieee.std_logic_1164.all;
 
 LIBRARY work;
 
-ENTITY mux8_32bits_vhd IS
+ENTITY mux8_32bits IS
   PORT (
     A : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     B : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -15,11 +15,11 @@ ENTITY mux8_32bits_vhd IS
     H : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     Sel : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     Result : OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
-END mux8_32bits_vhd;
+END mux8_32bits;
 
-ARCHITECTURE bdf_type OF mux8_32bits_vhd IS
+ARCHITECTURE bdf_type OF mux8_32bits IS
 
-COMPONENT mux2_32bits_vhd
+COMPONENT mux2_32bits
   PORT (
     Sel : IN STD_LOGIC;
     A : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -27,7 +27,7 @@ COMPONENT mux2_32bits_vhd
     Result : OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
 END COMPONENT;
 
-COMPONENT mux4_32bits_vhd
+COMPONENT mux4_32bits
   PORT (
     A : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     B : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -42,14 +42,14 @@ SIGNAL SYNTHESIZED_WIRE_1 : STD_LOGIC_VECTOR(31 DOWNTO 0);
 
 BEGIN
 
-  b2v_inst : mux2_32bits_vhd
+  b2v_inst : mux2_32bits
   PORT MAP (
     Sel => Sel(2),
     A => SYNTHESIZED_WIRE_0,
     B => SYNTHESIZED_WIRE_1,
     Result => Result);
 
-  b2v_inst1 : mux4_32bits_vhd
+  b2v_inst1 : mux4_32bits
   PORT MAP (
     A => E,
     B => F,
@@ -58,7 +58,7 @@ BEGIN
     Sel => Sel(1 DOWNTO 0),
     Result => SYNTHESIZED_WIRE_1);
 
-  b2v_inst346 : mux4_32bits_vhd
+  b2v_inst346 : mux4_32bits
   PORT MAP (
     A => A,
     B => B,

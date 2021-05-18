@@ -3,13 +3,13 @@ USE ieee.std_logic_1164.all;
 
 LIBRARY work;
 
-ENTITY genImm32_vhd IS
+ENTITY genImm IS
   PORT (
     instr : IN STD_LOGIC_VECTOR(31 DOWNTO 0);  -- instrução completa
     result_imm : OUT STD_LOGIC_VECTOR(31 DOWNTO 0));  -- já selecionado
-END genImm32_vhd;
+END genImm;
 
-ARCHITECTURE bdf_type OF genImm32_vhd IS
+ARCHITECTURE bdf_type OF genImm IS
 
 SIGNAL I_type : STD_LOGIC_VECTOR(31 DOWNTO 0);  -- calculados e usados no mux
 SIGNAL S_type : STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -24,7 +24,7 @@ SIGNAL zero_bit_twelve : STD_LOGIC_VECTOR(11 DOWNTO 0) := "000000000000";
 SIGNAL zero_bit_thirtytwo : STD_LOGIC_VECTOR(31 DOWNTO 0) := "00000000000000000000000000000000";
 
 -- mux de 5 entradas de 32 bits
-COMPONENT mux8_32bits_vhd
+COMPONENT mux8_32bits
   PORT (
     A : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     B : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -141,7 +141,7 @@ BEGIN
   selector(0) <= ((NOT(instr(6)) AND instr(5)) AND NOT(instr(4))) OR
                  ((instr(5) AND instr(4)) AND instr(2));
 
-  b2v_inst : mux8_32bits_vhd
+  b2v_inst : mux8_32bits
   PORT MAP (
     A => I_type,  -- 000
     B => S_type,  -- 001

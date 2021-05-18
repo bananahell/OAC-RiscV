@@ -4,7 +4,7 @@ USE ieee.numeric_std.all;
 
 LIBRARY work;
 
-ENTITY control_vhd IS
+ENTITY control IS
   PORT (
     op : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
     aluOp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);  -- 2 bits da aluOp
@@ -17,9 +17,9 @@ ENTITY control_vhd IS
     jump : OUT STD_LOGIC;  -- Ligado caso seja instrucao de jump
     jal : OUT STD_LOGIC;  -- Ligado caso seja instrucao de link
     luiCtr : OUT STD_LOGIC);  -- Ligado caso seja instrucao de lui
-END control_vhd;
+END control;
 
-ARCHITECTURE bdf_type OF control_vhd IS
+ARCHITECTURE bdf_type OF control IS
 
 BEGIN
 PROCESS (op)
