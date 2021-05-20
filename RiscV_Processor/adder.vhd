@@ -1,7 +1,6 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
-USE ieee.std_logic_arith.all;
-USE ieee.stt_logic_vector.all;
+USE ieee.numeric_std.all;
 
 LIBRARY work;
 
@@ -13,9 +12,9 @@ ENTITY adder IS
 END ENTITY adder;
 
 ARCHITECTURE bdf_type OF adder IS
--- O adder deve somar A + B = Z
+
 BEGIN
 
-  Z <= A + B;
+  Z <= STD_LOGIC_VECTOR(UNSIGNED(A) + UNSIGNED(B));
 
 END bdf_type;

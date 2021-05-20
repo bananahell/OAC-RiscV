@@ -40,7 +40,7 @@
 set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA4U23C6
-set_global_assignment -name TOP_LEVEL_ENTITY mem_data
+set_global_assignment -name TOP_LEVEL_ENTITY mux2_32bits
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:01:33  APRIL 13, 2021"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -74,10 +74,6 @@ set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME testbench_mem_instr -sect
 set_global_assignment -name EDA_TEST_BENCH_NAME testbench_mem_reg -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id testbench_mem_reg
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME testbench_mem_reg -section_id testbench_mem_reg
-set_global_assignment -name VHDL_FILE mem_data.vhd
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/testbench_genImm.vhd -section_id testbench_genImm
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/testbench_alu.vhd -section_id testbench_alu
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/testbench_mem_instr.vhd -section_id testbench_mem_instr
@@ -86,4 +82,18 @@ set_global_assignment -name EDA_TEST_BENCH_NAME testbench_mem_data -section_id e
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id testbench_mem_data
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME testbench_mem_data -section_id testbench_mem_data
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/testbench_mem_data.vhd -section_id testbench_mem_data
+set_global_assignment -name VHDL_FILE pc.vhd
+set_global_assignment -name VHDL_FILE mux2_32bits.vhd
+set_global_assignment -name VHDL_FILE mem_reg.vhd
+set_global_assignment -name VHDL_FILE mem_instr.vhd
+set_global_assignment -name VHDL_FILE mem_data.vhd
+set_global_assignment -name VHDL_FILE genImm.vhd
+set_global_assignment -name VHDL_FILE control_alu.vhd
+set_global_assignment -name VHDL_FILE control.vhd
+set_global_assignment -name VHDL_FILE alu.vhd
+set_global_assignment -name VHDL_FILE adder4.vhd
+set_global_assignment -name VHDL_FILE adder.vhd
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

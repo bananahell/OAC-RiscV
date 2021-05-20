@@ -1,5 +1,5 @@
 Flow report for RiscV_Processor
-Wed May 19 22:09:56 2021
+Wed May 19 23:06:16 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,16 +41,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed May 19 22:09:55 2021       ;
+; Flow Status                     ; Successful - Wed May 19 23:06:16 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; RiscV_Processor                             ;
-; Top-level Entity Name           ; mem_data                                    ;
+; Top-level Entity Name           ; mux2_32bits                                 ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA4U23C6                                ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 32768                                       ;
-; Total pins                      ; 78                                          ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 97                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/19/2021 22:09:26 ;
+; Start date & time ; 05/19/2021 23:06:08 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; RiscV_Processor     ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+---------------------------------------------+-----------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                       ; Default Value   ; Entity Name ; Section Id                        ;
 +--------------------------------------+---------------------------------------------+-----------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 91755630778.162147296509332                 ; --              ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 91755630778.162147636813644                 ; --              ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                          ; --              ; --          ; testbench_alu                     ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                          ; --              ; --          ; testbench_mem_reg                 ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                          ; --              ; --          ; testbench_genImm                  ;
@@ -112,13 +112,13 @@ https://fpgasoftware.intel.com/eula.
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                          ; --              ; --          ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                           ; --              ; --          ; --                                ;
 ; NUM_PARALLEL_PROCESSORS              ; All                                         ; --              ; --          ; --                                ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family)      ; --              ; mem_data    ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family)      ; --              ; mem_data    ; Top                               ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family)      ; --              ; mem_data    ; Top                               ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family)      ; --              ; mux2_32bits ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family)      ; --              ; mux2_32bits ; Top                               ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family)      ; --              ; mux2_32bits ; Top                               ;
 ; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                         ; --              ; --          ; --                                ;
 ; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW       ; --              ; --          ; --                                ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                                ; --              ; --          ; --                                ;
-; TOP_LEVEL_ENTITY                     ; mem_data                                    ; RiscV_Processor ; --          ; --                                ;
+; TOP_LEVEL_ENTITY                     ; mux2_32bits                                 ; RiscV_Processor ; --          ; --                                ;
 ; VHDL_INPUT_VERSION                   ; VHDL_2008                                   ; VHDL_1993       ; --          ; --                                ;
 ; VHDL_SHOW_LMF_MAPPING_MESSAGES       ; Off                                         ; --              ; --          ; --                                ;
 +--------------------------------------+---------------------------------------------+-----------------+-------------+-----------------------------------+
@@ -129,8 +129,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:27     ; 1.0                     ; 5019 MB             ; 00:00:38                           ;
-; Total                ; 00:00:27     ; --                      ; --                  ; 00:00:38                           ;
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4847 MB             ; 00:00:21                           ;
+; Total                ; 00:00:08     ; --                      ; --                  ; 00:00:21                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

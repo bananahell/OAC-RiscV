@@ -24,4 +24,4 @@ BEGIN
     END IF;
   END PROCESS;
 
-END bdf_type
+END bdf_type;

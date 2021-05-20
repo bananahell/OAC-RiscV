@@ -1,7 +1,6 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
-USE ieee.std_logic_arith.all;
-USE ieee.stt_logic_vector.all;
+USE ieee.numeric_std.all;
 
 LIBRARY work;
 
@@ -12,9 +11,12 @@ ENTITY adder4x IS
 END ENTITY adder4x;
 
 ARCHITECTURE bdf_type OF adder4x IS
--- O adder deve somar A + B = Z
+
+SIGNAL A_signal : INTEGER;
+
 BEGIN
 
-  Z <= TO_STDLOGICVECTOR(TO_UNSIGNED(A) + 4);
+  A_signal <= TO_INTEGER(UNSIGNED(A)) + 4;
+  Z <= STD_LOGIC_VECTOR(TO_UNSIGNED(A_signal, Z'LENGTH));
 
 END bdf_type;
