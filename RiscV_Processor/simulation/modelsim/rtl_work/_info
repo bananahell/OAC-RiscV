@@ -9,37 +9,37 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim
-Econtrol_alu
-Z1 w1621540351
+Emux8_32bits
+Z1 w1621549546
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 !i122 0
 R0
-Z4 8C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/control_alu.vhd
-Z5 FC:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/control_alu.vhd
+Z4 8C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux8_32bits.vhd
+Z5 FC:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux8_32bits.vhd
 l0
 L6 1
-VH_ob<VdXT[L@>dH8?2A380
-!s100 C1BagVg2NonUkjZdj;N`53
+Vz;BOD]amD4HYoc2fNYHo_0
+!s100 KFiLZ>JIgAdAYE8T=[;_=2
 Z6 OV;C;2020.1;71
 33
-Z7 !s110 1621541086
+Z7 !s110 1621549604
 !i10b 1
-Z8 !s108 1621541086.000000
-Z9 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/control_alu.vhd|
-Z10 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/control_alu.vhd|
+Z8 !s108 1621549604.000000
+Z9 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux8_32bits.vhd|
+Z10 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux8_32bits.vhd|
 !i113 1
 Z11 o-2008 -work work
 Z12 tExplicit 1 CvgOpt 0
 Abdf_type
 R2
 R3
-DEx4 work 11 control_alu 0 22 H_ob<VdXT[L@>dH8?2A380
+DEx4 work 11 mux8_32bits 0 22 z;BOD]amD4HYoc2fNYHo_0
 !i122 0
-l17
-L15 31
-VJI5ZP8?zIN9GbgAbAQ0BY1
-!s100 >?M`[TO4HMBR_NU9QAVcU3
+l22
+L20 26
+V@Rz[8j[8jb9KN@aX7lYCG2
+!s100 RAoBmf69z?Ni>PBbXQY_?1
 R6
 33
 R7
@@ -50,8 +50,8 @@ R10
 !i113 1
 R11
 R12
-Etestbench_control_alu
-Z13 w1621541066
+Etestbench_mux8_32bits
+Z13 w1621549414
 Z14 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z15 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 Z16 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
@@ -59,41 +59,41 @@ R2
 R3
 !i122 1
 R0
-Z17 8C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_control_alu.vhd
-Z18 FC:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_control_alu.vhd
+Z17 8C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_mux8_32bits.vhd
+Z18 FC:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_mux8_32bits.vhd
 l0
 L8 1
-V;KHlP2?HDDMERl[l[0mK23
-!s100 >=Z;_h;O8LkU`e0`NzSdU2
+V9h>EjF>6cb5I<>SdhVDcP3
+!s100 3647mifLzW?Yz`:bPmK>i1
 R6
 33
 R7
 !i10b 1
 R8
-Z19 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_control_alu.vhd|
-!s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_control_alu.vhd|
+Z19 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_mux8_32bits.vhd|
+!s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_mux8_32bits.vhd|
 !i113 1
 R11
 R12
-Atestbench_control_alu_arch
+Atestbench_mux8_32bits_arch
 R14
 R15
 R16
 R2
 R3
-DEx4 work 21 testbench_control_alu 0 22 ;KHlP2?HDDMERl[l[0mK23
+DEx4 work 21 testbench_mux8_32bits 0 22 9h>EjF>6cb5I<>SdhVDcP3
 !i122 1
-l26
-L11 74
-V<K>fcIXhceXfIem?CAaGZ2
-!s100 fP3[873PZ>U0ed:@R>Qab1
+l38
+L11 146
+V5;FIeA:SMKF2L^eAPOf@k0
+!s100 1HZk5nUiPfBYi4L3Um8hi0
 R6
 33
 R7
 !i10b 1
 R8
 R19
-Z20 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_control_alu.vhd|
+Z20 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_mux8_32bits.vhd|
 !i113 1
 R11
 R12

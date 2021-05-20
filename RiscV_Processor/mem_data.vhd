@@ -9,9 +9,10 @@ ENTITY mem_data IS
   PORT (
     clock : IN STD_LOGIC;
     we : IN STD_LOGIC;
+    re : IN STD_LOGIC;
     address : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
     data_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    data_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
+    data_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0) := x"00000000");
 END mem_data;
 
 ARCHITECTURE bdf_type OF mem_data IS
@@ -44,12 +45,16 @@ SIGNAL mem_bin : mem_type := init_mem_bin;
 BEGIN
 
   address_signal <= (TO_INTEGER(UNSIGNED(address)) / 4);
-  data_out <= mem_bin(address_signal);
 
   PROCESS (clock)
   BEGIN
-    IF RISING_EDGE(clock) AND (we = '1') THEN
-      mem_bin(address_signal) <= data_in;
+    IF RISING_EDGE(clock) THEN
+      IF we = '1' THEN
+        mem_bin(address_signal) <= data_in;
+        data_out <= mem_bin(address_signal);
+      ELSIF re = '1' THEN
+        data_out <= mem_bin(address_signal);
+      END IF;
     END IF;
   END PROCESS;
 

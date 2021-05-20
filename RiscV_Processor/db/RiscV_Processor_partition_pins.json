@@ -2,44 +2,7 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : [
-				{
-					"name" : "opOut[0]",
-					"strict" : false
-				},
-				{
-					"name" : "opOut[1]",
-					"strict" : false
-				},
-				{
-					"name" : "opOut[2]",
-					"strict" : false
-				},
-				{
-					"name" : "ulaOp[1]",
-					"strict" : false
-				},
-				{
-					"name" : "funct3[1]",
-					"strict" : false
-				},
-				{
-					"name" : "ulaOp[0]",
-					"strict" : false
-				},
-				{
-					"name" : "funct3[0]",
-					"strict" : false
-				},
-				{
-					"name" : "funct3[2]",
-					"strict" : false
-				},
-				{
-					"name" : "funct7",
-					"strict" : false
-				}
-			]
+			"pins" : []
 		}
 	]
 }

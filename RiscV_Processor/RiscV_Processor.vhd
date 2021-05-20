@@ -5,7 +5,12 @@ LIBRARY work;
 
 ENTITY RiscV_Processor IS
   PORT (
-    clock : IN STD_LOGIC);
+    clock : IN STD_LOGIC;
+    instr_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    rs1_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    rs2_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    rd_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    data_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
 END RiscV_Processor;
 
 ARCHITECTURE bdf_type OF RiscV_Processor IS
@@ -22,17 +27,15 @@ SIGNAL Ain_signal : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL Bin_signal : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL Zout_signal : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL zeroOut_signal : STD_LOGIC;
-SIGNAL aluOP_signal : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL aluOP_signal : STD_LOGIC_VECTOR(1 DOWNTO 0);
 SIGNAL aluOPout_signal : STD_LOGIC_VECTOR(3 DOWNTO 0);
 -- control
 SIGNAL branch_signal : STD_LOGIC;
 SIGNAL memToReg_signal : STD_LOGIC;
+SIGNAL memRead_signal : STD_LOGIC;
 SIGNAL memWrite_signal : STD_LOGIC;
 SIGNAL aluSrc_signal : STD_LOGIC;
 SIGNAL regWrite_signal : STD_LOGIC;
-SIGNAL jump_signal : STD_LOGIC;
-SIGNAL jal_signal : STD_LOGIC;
-SIGNAL luictr_signal : STD_LOGIC;
 -- pc
 SIGNAL addr_in_signal : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL rst_signal : STD_LOGIC;
@@ -69,16 +72,13 @@ END COMPONENT;
 COMPONENT control
   PORT (
     op : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
-    aluOp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     branch : OUT STD_LOGIC;
-    memToReg : OUT STD_LOGIC;
     memRead : OUT STD_LOGIC;
+    memToReg : OUT STD_LOGIC;
+    aluOp : OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
     memWrite : OUT STD_LOGIC;
     aluSrc : OUT STD_LOGIC;
-    regWrite : OUT STD_LOGIC;
-    jump : OUT STD_LOGIC;
-    jal : OUT STD_LOGIC;
-    luiCtr : OUT STD_LOGIC);
+    regWrite : OUT STD_LOGIC);
 END COMPONENT;
 
 COMPONENT mux2_32bits
@@ -96,7 +96,7 @@ COMPONENT adder
     Z : OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
 END COMPONENT;
 
-COMPONENT adder4x
+COMPONENT adder4
   PORT (
     A : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     Z : OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
@@ -135,6 +135,7 @@ COMPONENT mem_data
   PORT (
     clock : IN STD_LOGIC;
     we : IN STD_LOGIC;
+    re : IN STD_LOGIC;
     address : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
     data_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     data_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
@@ -163,10 +164,7 @@ BEGIN
     memToReg => memToReg_signal,
     memWrite => memWrite_signal,
     aluSrc => aluSrc_signal,
-    regWrite => regWrite_signal,
-    jump => jump_signal,
-    jal => jal_signal,
-    luiCtr => luiCtr_signal);
+    regWrite => regWrite_signal);
 
   b2v_inst02 : genImm
   PORT MAP (
@@ -201,7 +199,7 @@ BEGIN
     B => immOut_signal,
     Z => adderOut_signal);
 
-  b2v_inst07 : adder4x
+  b2v_inst07 : adder4
   PORT MAP (
     A => addr_out_signal,
     Z => adder4Out_signal);
@@ -235,7 +233,7 @@ BEGIN
     clock => clock,
     we => regWrite_signal,
     address1x => instruction_signal(19 DOWNTO 15),
-    address2x => instruction_signal(34 DOWNTO 20),
+    address2x => instruction_signal(24 DOWNTO 20),
     write_address => instruction_signal(11 DOWNTO 7),
     data_in => write_data_signal,
     data1_out => Ain_signal,
@@ -245,13 +243,20 @@ BEGIN
   PORT MAP (
     clock => clock,
     we => memWrite_signal,
+    re => memRead_signal,
     address => Zout_signal(11 DOWNTO 0),
     data_in => rs2_signal,
     data_out => data_out_signal);
 
   b2v_inst13 : mem_instr
   PORT MAP (
-    address => addr_out_signal,
+    address => addr_out_signal(11 DOWNTO 0),
     data_out => instruction_signal);
+
+  instr_out <= instruction_signal;
+  rs1_out <= Ain_signal;
+  rs2_out <= rs2_signal;
+  rd_out <= write_data_signal;
+  data_out <= data_out_signal;
 
 END bdf_type;

@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Thu May 20 16:52:44 2021
+Analysis & Synthesis Status : Successful - Thu May 20 19:28:23 2021
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : RiscV_Processor
-Top-level Entity Name : control_alu
+Top-level Entity Name : RiscV_Processor
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 0
-Total pins : 10
+Total pins : 161
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0
