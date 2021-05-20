@@ -116,6 +116,15 @@ COMPONENT alu
     zeroOut : OUT STD_LOGIC);
 END COMPONENT;
 
+COMPONENT mem_reg
+  PORT (
+    clock : IN STD_LOGIC;
+    we : IN STD_LOGIC;
+    address : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+    data_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    data_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
+END COMPONENT;
+
 
 
 
@@ -186,16 +195,24 @@ BEGIN
 
   b2v_inst09 : mux2_32bits  -- mux B
   PORT MAP (
-    Sel => aluSrc_signal
+    Sel => aluSrc_signal,
     A => ,                                             -- TODO
     B => ,                                             -- TODO
     Result => Bin_signal);
 
   b2v_inst10 : mux2_32bits  -- mux C
   PORT MAP (
-    Sel => memToReg_signal
+    Sel => memToReg_signal,
     A => Zout_signal,
     B => ,                                             -- TODO
     Result => );                                             -- TODO
+
+  b2v_inst11 : mem_reg  -- mux C
+  PORT MAP (
+    clock => ,
+    we => ,
+    address => ,                                             -- TODO
+    data_in => ,                                             -- TODO
+    data_out => );                                             -- TODO
 
 END bdf_type;

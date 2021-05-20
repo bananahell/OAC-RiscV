@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Wed May 19 23:06:16 2021
+Analysis & Synthesis Status : Successful - Wed May 19 23:49:04 2021
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : RiscV_Processor
-Top-level Entity Name : mux2_32bits
+Top-level Entity Name : mem_reg
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 0
-Total pins : 97
+Total registers : 992
+Total pins : 113
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0
