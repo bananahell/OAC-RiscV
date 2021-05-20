@@ -10,46 +10,46 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -2008 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd}
+# vcom -2008 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_data.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 08:22:08 on May 18,2021
-# vcom -reportprogress 300 -2008 -work work C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd 
+# Start time: 22:12:37 on May 19,2021
+# vcom -reportprogress 300 -2008 -work work C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_data.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Compiling entity mem_reg
-# -- Compiling architecture bdf_type of mem_reg
-# End time: 08:22:08 on May 18,2021, Elapsed time: 0:00:00
+# -- Compiling entity mem_data
+# -- Compiling architecture bdf_type of mem_data
+# End time: 22:12:38 on May 19,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
-# vcom -2008 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_mem_reg.vhd}
+# vcom -2008 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_mem_data.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 08:22:08 on May 18,2021
-# vcom -reportprogress 300 -2008 -work work C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_mem_reg.vhd 
+# Start time: 22:12:38 on May 19,2021
+# vcom -reportprogress 300 -2008 -work work C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_mem_data.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package std_logic_textio
 # -- Loading package std_logic_arith
 # -- Loading package STD_LOGIC_UNSIGNED
-# -- Compiling entity testbench_mem_reg
-# -- Compiling architecture testbench_mem_reg_arch of testbench_mem_reg
-# End time: 08:22:08 on May 18,2021, Elapsed time: 0:00:00
+# -- Compiling entity testbench_mem_data
+# -- Compiling architecture testbench_mem_data_arch of testbench_mem_data
+# End time: 22:12:38 on May 19,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  testbench_mem_reg
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" testbench_mem_reg 
-# Start time: 08:22:08 on May 18,2021
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  testbench_mem_data
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" testbench_mem_data 
+# Start time: 22:12:38 on May 19,2021
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.std_logic_textio(body)
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
-# Loading work.testbench_mem_reg(testbench_mem_reg_arch)
+# Loading work.testbench_mem_data(testbench_mem_data_arch)
 # Loading ieee.numeric_std(body)
-# Loading work.mem_reg(bdf_type)
+# Loading work.mem_data(bdf_type)
 # 
 # add wave *
 # view structure
@@ -58,8 +58,8 @@
 # .main_pane.objects.interior.cs.body.tree
 # run -all
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /testbench_mem_reg/DUT
-# ** Note: mem_reg done
-#    Time: 12 us  Iteration: 0  Instance: /testbench_mem_reg
-# End time: 08:26:12 on May 18,2021, Elapsed time: 0:04:04
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_mem_data/DUT
+# ** Note: mem_data done
+#    Time: 12 us  Iteration: 0  Instance: /testbench_mem_data
+# End time: 22:16:56 on May 19,2021, Elapsed time: 0:04:18
 # Errors: 0, Warnings: 1

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RiscV_Processor
-Tue May 18 07:56:54 2021
+Wed May 19 22:09:56 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,11 +13,10 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -44,14 +43,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue May 18 07:56:54 2021       ;
+; Analysis & Synthesis Status     ; Successful - Wed May 19 22:09:55 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; RiscV_Processor                             ;
-; Top-level Entity Name           ; mem_reg                                     ;
+; Top-level Entity Name           ; mem_data                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 992                                         ;
-; Total pins                      ; 71                                          ;
+; Total registers                 ; 32768                                       ;
+; Total pins                      ; 78                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -70,7 +69,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA4U23C6       ;                    ;
-; Top-level entity name                                                           ; mem_reg            ; RiscV_Processor    ;
+; Top-level entity name                                                           ; mem_data           ; RiscV_Processor    ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Maximum processors allowed for parallel compilation                             ; All                ;                    ;
 ; VHDL Show LMF Mapping Messages                                                  ; Off                ;                    ;
@@ -172,13 +171,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                       ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------+---------+
-; mem_reg.vhd                      ; yes             ; User VHDL File  ; C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                        ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                 ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------+---------+
+; mem_data.vhd                     ; yes             ; User VHDL File  ; C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_data.vhd ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -186,25 +185,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 768         ;
+; Estimate of Logic utilization (ALMs needed) ; 22046       ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 319         ;
-;     -- 7 input functions                    ; 224         ;
-;     -- 6 input functions                    ; 95          ;
+; Combinational ALUT usage for logic          ; 12016       ;
+;     -- 7 input functions                    ; 0           ;
+;     -- 6 input functions                    ; 10976       ;
 ;     -- 5 input functions                    ; 0           ;
-;     -- 4 input functions                    ; 0           ;
-;     -- <=3 input functions                  ; 0           ;
+;     -- 4 input functions                    ; 16          ;
+;     -- <=3 input functions                  ; 1024        ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 992         ;
+; Dedicated logic registers                   ; 32768       ;
 ;                                             ;             ;
-; I/O pins                                    ; 71          ;
+; I/O pins                                    ; 78          ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 992         ;
-; Total fan-out                               ; 5217        ;
-; Average fan-out                             ; 3.59        ;
+; Maximum fan-out                             ; 32768       ;
+; Total fan-out                               ; 167406      ;
+; Average fan-out                             ; 3.73        ;
 +---------------------------------------------+-------------+
 
 
@@ -213,50 +212,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |mem_reg                   ; 319 (319)           ; 992 (992)                 ; 0                 ; 0          ; 71   ; 0            ; |mem_reg            ; mem_reg     ; work         ;
+; |mem_data                  ; 12016 (12016)       ; 32768 (32768)             ; 0                 ; 0          ; 78   ; 0            ; |mem_data           ; mem_data    ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+--------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                   ;
-+----------------------------------------+---------------------------------------------+
-; Register name                          ; Reason for Removal                          ;
-+----------------------------------------+---------------------------------------------+
-; breg~38                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~39                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~40                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~41                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~42                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~43                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~44                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~45                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~46                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~47                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~48                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~49                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~50                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~51                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~52                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~53                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~54                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~55                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~56                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~57                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~58                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~59                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~60                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~61                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~62                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~63                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~64                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~65                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~66                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~67                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~68                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~69                                ; Stuck at GND due to stuck port clock_enable ;
-; Total Number of Removed Registers = 32 ;                                             ;
-+----------------------------------------+---------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -264,12 +222,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 992   ;
+; Total registers                              ; 32768 ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 992   ;
+; Number of registers using Clock Enable       ; 32768 ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -279,17 +237,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 992                         ;
-;     ENA               ; 992                         ;
-; arriav_lcell_comb     ; 319                         ;
-;     extend            ; 224                         ;
-;         7 data inputs ; 224                         ;
-;     normal            ; 95                          ;
-;         6 data inputs ; 95                          ;
-; boundary_port         ; 71                          ;
+; arriav_ff             ; 32768                       ;
+;     ENA               ; 32768                       ;
+; arriav_lcell_comb     ; 12016                       ;
+;     normal            ; 12016                       ;
+;         3 data inputs ; 1024                        ;
+;         4 data inputs ; 16                          ;
+;         6 data inputs ; 10976                       ;
+; boundary_port         ; 78                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 2.50                        ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 4.92                        ;
 +-----------------------+-----------------------------+
 
 
@@ -298,7 +256,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:19     ;
 +----------------+--------------+
 
 
@@ -308,28 +266,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue May 18 07:56:45 2021
+    Info: Processing started: Wed May 19 22:09:25 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RiscV_Processor -c RiscV_Processor
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file mem_reg.vhd
-    Info (12022): Found design unit 1: mem_reg-bdf_type File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd Line: 16
-    Info (12023): Found entity 1: mem_reg File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd Line: 7
-Info (12127): Elaborating entity "mem_reg" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at mem_reg.vhd(35): signal "we" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd Line: 35
-Warning (10492): VHDL Process Statement warning at mem_reg.vhd(35): signal "address_signal" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd Line: 35
+Info (12021): Found 2 design units, including 1 entities, in source file mem_data.vhd
+    Info (12022): Found design unit 1: mem_data-bdf_type File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_data.vhd Line: 17
+    Info (12023): Found entity 1: mem_data File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_data.vhd Line: 8
+Info (12127): Elaborating entity "mem_data" for the top level hierarchy
+Warning (10492): VHDL Process Statement warning at mem_data.vhd(51): signal "we" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_data.vhd Line: 51
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276007): RAM logic "breg" is uninferred due to asynchronous read logic File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd Line: 25
+    Info (276007): RAM logic "mem_bin" is uninferred due to asynchronous read logic File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_data.vhd Line: 42
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1382 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 39 input pins
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "address[0]" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_data.vhd Line: 12
+    Warning (15610): No output dependent on input pin "address[1]" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_data.vhd Line: 12
+Info (21057): Implemented 44862 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 46 input pins
     Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 1311 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4844 megabytes
-    Info: Processing ended: Tue May 18 07:56:54 2021
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:20
+    Info (21061): Implemented 44784 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 5019 megabytes
+    Info: Processing ended: Wed May 19 22:09:56 2021
+    Info: Elapsed time: 00:00:31
+    Info: Total CPU time (on all processors): 00:00:41
 
 
