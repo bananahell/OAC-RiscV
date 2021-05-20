@@ -28,6 +28,7 @@ BEGIN
 
   PROCESS
   BEGIN
+
     instr <= x"000002b3";
     WAIT FOR 1 us;
     ASSERT (result_imm = x"00000000") REPORT "Assert 1 (R type)" SEVERITY ERROR;

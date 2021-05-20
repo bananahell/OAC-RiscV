@@ -6,13 +6,13 @@ LIBRARY work;
 ENTITY control_alu IS
   GENERIC (data_width : NATURAL := 32);
   PORT (
-    ulaOp : IN STD_LOGIC_VECTOR(6 DOWNTO 0);  -- Vetor de 7 bits
-    funct7 : IN STD_LOGIC_VECTOR(6 DOWNTO 0);  -- Vetor de 7 bits
-    funct3 : IN STD_LOGIC_VECTOR(2 DOWNTO 0);  -- Vetor de 3 bits
-    opOut : OUT STD_LOGIC_VECTOR(3 DOWNTO 0));  -- Vetor de 4 bits
+    ulaOp : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    funct7 : IN STD_LOGIC;
+    funct3 : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
+    opOut : OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
 END ENTITY control_alu;
 
-ARCHITECTURE bdf_type OF control_alu IS  -- Gera o OP da ULA com base no opcode, funct3 e funct7
+ARCHITECTURE bdf_type OF control_alu IS
 
 BEGIN
 
@@ -26,7 +26,7 @@ BEGIN
       WHEN "10" =>
         CASE funct3 IS
           WHEN "000" =>
-            IF (funct7(5)='1') THEN
+            IF (funct7 = '1') THEN
               opOut <= "0010";
             ELSE
               opOut <= "0110";
@@ -34,7 +34,9 @@ BEGIN
           WHEN "111" => opOut <= "0000";
           WHEN "110" => opOut <= "0001";
           WHEN "010" => opOut <= "0111";
+          WHEN OTHERS => opOut <= "0000";
         END CASE;
+      WHEN OTHERS => opOut <= "0000";
 
     END CASE;
 

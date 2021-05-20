@@ -17,10 +17,11 @@ BEGIN
 
   PROCESS (Sel, A, B)
   BEGIN
-    CASE Sel IS
-      WHEN '0' => Result <= A;
-      WHEN '1' => Result <= B;
-    END CASE;
+    IF Sel = '0' THEN
+      Result <= A;
+    ELSE
+      Result <= B;
+    END IF;
   END PROCESS;
 
 END bdf_type;

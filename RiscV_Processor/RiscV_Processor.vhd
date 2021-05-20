@@ -4,13 +4,14 @@ USE ieee.std_logic_1164.all;
 LIBRARY work;
 
 ENTITY RiscV_Processor IS
+  PORT (
+    clock : IN STD_LOGIC);
 END RiscV_Processor;
 
 ARCHITECTURE bdf_type OF RiscV_Processor IS
 
 
 
-SIGNAL clock_signal : STD_LOGIC;
 
 -- mem
 SIGNAL instruction_signal : STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -35,7 +36,6 @@ SIGNAL luictr_signal : STD_LOGIC;
 -- pc
 SIGNAL addr_in_signal : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL rst_signal : STD_LOGIC;
-SIGNAL clk_signal : STD_LOGIC;
 SIGNAL addr_out_signal : STD_LOGIC_VECTOR(31 DOWNTO 0);
 -- adders
 SIGNAL adderOut_signal : STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -60,8 +60,8 @@ END COMPONENT;
 
 COMPONENT control_alu
   PORT (
-    ulaOp : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
-    funct7 : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+    ulaOp : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    funct7 : IN STD_LOGIC;
     funct3 : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     opOut : OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
 END COMPONENT;
@@ -72,6 +72,7 @@ COMPONENT control
     aluOp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     branch : OUT STD_LOGIC;
     memToReg : OUT STD_LOGIC;
+    memRead : OUT STD_LOGIC;
     memWrite : OUT STD_LOGIC;
     aluSrc : OUT STD_LOGIC;
     regWrite : OUT STD_LOGIC;
@@ -183,7 +184,7 @@ BEGIN
   b2v_inst04 : control_alu
   PORT MAP (
     ulaOp => aluOp_signal,
-    funct7 => instruction_signal(31 DOWNTO 25),
+    funct7 => instruction_signal(30),
     funct3 => instruction_signal(14 DOWNTO 12),
     opOut => aluOPout_signal);
 
@@ -191,7 +192,7 @@ BEGIN
   PORT MAP (
     addr_in => addr_in_signal,
     rst => rst_signal,
-    clk => clk_signal,
+    clk => clock,
     addr_out => addr_out_signal);
 
   b2v_inst06 : adder
@@ -231,7 +232,7 @@ BEGIN
 
   b2v_inst11 : mem_reg
   PORT MAP (
-    clock => clock_signal,
+    clock => clock,
     we => regWrite_signal,
     address1x => instruction_signal(19 DOWNTO 15),
     address2x => instruction_signal(34 DOWNTO 20),
@@ -242,7 +243,7 @@ BEGIN
 
   b2v_inst12 : mem_data
   PORT MAP (
-    clock => clock_signal,
+    clock => clock,
     we => memWrite_signal,
     address => Zout_signal(11 DOWNTO 0),
     data_in => rs2_signal,

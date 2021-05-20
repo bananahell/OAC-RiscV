@@ -10,6 +10,7 @@ ENTITY control IS
     aluOp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);  -- 2 bits da aluOp
     branch : OUT STD_LOGIC;  --  Ligado caso haja uma instrucao de branch
     memToReg : OUT STD_LOGIC;  --  O valor que vem da memoria de dados para se escrita no registrador
+    memRead : OUT STD_LOGIC;  -- Permite a escrita na memoria
     memWrite : OUT STD_LOGIC;  -- Permite a escrita na memoria
     aluSrc : OUT STD_LOGIC;  -- Se a segunda entrada na ula vira do imediato ou nao
     regWrite : OUT STD_LOGIC;  -- Permite escrever na memoria de registradores

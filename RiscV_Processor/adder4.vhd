@@ -4,13 +4,13 @@ USE ieee.numeric_std.all;
 
 LIBRARY work;
 
-ENTITY adder4x IS
+ENTITY adder4 IS
   PORT (
     A : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     Z : OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
-END ENTITY adder4x;
+END ENTITY adder4;
 
-ARCHITECTURE bdf_type OF adder4x IS
+ARCHITECTURE bdf_type OF adder4 IS
 
 SIGNAL A_signal : INTEGER;
 
