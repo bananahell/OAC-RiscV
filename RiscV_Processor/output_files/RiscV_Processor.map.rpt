@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RiscV_Processor
-Wed May 19 23:49:04 2021
+Thu May 20 00:31:53 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -10,14 +10,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -41,27 +34,22 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed May 19 23:49:04 2021       ;
-; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name                   ; RiscV_Processor                             ;
-; Top-level Entity Name           ; mem_reg                                     ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 992                                         ;
-; Total pins                      ; 113                                         ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Thu May 20 00:31:53 2021           ;
+; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name               ; RiscV_Processor                             ;
+; Top-level Entity Name       ; RiscV_Processor                             ;
+; Family                      ; Cyclone V                                   ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
+; Total registers             ; N/A until Partition Merge                   ;
+; Total pins                  ; N/A until Partition Merge                   ;
+; Total virtual pins          ; N/A until Partition Merge                   ;
+; Total block memory bits     ; N/A until Partition Merge                   ;
+; Total PLLs                  ; N/A until Partition Merge                   ;
+; Total DLLs                  ; N/A until Partition Merge                   ;
++-----------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -70,7 +58,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA4U23C6       ;                    ;
-; Top-level entity name                                                           ; mem_reg            ; RiscV_Processor    ;
+; Top-level entity name                                                           ; RiscV_Processor    ; RiscV_Processor    ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Maximum processors allowed for parallel compilation                             ; All                ;                    ;
 ; VHDL Show LMF Mapping Messages                                                  ; Off                ;                    ;
@@ -162,144 +150,11 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                       ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------+---------+
-; mem_reg.vhd                      ; yes             ; User VHDL File  ; C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------+---------+
-
-
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 1024        ;
-;                                             ;             ;
-; Combinational ALUT usage for logic          ; 607         ;
-;     -- 7 input functions                    ; 448         ;
-;     -- 6 input functions                    ; 159         ;
-;     -- 5 input functions                    ; 0           ;
-;     -- 4 input functions                    ; 0           ;
-;     -- <=3 input functions                  ; 0           ;
-;                                             ;             ;
-; Dedicated logic registers                   ; 992         ;
-;                                             ;             ;
-; I/O pins                                    ; 113         ;
-;                                             ;             ;
-; Total DSP Blocks                            ; 0           ;
-;                                             ;             ;
-; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 992         ;
-; Total fan-out                               ; 7243        ;
-; Average fan-out                             ; 3.97        ;
-+---------------------------------------------+-------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |mem_reg                   ; 607 (607)           ; 992 (992)                 ; 0                 ; 0          ; 113  ; 0            ; |mem_reg            ; mem_reg     ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+--------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                   ;
-+----------------------------------------+---------------------------------------------+
-; Register name                          ; Reason for Removal                          ;
-+----------------------------------------+---------------------------------------------+
-; breg~38                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~39                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~40                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~41                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~42                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~43                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~44                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~45                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~46                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~47                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~48                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~49                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~50                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~51                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~52                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~53                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~54                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~55                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~56                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~57                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~58                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~59                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~60                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~61                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~62                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~63                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~64                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~65                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~66                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~67                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~68                                ; Stuck at GND due to stuck port clock_enable ;
-; breg~69                                ; Stuck at GND due to stuck port clock_enable ;
-; Total Number of Removed Registers = 32 ;                                             ;
-+----------------------------------------+---------------------------------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 992   ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 992   ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_ff             ; 992                         ;
-;     ENA               ; 992                         ;
-; arriav_lcell_comb     ; 607                         ;
-;     extend            ; 448                         ;
-;         7 data inputs ; 448                         ;
-;     normal            ; 159                         ;
-;         6 data inputs ; 159                         ;
-; boundary_port         ; 113                         ;
-;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 2.58                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
 
 
 +-------------------------------+
@@ -308,9 +163,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed May 19 23:48:55 2021
+    Info: Processing started: Thu May 20 00:31:45 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RiscV_Processor -c RiscV_Processor
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file riscv_processor.vhd
+    Info (12022): Found design unit 1: RiscV_Processor-bdf_type File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
+    Info (12023): Found entity 1: RiscV_Processor File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file pc.vhd
     Info (12022): Found design unit 1: pc-bdf_type File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/pc.vhd Line: 15
     Info (12023): Found entity 1: pc File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/pc.vhd Line: 7
@@ -333,7 +191,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file control
     Info (12022): Found design unit 1: control_alu-bdf_type File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/control_alu.vhd Line: 15
     Info (12023): Found entity 1: control_alu File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/control_alu.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file control.vhd
-    Info (12022): Found design unit 1: control-bdf_type File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/control.vhd Line: 22
+    Info (12022): Found design unit 1: control-bdf_type File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/control.vhd Line: 21
     Info (12023): Found entity 1: control File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/control.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
     Info (12022): Found design unit 1: alu-bdf_type File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/alu.vhd Line: 16
@@ -344,22 +202,19 @@ Info (12021): Found 2 design units, including 1 entities, in source file adder4.
 Info (12021): Found 2 design units, including 1 entities, in source file adder.vhd
     Info (12022): Found design unit 1: adder-bdf_type File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/adder.vhd Line: 14
     Info (12023): Found entity 1: adder File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/adder.vhd Line: 7
-Info (12127): Elaborating entity "mem_reg" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at mem_reg.vhd(43): signal "we" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd Line: 43
-Warning (10492): VHDL Process Statement warning at mem_reg.vhd(43): signal "write_address_signal" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd Line: 43
-Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276007): RAM logic "breg" is uninferred due to asynchronous read logic File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd Line: 30
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1712 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 49 input pins
-    Info (21059): Implemented 64 output pins
-    Info (21061): Implemented 1599 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4848 megabytes
-    Info: Processing ended: Wed May 19 23:49:04 2021
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:20
+Info (12127): Elaborating entity "RiscV_Processor" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at RiscV_Processor.vhd(13): used implicit default value for signal "clock_signal" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
+Warning (10036): Verilog HDL or VHDL warning at RiscV_Processor.vhd(32): object "jump_signal" assigned a value but never read File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 32
+Warning (10036): Verilog HDL or VHDL warning at RiscV_Processor.vhd(33): object "jal_signal" assigned a value but never read File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 33
+Warning (10036): Verilog HDL or VHDL warning at RiscV_Processor.vhd(34): object "luictr_signal" assigned a value but never read File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 34
+Warning (10541): VHDL Signal Declaration warning at RiscV_Processor.vhd(37): used implicit default value for signal "rst_signal" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 37
+Warning (10541): VHDL Signal Declaration warning at RiscV_Processor.vhd(38): used implicit default value for signal "clk_signal" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 38
+Error (10344): VHDL expression error at RiscV_Processor.vhd(160): expression has 7 elements, but must have 2 elements File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 160
+Error (12153): Can't elaborate top-level user hierarchy
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 6 warnings
+    Error: Peak virtual memory: 4825 megabytes
+    Error: Processing ended: Thu May 20 00:31:53 2021
+    Error: Elapsed time: 00:00:08
+    Error: Total CPU time (on all processors): 00:00:20
 
 

@@ -16,39 +16,28 @@ ARCHITECTURE bdf_type OF control_alu IS  -- Gera o OP da ULA com base no opcode,
 
 BEGIN
 
-  opOut <=
-    -- Tipo-R
-    "0000" WHEN ulaOp = "0110011" AND funct3 = "000" AND funct7 = "0000000" ELSE  -- add
-    "0001" WHEN ulaOp = "0110011" AND funct3 = "000" AND funct7 = "0100000" ELSE  -- sub
-    "0010" WHEN ulaOp = "0110011" AND funct3 = "001" AND funct7 = "0000000" ELSE  -- sll
-    "0011" WHEN ulaOp = "0110011" AND funct3 = "010" AND funct7 = "0000000" ELSE  -- slt
-    "0100" WHEN ulaOp = "0110011" AND funct3 = "011" AND funct7 = "0000000" ELSE  -- sltu
-    "0101" WHEN ulaOp = "0110011" AND funct3 = "100" AND funct7 = "0000000" ELSE  -- xor
-    "0110" WHEN ulaOp = "0110011" AND funct3 = "101" AND funct7 = "0000000" ELSE  -- srl
-    "0111" WHEN ulaOp = "0110011" AND funct3 = "101" AND funct7 = "0100000" ELSE  -- sra
-    "1000" WHEN ulaOp = "0110011" AND funct3 = "110" AND funct7 = "0000000" ELSE  -- or
-    "1001" WHEN ulaOp = "0110011" AND funct3 = "111" AND funct7 = "0000000" ELSE  -- AND
-    -- Tipo-I
-    "0000" WHEN ulaOp = "0010011" AND funct3 = "000" ELSE  -- addi
-    "0011" WHEN ulaOp = "0010011" AND funct3 = "010" ELSE  -- slti
-    "0100" WHEN ulaOp = "0010011" AND funct3 = "011" ELSE  -- sltiu
-    "0101" WHEN ulaOp = "0010011" AND funct3 = "100" ELSE  -- xori
-    "1000" WHEN ulaOp = "0010011" AND funct3 = "110" ELSE  -- ori
-    "1001" WHEN ulaOp = "0010011" AND funct3 = "111" ELSE  -- andi
-    "0010" WHEN ulaOp = "0010011" AND funct3 = "001" AND funct7 = "0000000" ELSE  -- slli
-    "0110" WHEN ulaOp = "0010011" AND funct3 = "101" AND funct7 = "0000000" ELSE  -- srli
-    "0111" WHEN ulaOp = "0010011" AND funct3 = "101" AND funct7 = "0100000" ELSE  -- srai
-    "0000" WHEN ulaOp = "0000011" AND funct3 = "010" ELSE  -- lw
-    "0000" WHEN ulaOp = "1100111" AND funct3 = "000" ELSE  -- jalr
-    -- Tipo-S
-    "0000" WHEN ulaOp = "0100011" AND funct3 = "010" ELSE  -- sw
-    -- Tipo-B
-    "1010" WHEN ulaOp = "1100011" AND funct3 = "000" ELSE  -- sqe para beq
-    "1011" WHEN ulaOp = "1100011" AND funct3 = "001" ELSE  -- sne para bne
-    "0011" WHEN ulaOp = "1100011" AND funct3 = "100" ELSE  -- slt para blt
-    "1100" WHEN ulaOp = "1100011" AND funct3 = "101" ELSE  -- sge para bge
-    "0100" WHEN ulaOp = "1100011" AND funct3 = "110" ELSE  -- sltu para bltu
-    "1101" WHEN ulaOp = "1100011" AND funct3 = "111";  -- sgeu para bgeu
-    -- As demais operacoes usam um somador simples
+  PROCESS (funct7, funct3, ulaOp)
+  BEGIN
+
+    CASE ulaOp IS
+
+      WHEN "00" => opOut <= "0010";
+      WHEN "01" => opOut <= "0110";
+      WHEN "10" =>
+        CASE funct3 IS
+          WHEN "000" =>
+            IF (funct7(5)='1') THEN
+              opOut <= "0010";
+            ELSE
+              opOut <= "0110";
+            END IF;
+          WHEN "111" => opOut <= "0000";
+          WHEN "110" => opOut <= "0001";
+          WHEN "010" => opOut <= "0111";
+        END CASE;
+
+    END CASE;
+
+  END PROCESS;
 
 END bdf_type;

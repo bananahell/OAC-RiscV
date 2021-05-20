@@ -1,5 +1,5 @@
 Flow report for RiscV_Processor
-Wed May 19 23:49:04 2021
+Thu May 20 00:31:53 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -38,29 +38,24 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------+
-; Flow Summary                                                                  ;
-+---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed May 19 23:49:04 2021       ;
-; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name                   ; RiscV_Processor                             ;
-; Top-level Entity Name           ; mem_reg                                     ;
-; Family                          ; Cyclone V                                   ;
-; Device                          ; 5CSEMA4U23C6                                ;
-; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 992                                         ;
-; Total pins                      ; 113                                         ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++---------------------------------------------------------------------------+
+; Flow Summary                                                              ;
++-----------------------------+---------------------------------------------+
+; Flow Status                 ; Flow Failed - Thu May 20 00:31:53 2021      ;
+; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name               ; RiscV_Processor                             ;
+; Top-level Entity Name       ; RiscV_Processor                             ;
+; Family                      ; Cyclone V                                   ;
+; Device                      ; 5CSEMA4U23C6                                ;
+; Timing Models               ; Final                                       ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
+; Total registers             ; N/A until Partition Merge                   ;
+; Total pins                  ; N/A until Partition Merge                   ;
+; Total virtual pins          ; N/A until Partition Merge                   ;
+; Total block memory bits     ; N/A until Partition Merge                   ;
+; Total PLLs                  ; N/A until Partition Merge                   ;
+; Total DLLs                  ; N/A until Partition Merge                   ;
++-----------------------------+---------------------------------------------+
 
 
 +-----------------------------------------+
@@ -68,60 +63,59 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/19/2021 23:48:55 ;
+; Start date & time ; 05/20/2021 00:31:45 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; RiscV_Processor     ;
 +-------------------+---------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                       ;
-+--------------------------------------+---------------------------------------------+-----------------+-------------+-----------------------------------+
-; Assignment Name                      ; Value                                       ; Default Value   ; Entity Name ; Section Id                        ;
-+--------------------------------------+---------------------------------------------+-----------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 91755630778.162147893511700                 ; --              ; --          ; --                                ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                          ; --              ; --          ; testbench_alu                     ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                          ; --              ; --          ; testbench_mem_reg                 ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                          ; --              ; --          ; testbench_genImm                  ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                          ; --              ; --          ; testbench_mem_data                ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                          ; --              ; --          ; testbench_mem_instr               ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                         ; --              ; --          ; eda_board_design_timing           ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                         ; --              ; --          ; eda_board_design_boundary_scan    ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                         ; --              ; --          ; eda_board_design_signal_integrity ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                         ; --              ; --          ; eda_board_design_symbol           ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; testbench_mem_data                          ; --              ; --          ; eda_simulation                    ;
-; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                        ; --              ; --          ; eda_simulation                    ;
-; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)                      ; <None>          ; --          ; --                                ;
-; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                             ; --              ; --          ; eda_simulation                    ;
-; EDA_TEST_BENCH_FILE                  ; simulation/modelsim/testbench_alu.vhd       ; --              ; --          ; testbench_alu                     ;
-; EDA_TEST_BENCH_FILE                  ; simulation/modelsim/testbench_mem_reg.vhd   ; --              ; --          ; testbench_mem_reg                 ;
-; EDA_TEST_BENCH_FILE                  ; simulation/modelsim/testbench_genImm.vhd    ; --              ; --          ; testbench_genImm                  ;
-; EDA_TEST_BENCH_FILE                  ; simulation/modelsim/testbench_mem_data.vhd  ; --              ; --          ; testbench_mem_data                ;
-; EDA_TEST_BENCH_FILE                  ; simulation/modelsim/testbench_mem_instr.vhd ; --              ; --          ; testbench_mem_instr               ;
-; EDA_TEST_BENCH_MODULE_NAME           ; testbench_alu                               ; --              ; --          ; testbench_alu                     ;
-; EDA_TEST_BENCH_MODULE_NAME           ; testbench_mem_reg                           ; --              ; --          ; testbench_mem_reg                 ;
-; EDA_TEST_BENCH_MODULE_NAME           ; testbench_genImm                            ; --              ; --          ; testbench_genImm                  ;
-; EDA_TEST_BENCH_MODULE_NAME           ; testbench_mem_data                          ; --              ; --          ; testbench_mem_data                ;
-; EDA_TEST_BENCH_MODULE_NAME           ; testbench_mem_instr                         ; --              ; --          ; testbench_mem_instr               ;
-; EDA_TEST_BENCH_NAME                  ; testbench_genImm                            ; --              ; --          ; eda_simulation                    ;
-; EDA_TEST_BENCH_NAME                  ; testbench_alu                               ; --              ; --          ; eda_simulation                    ;
-; EDA_TEST_BENCH_NAME                  ; testbench_mem_instr                         ; --              ; --          ; eda_simulation                    ;
-; EDA_TEST_BENCH_NAME                  ; testbench_mem_reg                           ; --              ; --          ; eda_simulation                    ;
-; EDA_TEST_BENCH_NAME                  ; testbench_mem_data                          ; --              ; --          ; eda_simulation                    ;
-; EDA_TIME_SCALE                       ; 1 ps                                        ; --              ; --          ; eda_simulation                    ;
-; MAX_CORE_JUNCTION_TEMP               ; 85                                          ; --              ; --          ; --                                ;
-; MIN_CORE_JUNCTION_TEMP               ; 0                                           ; --              ; --          ; --                                ;
-; NUM_PARALLEL_PROCESSORS              ; All                                         ; --              ; --          ; --                                ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family)      ; --              ; mem_reg     ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family)      ; --              ; mem_reg     ; Top                               ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family)      ; --              ; mem_reg     ; Top                               ;
-; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                         ; --              ; --          ; --                                ;
-; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW       ; --              ; --          ; --                                ;
-; PROJECT_OUTPUT_DIRECTORY             ; output_files                                ; --              ; --          ; --                                ;
-; TOP_LEVEL_ENTITY                     ; mem_reg                                     ; RiscV_Processor ; --          ; --                                ;
-; VHDL_INPUT_VERSION                   ; VHDL_2008                                   ; VHDL_1993       ; --          ; --                                ;
-; VHDL_SHOW_LMF_MAPPING_MESSAGES       ; Off                                         ; --              ; --          ; --                                ;
-+--------------------------------------+---------------------------------------------+-----------------+-------------+-----------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                     ;
++--------------------------------------+---------------------------------------------+---------------+-------------+-----------------------------------+
+; Assignment Name                      ; Value                                       ; Default Value ; Entity Name ; Section Id                        ;
++--------------------------------------+---------------------------------------------+---------------+-------------+-----------------------------------+
+; COMPILER_SIGNATURE_ID                ; 91755630778.162148150512188                 ; --            ; --          ; --                                ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                          ; --            ; --          ; testbench_alu                     ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                          ; --            ; --          ; testbench_mem_reg                 ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                          ; --            ; --          ; testbench_genImm                  ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                          ; --            ; --          ; testbench_mem_data                ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                          ; --            ; --          ; testbench_mem_instr               ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                         ; --            ; --          ; eda_board_design_timing           ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                         ; --            ; --          ; eda_board_design_boundary_scan    ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                         ; --            ; --          ; eda_board_design_signal_integrity ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                         ; --            ; --          ; eda_board_design_symbol           ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; testbench_mem_reg                           ; --            ; --          ; eda_simulation                    ;
+; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                        ; --            ; --          ; eda_simulation                    ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)                      ; <None>        ; --          ; --                                ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                             ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_FILE                  ; simulation/modelsim/testbench_alu.vhd       ; --            ; --          ; testbench_alu                     ;
+; EDA_TEST_BENCH_FILE                  ; simulation/modelsim/testbench_mem_reg.vhd   ; --            ; --          ; testbench_mem_reg                 ;
+; EDA_TEST_BENCH_FILE                  ; simulation/modelsim/testbench_genImm.vhd    ; --            ; --          ; testbench_genImm                  ;
+; EDA_TEST_BENCH_FILE                  ; simulation/modelsim/testbench_mem_data.vhd  ; --            ; --          ; testbench_mem_data                ;
+; EDA_TEST_BENCH_FILE                  ; simulation/modelsim/testbench_mem_instr.vhd ; --            ; --          ; testbench_mem_instr               ;
+; EDA_TEST_BENCH_MODULE_NAME           ; testbench_alu                               ; --            ; --          ; testbench_alu                     ;
+; EDA_TEST_BENCH_MODULE_NAME           ; testbench_mem_reg                           ; --            ; --          ; testbench_mem_reg                 ;
+; EDA_TEST_BENCH_MODULE_NAME           ; testbench_genImm                            ; --            ; --          ; testbench_genImm                  ;
+; EDA_TEST_BENCH_MODULE_NAME           ; testbench_mem_data                          ; --            ; --          ; testbench_mem_data                ;
+; EDA_TEST_BENCH_MODULE_NAME           ; testbench_mem_instr                         ; --            ; --          ; testbench_mem_instr               ;
+; EDA_TEST_BENCH_NAME                  ; testbench_genImm                            ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; testbench_alu                               ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; testbench_mem_instr                         ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; testbench_mem_reg                           ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; testbench_mem_data                          ; --            ; --          ; eda_simulation                    ;
+; EDA_TIME_SCALE                       ; 1 ps                                        ; --            ; --          ; eda_simulation                    ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                          ; --            ; --          ; --                                ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                           ; --            ; --          ; --                                ;
+; NUM_PARALLEL_PROCESSORS              ; All                                         ; --            ; --          ; --                                ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family)      ; --            ; --          ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family)      ; --            ; --          ; Top                               ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family)      ; --            ; --          ; Top                               ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                         ; --            ; --          ; --                                ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW       ; --            ; --          ; --                                ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                                ; --            ; --          ; --                                ;
+; VHDL_INPUT_VERSION                   ; VHDL_2008                                   ; VHDL_1993     ; --          ; --                                ;
+; VHDL_SHOW_LMF_MAPPING_MESSAGES       ; Off                                         ; --            ; --          ; --                                ;
++--------------------------------------+---------------------------------------------+---------------+-------------+-----------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -129,8 +123,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4848 MB             ; 00:00:20                           ;
-; Total                ; 00:00:09     ; --                      ; --                  ; 00:00:20                           ;
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4825 MB             ; 00:00:20                           ;
+; Total                ; 00:00:08     ; --                      ; --                  ; 00:00:20                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

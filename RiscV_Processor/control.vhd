@@ -9,7 +9,6 @@ ENTITY control IS
     op : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
     aluOp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);  -- 2 bits da aluOp
     branch : OUT STD_LOGIC;  --  Ligado caso haja uma instrucao de branch
-    memRead : OUT STD_LOGIC;  -- Permite a leitura da memoria
     memToReg : OUT STD_LOGIC;  --  O valor que vem da memoria de dados para se escrita no registrador
     memWrite : OUT STD_LOGIC;  -- Permite a escrita na memoria
     aluSrc : OUT STD_LOGIC;  -- Se a segunda entrada na ula vira do imediato ou nao
@@ -27,7 +26,6 @@ PROCESS (op)
     CASE op IS
       WHEN "0110011" =>  -- Tipo R
         branch <= '0';
-        memRead <= '0';
         memToReg <= '0';
         memWrite <= '0';
         aluSrc <= '0';
@@ -38,7 +36,6 @@ PROCESS (op)
         aluOp <= "10";
       WHEN "0010011" =>  -- Tipo I
         branch <= '0';
-        memRead <= '0';
         memToReg <= '0';
         memWrite <= '0';
         aluSrc <= '1';
@@ -49,7 +46,6 @@ PROCESS (op)
         aluOp <= "10";
       WHEN "0000011" =>  -- Tipo I - LW
         branch <= '0';
-        memRead <= '1';
         memToReg <= '1';
         memWrite <= '0';
         aluSrc <= '1';
@@ -60,7 +56,6 @@ PROCESS (op)
         aluOp <= "00";
       WHEN "1100111" =>  -- Tipo I - Jalr
         branch <= '1';
-        memRead <= '0';
         memToReg <= '0';
         memWrite <= '0';
         aluSrc <= '1';
@@ -71,7 +66,6 @@ PROCESS (op)
         aluOp <= "11";
       WHEN "0100011" =>  -- Tipo S - SW
         branch <= '0';
-        memRead <= '0';
         memToReg <= '0';
         memWrite <= '1';
         aluSrc <= '1';
@@ -82,7 +76,6 @@ PROCESS (op)
         aluOp <= "00";
       WHEN "1100011" =>  -- Tipo B
         branch <= '1';
-        memRead <= '0';
         memToReg <= '0';
         memWrite <= '0';
         aluSrc <= '0';
@@ -93,7 +86,6 @@ PROCESS (op)
         aluOp <= "01";
       WHEN "1101111" =>  -- Tipo J - JAL
         branch <= '1';
-        memRead <= '0';
         memToReg <= '0';
         memWrite <= '0';
         aluSrc <= '0';
@@ -104,7 +96,6 @@ PROCESS (op)
         aluOp <= "11";
       WHEN "0110111" =>  -- Tipo U - LUI
         branch <= '1';
-        memRead <= '0';
         memToReg <= '0';
         memWrite <= '0';
         aluSrc <= '1';
@@ -115,7 +106,6 @@ PROCESS (op)
         aluOp <= "11";
       WHEN "0010111" =>  -- Tipo U - AUIPC
         branch <= '1';
-        memRead <= '0';
         memToReg <= '0';
         memWrite <= '0';
         aluSrc <= '1';
@@ -126,7 +116,6 @@ PROCESS (op)
         aluOp <= "11";
       WHEN OTHERS =>
         branch <= '0';
-        memRead <= '0';
         memToReg <= '0';
         memWrite <= '0';
         aluSrc <= '0';
