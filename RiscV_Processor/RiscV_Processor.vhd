@@ -163,6 +163,7 @@ BEGIN
     branch => branch_signal,
     memToReg => memToReg_signal,
     memWrite => memWrite_signal,
+    memRead => memRead_signal,
     aluSrc => aluSrc_signal,
     regWrite => regWrite_signal);
 

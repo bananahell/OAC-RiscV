@@ -19,9 +19,9 @@ vcom -2008 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC
 vcom -2008 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/adder4.vhd}
 vcom -2008 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/adder.vhd}
 
-vcom -2008 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_mem_data.vhd}
+vcom -2008 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_RiscV_Processor.vhd}
 
-vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  testbench_mem_data
+vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  testbench_RiscV_Processor
 
 add wave *
 view structure

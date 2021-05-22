@@ -41,6 +41,8 @@ BEGIN
   PROCESS
   BEGIN
 
+    -- ori t0, zero, 0xFF
+
     clock <= '0';
     WAIT FOR 1 us;
     ASSERT (instr_out = "00001111111100000110001010010011") REPORT "Assert 1 - instr_out" SEVERITY ERROR;
@@ -56,6 +58,8 @@ BEGIN
     ASSERT (rs2_out = x"00000000") REPORT "Assert 2 - rs2_out" SEVERITY ERROR;
     ASSERT (rd_out = x"000000F0") REPORT "Assert 2 - rd_out" SEVERITY ERROR;
     ASSERT (data_out = x"00000000") REPORT "Assert 2 - data_out" SEVERITY ERROR;
+
+    -- andi t0, t0, 0xF0
 
     clock <= '0';
     WAIT FOR 1 us;
@@ -73,6 +77,8 @@ BEGIN
     ASSERT (rd_out = x"00000400") REPORT "Assert 4 - rd_out" SEVERITY ERROR;
     ASSERT (data_out = x"00000000") REPORT "Assert 4 - data_out" SEVERITY ERROR;
 
+    -- addi s0, x0, 1024
+
     clock <= '0';
     WAIT FOR 1 us;
     ASSERT (instr_out = "01000000000000000000010000010011") REPORT "Assert 5 - instr_out" SEVERITY ERROR;
@@ -89,49 +95,75 @@ BEGIN
     ASSERT (rd_out = x"00000800") REPORT "Assert 6 - rd_out" SEVERITY ERROR;
     ASSERT (data_out = x"00000000") REPORT "Assert 6 - data_out" SEVERITY ERROR;
 
-    -- 4 iteracoes
+    -- addi s0, s0, 1024
 
     clock <= '0';
     WAIT FOR 1 us;
     clock <= '1';
     WAIT FOR 1 us;
 
-    clock <= '0';
-    WAIT FOR 1 us;
-    clock <= '1';
-    WAIT FOR 1 us;
+    -- addi s0, s0, 1024
 
     clock <= '0';
     WAIT FOR 1 us;
     clock <= '1';
     WAIT FOR 1 us;
 
-    clock <= '0';
-    WAIT FOR 1 us;
-    clock <= '1';
-    WAIT FOR 1 us;
+    -- addi s0, s0, 1024
 
     clock <= '0';
     WAIT FOR 1 us;
     clock <= '1';
     WAIT FOR 1 us;
 
-    clock <= '0';
-    WAIT FOR 1 us;
-    clock <= '1';
-    WAIT FOR 1 us;
+    -- addi s0, s0, 1024
 
     clock <= '0';
     WAIT FOR 1 us;
     clock <= '1';
     WAIT FOR 1 us;
 
-    -- 11 iteracoes
+    -- addi s0, s0, 1024
 
     clock <= '0';
     WAIT FOR 1 us;
     clock <= '1';
     WAIT FOR 1 us;
+
+    -- addi s0, s0, 1024
+
+    clock <= '0';
+    WAIT FOR 1 us;
+    clock <= '1';
+    WAIT FOR 1 us;
+
+    -- addi s0, s0, 1024
+
+    clock <= '0';
+    WAIT FOR 1 us;
+    clock <= '1';
+    WAIT FOR 1 us;
+
+    -- lw s1, 0(s0)
+
+    clock <= '0';
+    WAIT FOR 1 us;
+    clock <= '1';
+    WAIT FOR 1 us;
+
+    -- lw s2, 4(s0)
+
+    -- clock <= '0';
+    -- WAIT FOR 1 us;
+    -- clock <= '1';
+    -- WAIT FOR 1 us;
+
+    -- add s3, s1, s2
+
+    -- clock <= '0';
+    -- WAIT FOR 1 us;
+    -- clock <= '1';
+    -- WAIT FOR 1 us;
 
     REPORT "RiscV_Processor done" SEVERITY NOTE;
     WAIT;
