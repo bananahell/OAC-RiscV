@@ -89,6 +89,50 @@ BEGIN
     ASSERT (rd_out = x"00000800") REPORT "Assert 6 - rd_out" SEVERITY ERROR;
     ASSERT (data_out = x"00000000") REPORT "Assert 6 - data_out" SEVERITY ERROR;
 
+    -- 4 iteracoes
+
+    clock <= '0';
+    WAIT FOR 1 us;
+    clock <= '1';
+    WAIT FOR 1 us;
+
+    clock <= '0';
+    WAIT FOR 1 us;
+    clock <= '1';
+    WAIT FOR 1 us;
+
+    clock <= '0';
+    WAIT FOR 1 us;
+    clock <= '1';
+    WAIT FOR 1 us;
+
+    clock <= '0';
+    WAIT FOR 1 us;
+    clock <= '1';
+    WAIT FOR 1 us;
+
+    clock <= '0';
+    WAIT FOR 1 us;
+    clock <= '1';
+    WAIT FOR 1 us;
+
+    clock <= '0';
+    WAIT FOR 1 us;
+    clock <= '1';
+    WAIT FOR 1 us;
+
+    clock <= '0';
+    WAIT FOR 1 us;
+    clock <= '1';
+    WAIT FOR 1 us;
+
+    -- 11 iteracoes
+
+    clock <= '0';
+    WAIT FOR 1 us;
+    clock <= '1';
+    WAIT FOR 1 us;
+
     REPORT "RiscV_Processor done" SEVERITY NOTE;
     WAIT;
   END PROCESS;

@@ -63,7 +63,7 @@ PROCESS (op_signal)
         aluSrc_signal <= '1';
         aluOp_signal <= "01";
 
-      -- sei lá
+      -- Branches
       WHEN "1100011" =>
         branch_signal <= '1';
         memRead_signal <= '0';
@@ -72,6 +72,26 @@ PROCESS (op_signal)
         regWrite_signal <= '0';
         aluSrc_signal <= '0';
         aluOp_signal <= "10";
+
+      -- LW
+      WHEN "0000011" =>
+        branch_signal <= '0';
+        memRead_signal <= '1';
+        memToReg_signal <= '1';
+        memWrite_signal <= '0';
+        regWrite_signal <= '1';
+        aluSrc_signal <= '1';
+        aluOp_signal <= "11";
+
+      -- SW
+      WHEN "0100011" =>
+        branch_signal <= '0';
+        memRead_signal <= '0';
+        memToReg_signal <= '0';
+        memWrite_signal <= '1';
+        regWrite_signal <= '0';
+        aluSrc_signal <= '1';
+        aluOp_signal <= "11";
 
       WHEN OTHERS =>
         branch_signal <= '0';
