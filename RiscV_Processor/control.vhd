@@ -18,14 +18,14 @@ END control;
 
 ARCHITECTURE bdf_type OF control IS
 
-SIGNAL op_signal: STD_LOGIC_VECTOR (6 DOWNTO 0);
-SIGNAL branch_signal: STD_LOGIC;
-SIGNAL memRead_signal: STD_LOGIC;
-SIGNAL memToReg_signal: STD_LOGIC;
-SIGNAL aluOp_signal: STD_LOGIC_VECTOR(1 DOWNTO 0);
-SIGNAL memWrite_signal: STD_LOGIC;
-SIGNAL aluSrc_signal: STD_LOGIC;
-SIGNAL regWrite_signal: STD_LOGIC;
+SIGNAL op_signal : STD_LOGIC_VECTOR (6 DOWNTO 0);
+SIGNAL branch_signal : STD_LOGIC;
+SIGNAL memRead_signal : STD_LOGIC;
+SIGNAL memToReg_signal : STD_LOGIC;
+SIGNAL aluOp_signal : STD_LOGIC_VECTOR(1 DOWNTO 0);
+SIGNAL memWrite_signal : STD_LOGIC;
+SIGNAL aluSrc_signal : STD_LOGIC;
+SIGNAL regWrite_signal : STD_LOGIC;
 
 BEGIN
 
@@ -48,40 +48,30 @@ PROCESS (op_signal)
         branch_signal <= '0';
         memRead_signal <= '0';
         memToReg_signal <= '0';
-        aluOp_signal <= "10";
         memWrite_signal <= '0';
+        regWrite_signal <= '1';
         aluSrc_signal <= '0';
-        regWrite_signal <= '1';
-
-      -- tipo LW
-      WHEN "0000011" =>
-        branch_signal <= '0';
-        memRead_signal <= '1';
-        memToReg_signal <= '1';
         aluOp_signal <= "00";
-        memWrite_signal <= '0';
-        aluSrc_signal <= '1';
-        regWrite_signal <= '1';
 
-      -- tipo SW
-      WHEN "0100011" =>
+      -- tipo I
+      WHEN "0010011" =>
         branch_signal <= '0';
         memRead_signal <= '0';
         memToReg_signal <= '0';
-        aluOp_signal <= "00";
-        memWrite_signal <= '1';
+        memWrite_signal <= '0';
+        regWrite_signal <= '1';
         aluSrc_signal <= '1';
-        regWrite_signal <= '0';
+        aluOp_signal <= "01";
 
-      -- tipo Beq
+      -- sei lá
       WHEN "1100011" =>
         branch_signal <= '1';
         memRead_signal <= '0';
         memToReg_signal <= '0';
-        aluOp_signal <= "01";
         memWrite_signal <= '0';
-        aluSrc_signal <= '0';
         regWrite_signal <= '0';
+        aluSrc_signal <= '0';
+        aluOp_signal <= "10";
 
       WHEN OTHERS =>
         branch_signal <= '0';

@@ -24,7 +24,7 @@ TYPE mem_type IS ARRAY (0 TO mem_depth - 1)
 
 SIGNAL address_signal : INTEGER := 0;
 
-IMPURE FUNCTION init_mem_bin RETURN mem_type IS
+IMPURE FUNCTION init_mem_data RETURN mem_type IS
   FILE text_file : TEXT OPEN READ_MODE IS "data.txt";
   VARIABLE text_line : LINE;
   VARIABLE mem_content : mem_type;
@@ -40,7 +40,7 @@ IMPURE FUNCTION init_mem_bin RETURN mem_type IS
     RETURN mem_content;
 END FUNCTION;
 
-SIGNAL mem_bin : mem_type := init_mem_bin;
+SIGNAL mem_data : mem_type := init_mem_data;
 
 BEGIN
 
@@ -50,10 +50,10 @@ BEGIN
   BEGIN
     IF RISING_EDGE(clock) THEN
       IF we = '1' THEN
-        mem_bin(address_signal) <= data_in;
-        data_out <= mem_bin(address_signal);
+        mem_data(address_signal) <= data_in;
+        data_out <= mem_data(address_signal);
       ELSIF re = '1' THEN
-        data_out <= mem_bin(address_signal);
+        data_out <= mem_data(address_signal);
       END IF;
     END IF;
   END PROCESS;

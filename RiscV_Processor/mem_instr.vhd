@@ -20,7 +20,7 @@ TYPE mem_type IS ARRAY (0 TO mem_depth - 1)
 
 SIGNAL address_signal : INTEGER := 0;
 
-IMPURE FUNCTION init_mem_bin RETURN mem_type IS
+IMPURE FUNCTION init_mem_instr RETURN mem_type IS
   FILE text_file : TEXT OPEN READ_MODE IS "code.txt";
   VARIABLE text_line : LINE;
   VARIABLE mem_content : mem_type;
@@ -36,11 +36,11 @@ IMPURE FUNCTION init_mem_bin RETURN mem_type IS
     RETURN mem_content;
 END FUNCTION;
 
-SIGNAL mem_bin : mem_type := init_mem_bin;
+SIGNAL mem_instr : mem_type := init_mem_instr;
 
 BEGIN
 
   address_signal <= TO_INTEGER(UNSIGNED(address)) / 4;
-  data_out <= mem_bin(address_signal);
+  data_out <= mem_instr(address_signal);
 
 END bdf_type;

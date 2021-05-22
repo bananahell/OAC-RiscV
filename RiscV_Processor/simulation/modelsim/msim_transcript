@@ -10,9 +10,78 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
+# vcom -2008 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux8_32bits.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:20:57 on May 22,2021
+# vcom -reportprogress 300 -2008 -work work C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux8_32bits.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux8_32bits
+# -- Compiling architecture bdf_type of mux8_32bits
+# End time: 01:20:57 on May 22,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:20:57 on May 22,2021
+# vcom -reportprogress 300 -2008 -work work C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity RiscV_Processor
+# -- Compiling architecture bdf_type of RiscV_Processor
+# End time: 01:20:58 on May 22,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/pc.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:20:58 on May 22,2021
+# vcom -reportprogress 300 -2008 -work work C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/pc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pc
+# -- Compiling architecture bdf_type of pc
+# End time: 01:20:58 on May 22,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux2_32bits.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:20:58 on May 22,2021
+# vcom -reportprogress 300 -2008 -work work C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux2_32bits.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2_32bits
+# -- Compiling architecture bdf_type of mux2_32bits
+# End time: 01:20:58 on May 22,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:20:58 on May 22,2021
+# vcom -reportprogress 300 -2008 -work work C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mem_reg
+# -- Compiling architecture bdf_type of mem_reg
+# End time: 01:20:58 on May 22,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:20:58 on May 22,2021
+# vcom -reportprogress 300 -2008 -work work C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mem_instr
+# -- Compiling architecture bdf_type of mem_instr
+# End time: 01:20:58 on May 22,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 # vcom -2008 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_data.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:29:59 on May 21,2021
+# Start time: 01:20:58 on May 22,2021
 # vcom -reportprogress 300 -2008 -work work C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_data.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -20,36 +89,118 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity mem_data
 # -- Compiling architecture bdf_type of mem_data
-# End time: 22:29:59 on May 21,2021, Elapsed time: 0:00:00
+# End time: 01:20:58 on May 22,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/genImm.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:20:58 on May 22,2021
+# vcom -reportprogress 300 -2008 -work work C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/genImm.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity genImm
+# -- Compiling architecture bdf_type of genImm
+# End time: 01:20:58 on May 22,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/control_alu.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:20:58 on May 22,2021
+# vcom -reportprogress 300 -2008 -work work C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/control_alu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity control_alu
+# -- Compiling architecture bdf_type of control_alu
+# End time: 01:20:58 on May 22,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/control.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:20:58 on May 22,2021
+# vcom -reportprogress 300 -2008 -work work C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity control
+# -- Compiling architecture bdf_type of control
+# End time: 01:20:59 on May 22,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/alu.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:20:59 on May 22,2021
+# vcom -reportprogress 300 -2008 -work work C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/alu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity alu
+# -- Compiling architecture bdf_type of alu
+# End time: 01:20:59 on May 22,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/adder4.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:20:59 on May 22,2021
+# vcom -reportprogress 300 -2008 -work work C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/adder4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity adder4
+# -- Compiling architecture bdf_type of adder4
+# End time: 01:20:59 on May 22,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/adder.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:20:59 on May 22,2021
+# vcom -reportprogress 300 -2008 -work work C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity adder
+# -- Compiling architecture bdf_type of adder
+# End time: 01:20:59 on May 22,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vcom -2008 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_mem_data.vhd}
+# vcom -2008 -work work {C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_RiscV_Processor.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:29:59 on May 21,2021
-# vcom -reportprogress 300 -2008 -work work C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_mem_data.vhd 
+# Start time: 01:20:59 on May 22,2021
+# vcom -reportprogress 300 -2008 -work work C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_RiscV_Processor.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package std_logic_textio
 # -- Loading package std_logic_arith
 # -- Loading package STD_LOGIC_UNSIGNED
-# -- Compiling entity testbench_mem_data
-# -- Compiling architecture testbench_mem_data_arch of testbench_mem_data
-# End time: 22:29:59 on May 21,2021, Elapsed time: 0:00:00
+# -- Compiling entity testbench_RiscV_Processor
+# -- Compiling architecture testbench_RiscV_Processor_arch of testbench_RiscV_Processor
+# End time: 01:20:59 on May 22,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  testbench_mem_data
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" testbench_mem_data 
-# Start time: 22:30:00 on May 21,2021
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  testbench_RiscV_Processor
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" testbench_RiscV_Processor 
+# Start time: 01:20:59 on May 22,2021
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.std_logic_textio(body)
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
-# Loading work.testbench_mem_data(testbench_mem_data_arch)
+# Loading work.testbench_riscv_processor(testbench_riscv_processor_arch)
+# Loading work.riscv_processor(bdf_type)
 # Loading ieee.numeric_std(body)
+# Loading work.control(bdf_type)
+# Loading work.genimm(bdf_type)
+# Loading work.mux8_32bits(bdf_type)
+# Loading work.alu(bdf_type)
+# Loading work.control_alu(bdf_type)
+# Loading work.pc(bdf_type)
+# Loading work.adder(bdf_type)
+# Loading work.adder4(bdf_type)
+# Loading work.mux2_32bits(bdf_type)
+# Loading work.mem_reg(bdf_type)
 # Loading work.mem_data(bdf_type)
+# Loading work.mem_instr(bdf_type)
 # 
 # add wave *
 # view structure
@@ -58,8 +209,66 @@
 # .main_pane.objects.interior.cs.body.tree
 # run -all
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /testbench_mem_data/DUT
-# ** Note: mem_data done
-#    Time: 14 us  Iteration: 0  Instance: /testbench_mem_data
-# End time: 22:30:23 on May 21,2021, Elapsed time: 0:00:23
-# Errors: 0, Warnings: 1
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_riscv_processor/DUT/mem_data_inst12
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_riscv_processor/DUT/mem_reg_inst11
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_riscv_processor/DUT/mem_reg_inst11
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_riscv_processor/DUT/mem_reg_inst11
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_riscv_processor/DUT/adder4_inst07
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /testbench_riscv_processor/DUT/mem_data_inst12
+# ** Error: Assert 1 - rs1_out
+#    Time: 1 us  Iteration: 0  Instance: /testbench_riscv_processor
+# ** Error: Assert 1 - rs2_out
+#    Time: 1 us  Iteration: 0  Instance: /testbench_riscv_processor
+# ** Error: Assert 1 - rd_out
+#    Time: 1 us  Iteration: 0  Instance: /testbench_riscv_processor
+# ** Error: Assert 1 - data_out
+#    Time: 1 us  Iteration: 0  Instance: /testbench_riscv_processor
+# ** Error: Assert 2 - rs1_out
+#    Time: 2 us  Iteration: 0  Instance: /testbench_riscv_processor
+# ** Error: Assert 2 - rs2_out
+#    Time: 2 us  Iteration: 0  Instance: /testbench_riscv_processor
+# ** Error: Assert 2 - rd_out
+#    Time: 2 us  Iteration: 0  Instance: /testbench_riscv_processor
+# ** Error: Assert 2 - data_out
+#    Time: 2 us  Iteration: 0  Instance: /testbench_riscv_processor
+# ** Error: Assert 3 - rs1_out
+#    Time: 3 us  Iteration: 0  Instance: /testbench_riscv_processor
+# ** Error: Assert 3 - rs2_out
+#    Time: 3 us  Iteration: 0  Instance: /testbench_riscv_processor
+# ** Error: Assert 3 - rd_out
+#    Time: 3 us  Iteration: 0  Instance: /testbench_riscv_processor
+# ** Error: Assert 3 - data_out
+#    Time: 3 us  Iteration: 0  Instance: /testbench_riscv_processor
+# ** Error: Assert 4 - rs1_out
+#    Time: 4 us  Iteration: 0  Instance: /testbench_riscv_processor
+# ** Error: Assert 4 - rs2_out
+#    Time: 4 us  Iteration: 0  Instance: /testbench_riscv_processor
+# ** Error: Assert 4 - rd_out
+#    Time: 4 us  Iteration: 0  Instance: /testbench_riscv_processor
+# ** Error: Assert 4 - data_out
+#    Time: 4 us  Iteration: 0  Instance: /testbench_riscv_processor
+# ** Error: Assert 5 - rs1_out
+#    Time: 5 us  Iteration: 0  Instance: /testbench_riscv_processor
+# ** Error: Assert 5 - rs2_out
+#    Time: 5 us  Iteration: 0  Instance: /testbench_riscv_processor
+# ** Error: Assert 5 - rd_out
+#    Time: 5 us  Iteration: 0  Instance: /testbench_riscv_processor
+# ** Error: Assert 5 - data_out
+#    Time: 5 us  Iteration: 0  Instance: /testbench_riscv_processor
+# ** Error: Assert 6 - rs1_out
+#    Time: 6 us  Iteration: 0  Instance: /testbench_riscv_processor
+# ** Error: Assert 6 - rs2_out
+#    Time: 6 us  Iteration: 0  Instance: /testbench_riscv_processor
+# ** Error: Assert 6 - rd_out
+#    Time: 6 us  Iteration: 0  Instance: /testbench_riscv_processor
+# ** Error: Assert 6 - data_out
+#    Time: 6 us  Iteration: 0  Instance: /testbench_riscv_processor
+# ** Note: RiscV_Processor done
+#    Time: 6 us  Iteration: 0  Instance: /testbench_riscv_processor
+# End time: 01:24:37 on May 22,2021, Elapsed time: 0:03:38
+# Errors: 25, Warnings: 5

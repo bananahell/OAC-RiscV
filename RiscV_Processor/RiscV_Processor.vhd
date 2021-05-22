@@ -38,7 +38,7 @@ SIGNAL aluSrc_signal : STD_LOGIC;
 SIGNAL regWrite_signal : STD_LOGIC;
 -- pc
 SIGNAL addr_in_signal : STD_LOGIC_VECTOR(31 DOWNTO 0);
-SIGNAL rst_signal : STD_LOGIC;
+SIGNAL rst_signal : STD_LOGIC := '0';
 SIGNAL addr_out_signal : STD_LOGIC_VECTOR(31 DOWNTO 0);
 -- adders
 SIGNAL adderOut_signal : STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -156,7 +156,7 @@ END COMPONENT;
 
 BEGIN
 
-  b2v_inst01 : control
+  control_inst01 : control
   PORT MAP (
     op => instruction_signal(6 DOWNTO 0),
     aluOp => aluOp_signal,
@@ -166,12 +166,12 @@ BEGIN
     aluSrc => aluSrc_signal,
     regWrite => regWrite_signal);
 
-  b2v_inst02 : genImm
+  genImm_inst02 : genImm
   PORT MAP (
     instr => instruction_signal,
     result_imm => immOut_signal);
 
-  b2v_inst03 : alu
+  alu_inst03 : alu
   PORT MAP (
     opcode => aluOPout_signal,
     Ain => Ain_signal,
@@ -179,33 +179,33 @@ BEGIN
     Zout => Zout_signal,
     zeroOut => zeroOut_signal);
 
-  b2v_inst04 : control_alu
+  control_alu_inst04 : control_alu
   PORT MAP (
     ulaOp => aluOp_signal,
     funct7 => instruction_signal(30),
     funct3 => instruction_signal(14 DOWNTO 12),
     opOut => aluOPout_signal);
 
-  b2v_inst05 : pc
+  pc_inst05 : pc
   PORT MAP (
     addr_in => addr_in_signal,
     rst => rst_signal,
     clk => clock,
     addr_out => addr_out_signal);
 
-  b2v_inst06 : adder
+  adder_inst06 : adder
   PORT MAP (
     A => addr_out_signal,
     B => immOut_signal,
     Z => adderOut_signal);
 
-  b2v_inst07 : adder4
+  adder4_inst07 : adder4
   PORT MAP (
     A => addr_out_signal,
     Z => adder4Out_signal);
 
   -- mux A
-  b2v_inst08 : mux2_32bits
+  muxA_inst08 : mux2_32bits
   PORT MAP (
     Sel => branch_signal AND zeroOut_signal,
     A => adder4Out_signal,
@@ -213,7 +213,7 @@ BEGIN
     Result => addr_in_signal);
 
   -- mux B
-  b2v_inst09 : mux2_32bits
+  muxB_inst09 : mux2_32bits
   PORT MAP (
     Sel => aluSrc_signal,
     A => rs2_signal,
@@ -221,14 +221,14 @@ BEGIN
     Result => Bin_signal);
 
   -- mux C
-  b2v_inst10 : mux2_32bits
+  muxC_inst10 : mux2_32bits
   PORT MAP (
     Sel => memToReg_signal,
     A => Zout_signal,
     B => data_out_signal,
     Result => write_data_signal);
 
-  b2v_inst11 : mem_reg
+  mem_reg_inst11 : mem_reg
   PORT MAP (
     clock => clock,
     we => regWrite_signal,
@@ -239,7 +239,7 @@ BEGIN
     data1_out => Ain_signal,
     data2_out => rs2_signal);
 
-  b2v_inst12 : mem_data
+  mem_data_inst12 : mem_data
   PORT MAP (
     clock => clock,
     we => memWrite_signal,
@@ -248,7 +248,7 @@ BEGIN
     data_in => rs2_signal,
     data_out => data_out_signal);
 
-  b2v_inst13 : mem_instr
+  mem_instr_inst13 : mem_instr
   PORT MAP (
     address => addr_out_signal(11 DOWNTO 0),
     data_out => instruction_signal);
