@@ -40,7 +40,7 @@
 set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA4U23C6
-set_global_assignment -name TOP_LEVEL_ENTITY RiscV_Processor
+set_global_assignment -name TOP_LEVEL_ENTITY mem_data
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:01:33  APRIL 13, 2021"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -58,7 +58,7 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH testbench_mux8_32bits -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH testbench_mem_data -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME testbench_genImm -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id testbench_genImm
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME testbench_genImm -section_id testbench_genImm
@@ -95,6 +95,9 @@ set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME testbench_control_alu -se
 set_global_assignment -name EDA_TEST_BENCH_NAME testbench_control -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id testbench_control
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME testbench_control -section_id testbench_control
+set_global_assignment -name EDA_TEST_BENCH_NAME testbench_mux8_32bits -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id testbench_mux8_32bits
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME testbench_mux8_32bits -section_id testbench_mux8_32bits
 set_global_assignment -name VHDL_FILE mux8_32bits.vhd
 set_global_assignment -name VHDL_FILE RiscV_Processor.vhd
 set_global_assignment -name VHDL_FILE pc.vhd
@@ -108,6 +111,13 @@ set_global_assignment -name VHDL_FILE control.vhd
 set_global_assignment -name VHDL_FILE alu.vhd
 set_global_assignment -name VHDL_FILE adder4.vhd
 set_global_assignment -name VHDL_FILE adder.vhd
+set_global_assignment -name EDA_TEST_BENCH_NAME testbench_RiscV_Processor -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id testbench_RiscV_Processor
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME testbench_RiscV_Processor -section_id testbench_RiscV_Processor
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/testbench_genImm.vhd -section_id testbench_genImm
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/testbench_alu.vhd -section_id testbench_alu
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/testbench_mem_instr.vhd -section_id testbench_mem_instr
@@ -119,11 +129,5 @@ set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/testbench_ad
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/testbench_adder4.vhd -section_id testbench_adder4
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/testbench_control_alu.vhd -section_id testbench_control_alu
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/testbench_control.vhd -section_id testbench_control
-set_global_assignment -name EDA_TEST_BENCH_NAME testbench_mux8_32bits -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id testbench_mux8_32bits
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME testbench_mux8_32bits -section_id testbench_mux8_32bits
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/testbench_mux8_32bits.vhd -section_id testbench_mux8_32bits
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/testbench_RiscV_Processor.vhd -section_id testbench_RiscV_Processor

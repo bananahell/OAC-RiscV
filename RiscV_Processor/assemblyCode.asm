@@ -1,85 +1,55 @@
-# Code turned into code.txt and data.txt without the ecalls in RARS.
-
-# Faca uma funcao que recebe o endereco em memoria de um string em a0, conta o numero de
-# digitos presentes no string e retorna esse valor em a0.
-# Escreva apenas a funcao. A entrada e saida e feita no cabecalho da resposta.
-# Encerre o programa com a chamada do sistema.
-# Parametros da funcao:
-# a0 : endereco do primeiro caracter do string.
-# Valor de retorno:
-# a0: numero de digitos presentes no string.
-
-######################## Cabecalho da resposta - nao alterar ###################
 .data
-str: .space 32
-nl: .word 10
+vetx:  .word 15 63
 
-.text
-  addi t0, x0, 10
-  addi t3, x0, 48
-  addi t4, x0, 58
+# os valores ao lado sao tomados da saida dos modulos:
+# PC - saida do PC
+# MI - saida do módulo de memoria (e nao de IF/ID)
+# ULA - saida direta da ULA
+# MD - saida direta da memoria de dados
 
-  li a7, 8 # readString
-  la a0, str
-  li a1, 32
-  ecall
+.text                   # PC        MI         ULA       MD
 
-  jal digitos
+  ori  t0, zero, 0xFF   # 00000000  0ff06293   000000ff  00000000
+  andi t0, t0, 0xF0     # 00000004  0f02f293   000000f0  00000000
+# lui  s0, 2            # 00000008  00002437   00002000  00000000
+  addi s0, x0, 1024
+  addi s0, s0, 1024
+  addi s0, s0, 1024
+  addi s0, s0, 1024
+  addi s0, s0, 1024
+  addi s0, s0, 1024
+  addi s0, s0, 1024
+  addi s0, s0, 1024
+  lw   s1, 0(s0)        # 0000000c  00042483   00002000  0000000f
+  lw   s2, 4(s0)        # 00000010  00442903   00002004  0000003f
+  add  s3, s1, s2       # 00000014  012489b3   0000004e  00000000
+  sw   s3, 8(s0)        # 00000018  01342423   00002008  0000004e
+  lw   a0, 8(s0)        # 0000001c  00842503   00002008  0000004e
+  addi s4, zero, 0x7F0  # 00000020  7f000a13   000007f0  00000000
+  addi s5, zero, 0x0FF  # 00000024  0ff00a93   000000ff  00000000
+  and  s6, s5, s4       # 00000028  014afb33   000000f0  00000000
+  or   s7, s5, s4       # 0000002c  014aebb3   000007ff  00000000
+  xor  s8, s5, s4       # 00000030  014acc33   0000070f  00000000
+  slli  t1, s5, 4       # 00000034  004a9313   00000ff0  00000000
+  lui  t2, 0xFF000      # 00000038  ff0003b7   ff000000  00000000
+  srli  t3, t2, 4       # 0000003c  0043de13   0ff00000  00000000
+  srai  t4, t2, 4       # 00000040  4043de93   fff00000  00000000
+  slt  s0, t0, t1       # 00000044  0062a433   00000001  00000000
+  slt  s1, t1, t0       # 00000048  005324b3   00000000  00000000
+  sltu s3, zero, t0     # 0000004c  005039b3   00000001  00000000
+  sltu s4, t0, zero     # 00000050  0002ba33   00000000  00000000
 
-  li a7, 1 # printInt
-  ecall
+# jal  ra, testasub     # 00000054  008000ef   00000000  00000000 => 5c
 
-  li a7, 10 # exit
-  ecall
-
-######################## Escreva a funcao limpa a seguir #######################
-digitos:
-  lb t1, (a0)
-  beq t0, t1, exit_digitos
-  bge t1, t3, is_digito_bge
-continua_digitos:
-  addi a0, a0, 1
-  j digitos
-
-is_digito_bge:
-  blt t1, t4, is_digito_blt
-  j continua_digitos
-
-is_digito_blt:
-  addi t2, t2, 1
-  j continua_digitos
-
-exit_digitos:
-  add a0, x0, t2
-  jr ra
-
-# Question author's solution
-# .data
-# str: .space 32
-# nl: .word 10
-# .text
-#   li a7, 8
-#   la a0, str
-#   li a1, 32
-#   ecall
-#   jal digitos
-#   li a7, 1
-#   ecall
-#   li a7, 10
-#   ecall
-# digitos:
-#   li t0, 48
-#   li t1, 57
-#   li a2, 0
-# loop:
-#   lbu a1, 0(a0)
-#   beqz a1, fim
-#   blt a1, t0, next
-#   bgt a1, t1, next
-#   addi a2, a2, 1
-# next:
-#   addi a0, a0, 1
-#   j loop
-# fim:
-#   mv a0, a2
-#   ret
+# jal  x0, next         # 00000058  00c0006f   00000000  00000000 => 64
+testasub:
+  sub t3, t0, t1        # 0000005c  40628e33   fffffffe  00000000
+# jalr x0, ra, 0        # 00000060  00008067   00000058  00000000 => 58
+next:
+  addi t0, zero, -2     # 00000064  ffe00293   fffffffe  00000000
+beqsim:
+  addi t0, t0, 2        # 00000068  00228293   0000000*  00000000 * t0 = 0, 2
+  beq  t0, zero, beqsim # 0000006c  fe028ee3   00000000  00000000 => 68, 70
+bnesim:
+  addi t0, t0, -1       # 00000070  fff28293   0000000*  00000000 * t0 = 1, 0
+  bne  t0, zero, bnesim # 00000074  fe029ee3   00000000  00000000 => 70, 78

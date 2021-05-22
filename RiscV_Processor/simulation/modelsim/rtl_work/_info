@@ -9,91 +9,93 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim
-Emux8_32bits
-Z1 w1621549546
-Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Emem_data
+Z1 w1621547030
+Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 !i122 0
 R0
-Z4 8C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux8_32bits.vhd
-Z5 FC:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux8_32bits.vhd
+Z5 8C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_data.vhd
+Z6 FC:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_data.vhd
 l0
-L6 1
-Vz;BOD]amD4HYoc2fNYHo_0
-!s100 KFiLZ>JIgAdAYE8T=[;_=2
-Z6 OV;C;2020.1;71
+L8 1
+V]Ff6NK=l1dCXCWo<B5Az50
+!s100 h7oh6T02?:dHFE5kQcMI63
+Z7 OV;C;2020.1;71
 33
-Z7 !s110 1621549604
+Z8 !s110 1621646999
 !i10b 1
-Z8 !s108 1621549604.000000
-Z9 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux8_32bits.vhd|
-Z10 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux8_32bits.vhd|
+Z9 !s108 1621646999.000000
+Z10 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_data.vhd|
+Z11 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_data.vhd|
 !i113 1
-Z11 o-2008 -work work
-Z12 tExplicit 1 CvgOpt 0
+Z12 o-2008 -work work
+Z13 tExplicit 1 CvgOpt 0
 Abdf_type
 R2
 R3
-DEx4 work 11 mux8_32bits 0 22 z;BOD]amD4HYoc2fNYHo_0
+R4
+DEx4 work 8 mem_data 0 22 ]Ff6NK=l1dCXCWo<B5Az50
 !i122 0
-l22
-L20 26
-V@Rz[8j[8jb9KN@aX7lYCG2
-!s100 RAoBmf69z?Ni>PBbXQY_?1
-R6
-33
+l45
+L18 44
+V?2eJ_fB19ga5nhXME=K<S2
+!s100 G8MWJR:V]6Z_`mY_L1iDU0
 R7
-!i10b 1
+33
 R8
+!i10b 1
 R9
 R10
-!i113 1
 R11
+!i113 1
 R12
-Etestbench_mux8_32bits
-Z13 w1621549414
-Z14 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
-Z15 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
-Z16 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
-R2
+R13
+Etestbench_mem_data
+Z14 w1621646985
+Z15 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z16 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z17 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
 R3
+R2
 !i122 1
 R0
-Z17 8C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_mux8_32bits.vhd
-Z18 FC:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_mux8_32bits.vhd
+Z18 8C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_mem_data.vhd
+Z19 FC:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_mem_data.vhd
 l0
 L8 1
-V9h>EjF>6cb5I<>SdhVDcP3
-!s100 3647mifLzW?Yz`:bPmK>i1
-R6
-33
+VVRS>D6;c<Z>RSkkJaRe>]0
+!s100 ;CKhYoD4M3:jO<X0<oEia3
 R7
-!i10b 1
+33
 R8
-Z19 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_mux8_32bits.vhd|
-!s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_mux8_32bits.vhd|
+!i10b 1
+R9
+Z20 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_mem_data.vhd|
+!s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_mem_data.vhd|
 !i113 1
-R11
 R12
-Atestbench_mux8_32bits_arch
-R14
+R13
+Atestbench_mem_data_arch
 R15
 R16
-R2
+R17
 R3
-DEx4 work 21 testbench_mux8_32bits 0 22 9h>EjF>6cb5I<>SdhVDcP3
+R2
+DEx4 work 18 testbench_mem_data 0 22 VRS>D6;c<Z>RSkkJaRe>]0
 !i122 1
-l38
-L11 146
-V5;FIeA:SMKF2L^eAPOf@k0
-!s100 1HZk5nUiPfBYi4L3Um8hi0
-R6
-33
+l30
+L11 156
+V6TjK@6?]C:PAUh5=RUFi32
+!s100 NBDMS?`zVXRho5TFWhWG=1
 R7
-!i10b 1
+33
 R8
-R19
-Z20 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_mux8_32bits.vhd|
+!i10b 1
+R9
+R20
+Z21 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_mem_data.vhd|
 !i113 1
-R11
 R12
+R13

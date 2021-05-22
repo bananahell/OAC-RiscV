@@ -55,7 +55,7 @@ BEGIN
     address <= x"000";
     data_in <= x"01234567";
     WAIT FOR 1 us;
-    ASSERT (data_out = x"00000000") REPORT "Assert 2 (1 clock, 0 we, 1 re, 0 address)" SEVERITY ERROR;
+    ASSERT (data_out = x"0000000F") REPORT "Assert 2 (1 clock, 0 we, 1 re, 0 address)" SEVERITY ERROR;
 
     clock <= '0';
     we <= '1';
@@ -63,7 +63,7 @@ BEGIN
     address <= x"000";
     data_in <= x"01234567";
     WAIT FOR 1 us;
-    ASSERT (data_out = x"00000000") REPORT "Assert 3 (0 clock, 1 we, 0 re, 0 address)" SEVERITY ERROR;
+    ASSERT (data_out = x"0000000F") REPORT "Assert 3 (0 clock, 1 we, 0 re, 0 address)" SEVERITY ERROR;
 
     clock <= '1';
     we <= '1';
@@ -71,7 +71,7 @@ BEGIN
     address <= x"000";
     data_in <= x"01234567";
     WAIT FOR 1 us;
-    ASSERT (data_out = x"00000000") REPORT "Assert 4 (1 clock, 1 we, 0 re, 0 address)" SEVERITY ERROR;
+    ASSERT (data_out = x"0000000F") REPORT "Assert 4 (1 clock, 1 we, 0 re, 0 address)" SEVERITY ERROR;
 
 
 
@@ -81,7 +81,7 @@ BEGIN
     address <= x"004";
     data_in <= x"76543210";
     WAIT FOR 1 us;
-    ASSERT (data_out = x"00000000") REPORT "Assert 5 (0 clock, 0 we, 1 re, 4 address)" SEVERITY ERROR;
+    ASSERT (data_out = x"0000000F") REPORT "Assert 5 (0 clock, 0 we, 1 re, 4 address)" SEVERITY ERROR;
 
     clock <= '1';
     we <= '0';
@@ -89,7 +89,7 @@ BEGIN
     address <= x"004";
     data_in <= x"76543210";
     WAIT FOR 1 us;
-    ASSERT (data_out = x"00000000") REPORT "Assert 6 (1 clock, 0 we, 1 re, 4 address)" SEVERITY ERROR;
+    ASSERT (data_out = x"0000003F") REPORT "Assert 6 (1 clock, 0 we, 1 re, 4 address)" SEVERITY ERROR;
 
     clock <= '0';
     we <= '1';
@@ -97,7 +97,7 @@ BEGIN
     address <= x"004";
     data_in <= x"76543210";
     WAIT FOR 1 us;
-    ASSERT (data_out = x"00000000") REPORT "Assert 7 (0 clock, 1 we, 0 re, 4 address)" SEVERITY ERROR;
+    ASSERT (data_out = x"0000003F") REPORT "Assert 7 (0 clock, 1 we, 0 re, 4 address)" SEVERITY ERROR;
 
     clock <= '1';
     we <= '1';
@@ -105,7 +105,7 @@ BEGIN
     address <= x"004";
     data_in <= x"76543210";
     WAIT FOR 1 us;
-    ASSERT (data_out = x"00000000") REPORT "Assert 8 (1 clock, 1 we, 0 re, 4 address)" SEVERITY ERROR;
+    ASSERT (data_out = x"0000003F") REPORT "Assert 8 (1 clock, 1 we, 0 re, 4 address)" SEVERITY ERROR;
 
 
 
@@ -115,7 +115,7 @@ BEGIN
     address <= x"000";
     data_in <= x"45670123";
     WAIT FOR 1 us;
-    ASSERT (data_out = x"00000000") REPORT "Assert 9 (0 clock, 1 we, 0 re, 0 address)" SEVERITY ERROR;
+    ASSERT (data_out = x"0000003F") REPORT "Assert 9 (0 clock, 1 we, 0 re, 0 address)" SEVERITY ERROR;
 
     clock <= '1';
     we <= '1';

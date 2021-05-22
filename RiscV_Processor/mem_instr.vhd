@@ -40,7 +40,7 @@ SIGNAL mem_bin : mem_type := init_mem_bin;
 
 BEGIN
 
-  address_signal <= TO_INTEGER(UNSIGNED(address));
+  address_signal <= TO_INTEGER(UNSIGNED(address)) / 4;
   data_out <= mem_bin(address_signal);
 
 END bdf_type;

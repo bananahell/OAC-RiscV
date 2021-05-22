@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RiscV_Processor
-Thu May 20 19:28:23 2021
+Fri May 21 22:26:01 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,14 +13,10 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: control_alu:b2v_inst04
- 11. Port Connectivity Checks: "genImm:b2v_inst02|mux8_32bits:b2v_inst"
- 12. Port Connectivity Checks: "control:b2v_inst01"
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -47,14 +43,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu May 20 19:28:23 2021       ;
+; Analysis & Synthesis Status     ; Successful - Fri May 21 22:26:00 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; RiscV_Processor                             ;
-; Top-level Entity Name           ; RiscV_Processor                             ;
+; Top-level Entity Name           ; mem_data                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 161                                         ;
+; Total registers                 ; 32800                                       ;
+; Total pins                      ; 79                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -73,7 +69,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA4U23C6       ;                    ;
-; Top-level entity name                                                           ; RiscV_Processor    ; RiscV_Processor    ;
+; Top-level entity name                                                           ; mem_data           ; RiscV_Processor    ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Maximum processors allowed for parallel compilation                             ; All                ;                    ;
 ; VHDL Show LMF Mapping Messages                                                  ; Off                ;                    ;
@@ -165,1103 +161,60 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                               ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                        ; Library ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------+---------+
-; mux8_32bits.vhd                  ; yes             ; User VHDL File  ; C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux8_32bits.vhd     ;         ;
-; RiscV_Processor.vhd              ; yes             ; User VHDL File  ; C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd ;         ;
-; pc.vhd                           ; yes             ; User VHDL File  ; C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/pc.vhd              ;         ;
-; mux2_32bits.vhd                  ; yes             ; User VHDL File  ; C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux2_32bits.vhd     ;         ;
-; mem_reg.vhd                      ; yes             ; User VHDL File  ; C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd         ;         ;
-; mem_instr.vhd                    ; yes             ; User VHDL File  ; C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd       ;         ;
-; mem_data.vhd                     ; yes             ; User VHDL File  ; C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_data.vhd        ;         ;
-; genImm.vhd                       ; yes             ; User VHDL File  ; C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/genImm.vhd          ;         ;
-; control_alu.vhd                  ; yes             ; User VHDL File  ; C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/control_alu.vhd     ;         ;
-; control.vhd                      ; yes             ; User VHDL File  ; C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/control.vhd         ;         ;
-; alu.vhd                          ; yes             ; User VHDL File  ; C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/alu.vhd             ;         ;
-; adder4.vhd                       ; yes             ; User VHDL File  ; C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/adder4.vhd          ;         ;
-; adder.vhd                        ; yes             ; User VHDL File  ; C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/adder.vhd           ;         ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                        ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                 ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------+---------+
+; mem_data.vhd                     ; yes             ; User VHDL File  ; C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_data.vhd ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                       ;
-+---------------------------------------------+---------------------+
-; Resource                                    ; Usage               ;
-+---------------------------------------------+---------------------+
-; Estimate of Logic utilization (ALMs needed) ; 0                   ;
-;                                             ;                     ;
-; Combinational ALUT usage for logic          ; 0                   ;
-;     -- 7 input functions                    ; 0                   ;
-;     -- 6 input functions                    ; 0                   ;
-;     -- 5 input functions                    ; 0                   ;
-;     -- 4 input functions                    ; 0                   ;
-;     -- <=3 input functions                  ; 0                   ;
-;                                             ;                     ;
-; Dedicated logic registers                   ; 0                   ;
-;                                             ;                     ;
-; I/O pins                                    ; 161                 ;
-;                                             ;                     ;
-; Total DSP Blocks                            ; 0                   ;
-;                                             ;                     ;
-; Maximum fan-out node                        ; instr_out[0]~output ;
-; Maximum fan-out                             ; 1                   ;
-; Total fan-out                               ; 161                 ;
-; Average fan-out                             ; 0.50                ;
-+---------------------------------------------+---------------------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 22046       ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 12017       ;
+;     -- 7 input functions                    ; 0           ;
+;     -- 6 input functions                    ; 10976       ;
+;     -- 5 input functions                    ; 0           ;
+;     -- 4 input functions                    ; 16          ;
+;     -- <=3 input functions                  ; 1025        ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 32800       ;
+;                                             ;             ;
+; I/O pins                                    ; 79          ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; clock~input ;
+; Maximum fan-out                             ; 32800       ;
+; Total fan-out                               ; 167505      ;
+; Average fan-out                             ; 3.72        ;
++---------------------------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                        ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-----------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name     ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-----------------+--------------+
-; |RiscV_Processor           ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 161  ; 0            ; |RiscV_Processor    ; RiscV_Processor ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-----------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |mem_data                  ; 12017 (12017)       ; 32800 (32800)             ; 0                 ; 0          ; 79   ; 0            ; |mem_data           ; mem_data    ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-----------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                ;
-+------------------------------------------+----------------------------------------+
-; Register name                            ; Reason for Removal                     ;
-+------------------------------------------+----------------------------------------+
-; mem_data:b2v_inst12|data_out[0..31]      ; Stuck at GND due to stuck port data_in ;
-; mem_reg:b2v_inst11|breg~70               ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~71               ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~72               ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~73               ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~74               ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~75               ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~76               ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~77               ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~78               ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~79               ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~80               ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~81               ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~82               ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~83               ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~84               ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~85               ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~86               ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~87               ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~88               ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~89               ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~90               ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~91               ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~92               ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~93               ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~94               ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~95               ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~96               ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~97               ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~98               ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~99               ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~100              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~101              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~102              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~103              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~104              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~105              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~106              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~107              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~108              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~109              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~110              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~111              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~112              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~113              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~114              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~115              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~116              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~117              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~118              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~119              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~120              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~121              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~122              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~123              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~124              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~125              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~126              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~127              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~128              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~129              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~130              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~131              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~132              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~133              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~134              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~135              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~136              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~137              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~138              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~139              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~140              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~141              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~142              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~143              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~144              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~145              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~146              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~147              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~148              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~149              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~150              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~151              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~152              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~153              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~154              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~155              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~156              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~157              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~158              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~159              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~160              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~161              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~162              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~163              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~164              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~165              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~166              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~167              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~168              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~169              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~170              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~171              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~172              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~173              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~174              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~175              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~176              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~177              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~178              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~179              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~180              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~181              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~182              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~183              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~184              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~185              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~186              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~187              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~188              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~189              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~190              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~191              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~192              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~193              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~194              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~195              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~196              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~197              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~198              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~199              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~200              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~201              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~202              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~203              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~204              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~205              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~206              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~207              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~208              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~209              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~210              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~211              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~212              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~213              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~214              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~215              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~216              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~217              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~218              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~219              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~220              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~221              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~222              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~223              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~224              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~225              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~226              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~227              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~228              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~229              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~230              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~231              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~232              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~233              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~234              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~235              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~236              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~237              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~238              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~239              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~240              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~241              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~242              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~243              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~244              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~245              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~246              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~247              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~248              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~249              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~250              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~251              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~252              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~253              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~254              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~255              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~256              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~257              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~258              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~259              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~260              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~261              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~262              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~263              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~264              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~265              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~266              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~267              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~268              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~269              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~270              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~271              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~272              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~273              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~274              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~275              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~276              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~277              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~278              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~279              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~280              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~281              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~282              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~283              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~284              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~285              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~286              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~287              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~288              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~289              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~290              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~291              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~292              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~293              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~294              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~295              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~296              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~297              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~298              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~299              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~300              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~301              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~302              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~303              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~304              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~305              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~306              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~307              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~308              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~309              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~310              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~311              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~312              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~313              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~314              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~315              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~316              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~317              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~318              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~319              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~320              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~321              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~322              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~323              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~324              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~325              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~326              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~327              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~328              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~329              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~330              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~331              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~332              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~333              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~334              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~335              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~336              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~337              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~338              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~339              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~340              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~341              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~342              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~343              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~344              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~345              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~346              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~347              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~348              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~349              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~350              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~351              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~352              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~353              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~354              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~355              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~356              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~357              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~358              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~359              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~360              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~361              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~362              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~363              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~364              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~365              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~366              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~367              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~368              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~369              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~370              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~371              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~372              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~373              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~374              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~375              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~376              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~377              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~378              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~379              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~380              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~381              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~382              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~383              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~384              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~385              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~386              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~387              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~388              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~389              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~390              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~391              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~392              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~393              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~394              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~395              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~396              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~397              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~398              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~399              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~400              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~401              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~402              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~403              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~404              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~405              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~406              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~407              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~408              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~409              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~410              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~411              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~412              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~413              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~414              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~415              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~416              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~417              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~418              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~419              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~420              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~421              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~422              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~423              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~424              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~425              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~426              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~427              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~428              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~429              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~430              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~431              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~432              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~433              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~434              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~435              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~436              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~437              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~438              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~439              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~440              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~441              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~442              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~443              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~444              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~445              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~446              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~447              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~448              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~449              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~450              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~451              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~452              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~453              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~454              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~455              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~456              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~457              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~458              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~459              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~460              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~461              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~462              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~463              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~464              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~465              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~466              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~467              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~468              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~469              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~470              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~471              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~472              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~473              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~474              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~475              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~476              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~477              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~478              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~479              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~480              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~481              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~482              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~483              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~484              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~485              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~486              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~487              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~488              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~489              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~490              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~491              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~492              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~493              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~494              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~495              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~496              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~497              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~498              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~499              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~500              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~501              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~502              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~503              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~504              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~505              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~506              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~507              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~508              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~509              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~510              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~511              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~512              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~513              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~514              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~515              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~516              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~517              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~518              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~519              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~520              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~521              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~522              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~523              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~524              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~525              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~526              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~527              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~528              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~529              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~530              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~531              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~532              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~533              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~534              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~535              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~536              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~537              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~538              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~539              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~540              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~541              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~542              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~543              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~544              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~545              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~546              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~547              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~548              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~549              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~550              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~551              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~552              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~553              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~554              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~555              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~556              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~557              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~558              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~559              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~560              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~561              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~562              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~563              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~564              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~565              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~566              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~567              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~568              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~569              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~570              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~571              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~572              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~573              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~574              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~575              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~576              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~577              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~578              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~579              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~580              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~581              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~582              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~583              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~584              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~585              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~586              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~587              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~588              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~589              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~590              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~591              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~592              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~593              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~594              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~595              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~596              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~597              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~598              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~599              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~600              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~601              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~602              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~603              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~604              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~605              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~606              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~607              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~608              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~609              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~610              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~611              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~612              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~613              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~614              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~615              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~616              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~617              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~618              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~619              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~620              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~621              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~622              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~623              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~624              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~625              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~626              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~627              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~628              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~629              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~630              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~631              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~632              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~633              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~634              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~635              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~636              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~637              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~638              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~639              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~640              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~641              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~642              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~643              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~644              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~645              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~646              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~647              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~648              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~649              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~650              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~651              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~652              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~653              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~654              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~655              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~656              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~657              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~658              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~659              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~660              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~661              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~662              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~663              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~664              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~665              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~666              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~667              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~668              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~669              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~670              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~671              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~672              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~673              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~674              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~675              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~676              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~677              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~678              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~679              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~680              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~681              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~682              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~683              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~684              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~685              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~686              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~687              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~688              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~689              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~690              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~691              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~692              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~693              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~694              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~695              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~696              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~697              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~698              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~699              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~700              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~701              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~702              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~703              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~704              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~705              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~706              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~707              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~708              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~709              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~710              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~711              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~712              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~713              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~714              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~715              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~716              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~717              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~718              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~719              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~720              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~721              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~722              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~723              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~724              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~725              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~726              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~727              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~728              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~729              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~730              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~731              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~732              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~733              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~734              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~735              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~736              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~737              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~738              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~739              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~740              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~741              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~742              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~743              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~744              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~745              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~746              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~747              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~748              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~749              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~750              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~751              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~752              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~753              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~754              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~755              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~756              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~757              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~758              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~759              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~760              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~761              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~762              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~763              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~764              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~765              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~766              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~767              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~768              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~769              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~770              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~771              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~772              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~773              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~774              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~775              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~776              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~777              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~778              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~779              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~780              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~781              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~782              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~783              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~784              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~785              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~786              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~787              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~788              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~789              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~790              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~791              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~792              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~793              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~794              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~795              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~796              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~797              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~798              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~799              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~800              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~801              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~802              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~803              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~804              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~805              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~806              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~807              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~808              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~809              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~810              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~811              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~812              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~813              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~814              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~815              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~816              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~817              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~818              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~819              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~820              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~821              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~822              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~823              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~824              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~825              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~826              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~827              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~828              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~829              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~830              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~831              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~832              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~833              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~834              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~835              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~836              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~837              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~838              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~839              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~840              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~841              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~842              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~843              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~844              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~845              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~846              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~847              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~848              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~849              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~850              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~851              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~852              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~853              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~854              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~855              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~856              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~857              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~858              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~859              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~860              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~861              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~862              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~863              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~864              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~865              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~866              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~867              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~868              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~869              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~870              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~871              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~872              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~873              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~874              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~875              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~876              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~877              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~878              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~879              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~880              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~881              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~882              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~883              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~884              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~885              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~886              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~887              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~888              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~889              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~890              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~891              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~892              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~893              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~894              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~895              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~896              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~897              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~898              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~899              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~900              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~901              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~902              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~903              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~904              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~905              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~906              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~907              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~908              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~909              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~910              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~911              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~912              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~913              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~914              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~915              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~916              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~917              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~918              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~919              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~920              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~921              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~922              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~923              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~924              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~925              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~926              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~927              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~928              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~929              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~930              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~931              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~932              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~933              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~934              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~935              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~936              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~937              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~938              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~939              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~940              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~941              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~942              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~943              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~944              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~945              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~946              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~947              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~948              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~949              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~950              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~951              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~952              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~953              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~954              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~955              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~956              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~957              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~958              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~959              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~960              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~961              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~962              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~963              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~964              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~965              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~966              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~967              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~968              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~969              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~970              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~971              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~972              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~973              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~974              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~975              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~976              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~977              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~978              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~979              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~980              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~981              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~982              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~983              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~984              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~985              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~986              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~987              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~988              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~989              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~990              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~991              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~992              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~993              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~994              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~995              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~996              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~997              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~998              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~999              ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1000             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1001             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1002             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1003             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1004             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1005             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1006             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1007             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1008             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1009             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1010             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1011             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1012             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1013             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1014             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1015             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1016             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1017             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1018             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1019             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1020             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1021             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1022             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1023             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1024             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1025             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1026             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1027             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1028             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1029             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1030             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1031             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1032             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1033             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1034             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1035             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1036             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1037             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1038             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1039             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1040             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1041             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1042             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1043             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1044             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1045             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1046             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1047             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1048             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1049             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1050             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1051             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1052             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1053             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1054             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1055             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1056             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1057             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1058             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1059             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1060             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~1061             ; Lost fanout                            ;
-; mem_reg:b2v_inst11|breg~38               ; Stuck at GND due to stuck port data_in ;
-; mem_reg:b2v_inst11|breg~39               ; Stuck at GND due to stuck port data_in ;
-; mem_reg:b2v_inst11|breg~40               ; Stuck at GND due to stuck port data_in ;
-; mem_reg:b2v_inst11|breg~41               ; Stuck at GND due to stuck port data_in ;
-; mem_reg:b2v_inst11|breg~42               ; Stuck at GND due to stuck port data_in ;
-; mem_reg:b2v_inst11|breg~43               ; Stuck at GND due to stuck port data_in ;
-; mem_reg:b2v_inst11|breg~44               ; Stuck at GND due to stuck port data_in ;
-; mem_reg:b2v_inst11|breg~45               ; Stuck at GND due to stuck port data_in ;
-; mem_reg:b2v_inst11|breg~46               ; Stuck at GND due to stuck port data_in ;
-; mem_reg:b2v_inst11|breg~47               ; Stuck at GND due to stuck port data_in ;
-; mem_reg:b2v_inst11|breg~48               ; Stuck at GND due to stuck port data_in ;
-; mem_reg:b2v_inst11|breg~49               ; Stuck at GND due to stuck port data_in ;
-; mem_reg:b2v_inst11|breg~50               ; Stuck at GND due to stuck port data_in ;
-; mem_reg:b2v_inst11|breg~51               ; Stuck at GND due to stuck port data_in ;
-; mem_reg:b2v_inst11|breg~52               ; Stuck at GND due to stuck port data_in ;
-; mem_reg:b2v_inst11|breg~53               ; Stuck at GND due to stuck port data_in ;
-; mem_reg:b2v_inst11|breg~54               ; Stuck at GND due to stuck port data_in ;
-; mem_reg:b2v_inst11|breg~55               ; Stuck at GND due to stuck port data_in ;
-; mem_reg:b2v_inst11|breg~56               ; Stuck at GND due to stuck port data_in ;
-; mem_reg:b2v_inst11|breg~57               ; Stuck at GND due to stuck port data_in ;
-; mem_reg:b2v_inst11|breg~58               ; Stuck at GND due to stuck port data_in ;
-; mem_reg:b2v_inst11|breg~59               ; Stuck at GND due to stuck port data_in ;
-; mem_reg:b2v_inst11|breg~60               ; Stuck at GND due to stuck port data_in ;
-; mem_reg:b2v_inst11|breg~61               ; Stuck at GND due to stuck port data_in ;
-; mem_reg:b2v_inst11|breg~62               ; Stuck at GND due to stuck port data_in ;
-; mem_reg:b2v_inst11|breg~63               ; Stuck at GND due to stuck port data_in ;
-; mem_reg:b2v_inst11|breg~64               ; Stuck at GND due to stuck port data_in ;
-; mem_reg:b2v_inst11|breg~65               ; Stuck at GND due to stuck port data_in ;
-; mem_reg:b2v_inst11|breg~66               ; Stuck at GND due to stuck port data_in ;
-; mem_reg:b2v_inst11|breg~67               ; Stuck at GND due to stuck port data_in ;
-; mem_reg:b2v_inst11|breg~68               ; Stuck at GND due to stuck port data_in ;
-; mem_reg:b2v_inst11|breg~69               ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 1056 ;                                        ;
-+------------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -1269,47 +222,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 32800 ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 32800 ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: control_alu:b2v_inst04 ;
-+----------------+-------+--------------------------------------------+
-; Parameter Name ; Value ; Type                                       ;
-+----------------+-------+--------------------------------------------+
-; data_width     ; 32    ; Signed Integer                             ;
-+----------------+-------+--------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------+
-; Port Connectivity Checks: "genImm:b2v_inst02|mux8_32bits:b2v_inst" ;
-+----------+-------+----------+--------------------------------------+
-; Port     ; Type  ; Severity ; Details                              ;
-+----------+-------+----------+--------------------------------------+
-; c[0]     ; Input ; Info     ; Stuck at GND                         ;
-; d[11..0] ; Input ; Info     ; Stuck at GND                         ;
-; e[0]     ; Input ; Info     ; Stuck at GND                         ;
-; f        ; Input ; Info     ; Stuck at GND                         ;
-; g        ; Input ; Info     ; Stuck at GND                         ;
-; h        ; Input ; Info     ; Stuck at GND                         ;
-+----------+-------+----------+--------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "control:b2v_inst01"                                                                    ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; memread ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -1317,13 +237,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
-; boundary_port         ; 161                         ;
+; arriav_ff             ; 32800                       ;
+;     ENA               ; 32800                       ;
+; arriav_lcell_comb     ; 12017                       ;
+;     normal            ; 12017                       ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 1024                        ;
+;         4 data inputs ; 16                          ;
+;         6 data inputs ; 10976                       ;
+; boundary_port         ; 79                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 4.92                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1332,7 +257,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:19     ;
 +----------------+--------------+
 
 
@@ -1342,7 +267,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu May 20 19:28:14 2021
+    Info: Processing started: Fri May 21 22:25:30 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RiscV_Processor -c RiscV_Processor
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file mux8_32bits.vhd
@@ -1384,203 +309,23 @@ Info (12021): Found 2 design units, including 1 entities, in source file adder4.
 Info (12021): Found 2 design units, including 1 entities, in source file adder.vhd
     Info (12022): Found design unit 1: adder-bdf_type File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/adder.vhd Line: 14
     Info (12023): Found entity 1: adder File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/adder.vhd Line: 7
-Info (12127): Elaborating entity "RiscV_Processor" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at RiscV_Processor.vhd(35): used implicit default value for signal "memRead_signal" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 35
-Warning (10541): VHDL Signal Declaration warning at RiscV_Processor.vhd(41): used implicit default value for signal "rst_signal" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 41
-Info (12128): Elaborating entity "control" for hierarchy "control:b2v_inst01" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 159
-Info (12128): Elaborating entity "genImm" for hierarchy "genImm:b2v_inst02" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 169
-Warning (10540): VHDL Signal Declaration warning at genImm.vhd(22): used explicit default value for signal "zero_bit" because signal was never assigned a value File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/genImm.vhd Line: 22
-Warning (10540): VHDL Signal Declaration warning at genImm.vhd(23): used explicit default value for signal "zero_bit_twelve" because signal was never assigned a value File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/genImm.vhd Line: 23
-Warning (10540): VHDL Signal Declaration warning at genImm.vhd(24): used explicit default value for signal "zero_bit_thirtytwo" because signal was never assigned a value File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/genImm.vhd Line: 24
-Info (12128): Elaborating entity "mux8_32bits" for hierarchy "genImm:b2v_inst02|mux8_32bits:b2v_inst" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/genImm.vhd Line: 144
-Info (12128): Elaborating entity "alu" for hierarchy "alu:b2v_inst03" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 174
-Warning (10631): VHDL Process Statement warning at alu.vhd(20): inferring latch(es) for signal or variable "zeroOut", which holds its previous value in one or more paths through the process File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/alu.vhd Line: 20
-Info (10041): Inferred latch for "zeroOut" at alu.vhd(20) File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/alu.vhd Line: 20
-Info (12128): Elaborating entity "control_alu" for hierarchy "control_alu:b2v_inst04" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 182
-Info (12128): Elaborating entity "pc" for hierarchy "pc:b2v_inst05" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 189
-Info (12128): Elaborating entity "adder" for hierarchy "adder:b2v_inst06" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 196
-Info (12128): Elaborating entity "adder4" for hierarchy "adder4:b2v_inst07" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 202
-Info (12128): Elaborating entity "mux2_32bits" for hierarchy "mux2_32bits:b2v_inst08" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 208
-Info (12128): Elaborating entity "mem_reg" for hierarchy "mem_reg:b2v_inst11" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 231
-Warning (10492): VHDL Process Statement warning at mem_reg.vhd(43): signal "we" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd Line: 43
-Warning (10492): VHDL Process Statement warning at mem_reg.vhd(43): signal "write_address_signal" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd Line: 43
-Info (12128): Elaborating entity "mem_data" for hierarchy "mem_data:b2v_inst12" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 242
-Info (12128): Elaborating entity "mem_instr" for hierarchy "mem_instr:b2v_inst13" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 251
+Info (12127): Elaborating entity "mem_data" for the top level hierarchy
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276004): RAM logic "mem_reg:b2v_inst11|breg" is uninferred due to inappropriate RAM size File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd Line: 30
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "instr_out[0]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[1]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[2]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[3]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[4]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[5]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[6]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[7]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[8]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[9]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[10]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[11]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[12]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[13]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[14]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[15]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[16]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[17]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[18]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[19]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[20]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[21]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[22]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[23]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[24]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[25]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[26]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[27]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[28]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[29]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[30]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[31]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "rs1_out[0]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[1]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[2]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[3]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[4]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[5]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[6]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[7]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[8]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[9]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[10]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[11]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[12]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[13]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[14]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[15]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[16]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[17]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[18]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[19]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[20]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[21]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[22]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[23]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[24]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[25]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[26]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[27]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[28]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[29]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[30]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[31]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs2_out[0]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[1]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[2]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[3]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[4]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[5]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[6]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[7]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[8]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[9]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[10]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[11]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[12]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[13]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[14]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[15]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[16]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[17]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[18]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[19]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[20]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[21]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[22]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[23]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[24]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[25]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[26]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[27]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[28]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[29]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[30]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[31]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rd_out[0]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[1]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[2]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[3]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[4]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[5]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[6]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[7]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[8]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[9]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[10]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[11]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[12]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[13]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[14]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[15]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[16]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[17]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[18]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[19]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[20]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[21]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[22]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[23]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[24]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[25]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[26]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[27]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[28]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[29]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[30]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[31]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "data_out[0]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[1]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[2]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[3]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[4]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[5]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[6]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[7]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[8]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[9]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[10]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[11]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[12]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[13]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[14]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[15]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[16]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[17]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[18]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[19]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[20]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[21]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[22]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[23]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[24]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[25]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[26]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[27]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[28]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[29]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[30]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[31]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-Info (17049): 992 registers lost all their fanouts during netlist optimizations.
+    Info (276007): RAM logic "mem_bin" is uninferred due to asynchronous read logic File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_data.vhd Line: 43
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clock" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 8
-Info (21057): Implemented 161 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 160 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 171 warnings
-    Info: Peak virtual memory: 4849 megabytes
-    Info: Processing ended: Thu May 20 19:28:23 2021
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:21
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "address[0]" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_data.vhd Line: 13
+    Warning (15610): No output dependent on input pin "address[1]" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_data.vhd Line: 13
+Info (21057): Implemented 44864 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 47 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 44785 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 5028 megabytes
+    Info: Processing ended: Fri May 21 22:26:01 2021
+    Info: Elapsed time: 00:00:31
+    Info: Total CPU time (on all processors): 00:00:42
 
 
