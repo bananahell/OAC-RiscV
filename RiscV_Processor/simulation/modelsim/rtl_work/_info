@@ -24,9 +24,9 @@ VEB]_Sn6@h0l:bQ8Y1[YGn1
 !s100 l;2ClnKbS3UiYUcSZO[^o1
 Z7 OV;C;2020.1;71
 33
-Z8 !s110 1621686801
+Z8 !s110 1621726620
 !i10b 1
-Z9 !s108 1621686800.000000
+Z9 !s108 1621726620.000000
 Z10 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/adder.vhd|
 Z11 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/adder.vhd|
 !i113 1
@@ -67,11 +67,11 @@ VaC?l2>I9S:DaX_:`@lhf80
 !s100 C3L6zd;8Rn6:?4oRdlUFl1
 R7
 33
-Z17 !s110 1621686800
+R8
 !i10b 1
 R9
-Z18 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/adder4.vhd|
-Z19 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/adder4.vhd|
+Z17 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/adder4.vhd|
+Z18 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/adder4.vhd|
 !i113 1
 R12
 R13
@@ -87,34 +87,34 @@ Vg36BX=8^VJY@066I=]bUX0
 !s100 76JFmOm;n_3WaH16Pil9e2
 R7
 33
-R17
+R8
 !i10b 1
 R9
+R17
 R18
-R19
 !i113 1
 R12
 R13
 Ealu
-Z20 w1621328752
+Z19 w1621723783
 R4
 R3
 R2
 !i122 10
 R0
-Z21 8C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/alu.vhd
-Z22 FC:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/alu.vhd
+Z20 8C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/alu.vhd
+Z21 FC:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/alu.vhd
 l0
 L7 1
 VTzGX:85B85T[X`[fk=]8b2
 !s100 >8@T]@Q>NhU20?aDchO?60
 R7
 33
-R17
+R8
 !i10b 1
 R9
-Z23 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/alu.vhd|
-Z24 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/alu.vhd|
+Z22 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/alu.vhd|
+Z23 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/alu.vhd|
 !i113 1
 R12
 R13
@@ -125,39 +125,39 @@ R2
 DEx4 work 3 alu 0 22 TzGX:85B85T[X`[fk=]8b2
 !i122 10
 l18
-L16 87
-VO20KDo^K2kA6CDgFcHP@M2
-!s100 RVEHk5G6B9blag=l;G4cL1
+L16 88
+VYGPznPPEWl>NWVK86ngBo1
+!s100 11DDU8dRLz;DPCaZYI_;P1
 R7
 33
-R17
+R8
 !i10b 1
 R9
+R22
 R23
-R24
 !i113 1
 R12
 R13
 Econtrol
-Z25 w1621661545
+Z24 w1621724415
 R2
 R3
 R4
 !i122 9
 R0
-Z26 8C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/control.vhd
-Z27 FC:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/control.vhd
+Z25 8C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/control.vhd
+Z26 FC:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/control.vhd
 l0
 L7 1
-V[E3aSVdX^kLlHKOaDh9hJ2
-!s100 nh=6lkecA8l5:@hFoOeSU3
+Vg0Pl=@?d>@5S[YD02VbV[2
+!s100 ZT;l:M1O_C1CLL2Rg3cOC3
 R7
 33
-R17
+R8
 !i10b 1
 R9
-Z28 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/control.vhd|
-Z29 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/control.vhd|
+Z27 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/control.vhd|
+Z28 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/control.vhd|
 !i113 1
 R12
 R13
@@ -165,80 +165,80 @@ Abdf_type
 R2
 R3
 R4
-DEx4 work 7 control 0 22 [E3aSVdX^kLlHKOaDh9hJ2
+DEx4 work 7 control 0 22 g0Pl=@?d>@5S[YD02VbV[2
 !i122 9
-l30
-L19 90
-VDQC=RfYGNfCdPZ>Z4cb]]3
-!s100 9E9l]B07P1kiQaa5X<gDe0
+l32
+L20 120
+V6A4>m:oNOEHe]1DO3;o7@0
+!s100 jOlJM7813UD3`J2[ki2_^2
 R7
 33
-R17
+R8
 !i10b 1
 R9
+R27
 R28
-R29
 !i113 1
 R12
 R13
 Econtrol_alu
-Z30 w1621657231
+Z29 w1621722922
 R3
 R4
 !i122 8
 R0
-Z31 8C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/control_alu.vhd
-Z32 FC:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/control_alu.vhd
+Z30 8C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/control_alu.vhd
+Z31 FC:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/control_alu.vhd
 l0
 L6 1
-VH_ob<VdXT[L@>dH8?2A380
-!s100 C1BagVg2NonUkjZdj;N`53
+V5G8QUJ0;I@Hcci8iK?Ole3
+!s100 e<fhZLbLEhmVnzB=9A5Ec1
 R7
 33
-R17
+R8
 !i10b 1
 R9
-Z33 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/control_alu.vhd|
-Z34 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/control_alu.vhd|
+Z32 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/control_alu.vhd|
+Z33 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/control_alu.vhd|
 !i113 1
 R12
 R13
 Abdf_type
 R3
 R4
-DEx4 work 11 control_alu 0 22 H_ob<VdXT[L@>dH8?2A380
+DEx4 work 11 control_alu 0 22 5G8QUJ0;I@Hcci8iK?Ole3
 !i122 8
-l17
-L15 63
-Vd::HkbR;WhB7n3kUMj9RX3
-!s100 ngQD[1]f7MMUdTQZEc`ag2
+l18
+L16 69
+VS@[RA1C];W1P1hA41KC4n3
+!s100 `ch9k@>;=z:mH@=VoNN_j0
 R7
 33
-R17
+R8
 !i10b 1
 R9
+R32
 R33
-R34
 !i113 1
 R12
 R13
 Egenimm
-Z35 w1621328820
+Z34 w1621725358
 R3
 R4
 !i122 7
 R0
-Z36 8C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/genImm.vhd
-Z37 FC:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/genImm.vhd
+Z35 8C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/genImm.vhd
+Z36 FC:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/genImm.vhd
 l0
 L6 1
 V2N3fK?87>z8cRnWiG[3G^1
 !s100 5D354b;;kDCdnF[cTFkF@1
 R7
 33
-R17
+R8
 !i10b 1
-R9
+Z37 !s108 1621726619.000000
 Z38 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/genImm.vhd|
 Z39 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/genImm.vhd|
 !i113 1
@@ -251,20 +251,20 @@ DEx4 work 6 genimm 0 22 2N3fK?87>z8cRnWiG[3G^1
 !i122 7
 l41
 L12 146
-V3M_HV[@MRU>gmH4ZGcfgW2
-!s100 AMU`D7V^1nGN?hYJJM0ZP3
+V@;zLa1KT7?o_c^FOh`zFn1
+!s100 7AzXQHSdTRIhSXGmBOYMP1
 R7
 33
-R17
+R8
 !i10b 1
-R9
+R37
 R38
 R39
 !i113 1
 R12
 R13
 Emem_data
-Z40 w1621682799
+Z40 w1621708212
 R4
 R3
 R2
@@ -278,11 +278,11 @@ V]Ff6NK=l1dCXCWo<B5Az50
 !s100 h7oh6T02?:dHFE5kQcMI63
 R7
 33
-R17
+Z43 !s110 1621726619
 !i10b 1
-R9
-Z43 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_data.vhd|
-Z44 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_data.vhd|
+R37
+Z44 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_data.vhd|
+Z45 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_data.vhd|
 !i113 1
 R12
 R13
@@ -293,39 +293,39 @@ R2
 DEx4 work 8 mem_data 0 22 ]Ff6NK=l1dCXCWo<B5Az50
 !i122 6
 l45
-L18 44
-Va?]YMk=h2^^;NHO2X^ZBK3
-!s100 jKXlz4DD6IZWMYXHMT=811
+L18 43
+VmY^ok_IGY^oaFIai?Um^L3
+!s100 LEO]P7bbKmTULJ5b]NGX31
 R7
 33
-R17
-!i10b 1
-R9
 R43
+!i10b 1
+R37
 R44
+R45
 !i113 1
 R12
 R13
 Emem_instr
-Z45 w1621648014
+Z46 w1621648014
 R4
 R3
 R2
 !i122 5
 R0
-Z46 8C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd
-Z47 FC:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd
+Z47 8C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd
+Z48 FC:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd
 l0
 L8 1
 VCa_W<8gZV[:VJ@@n02Ml^3
 !s100 ?8AeSCjR`Xn?b9i:_;5FM2
 R7
 33
-R17
+R43
 !i10b 1
-R9
-Z48 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd|
-Z49 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd|
+R37
+Z49 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd|
+Z50 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_instr.vhd|
 !i113 1
 R12
 R13
@@ -341,34 +341,34 @@ VzbCYCVz`;C>oFUPGi2NNR1
 !s100 ]@;8Z3S`eI@n<f:S=2ZR30
 R7
 33
-R17
+R43
 !i10b 1
-R9
-R48
+R37
 R49
+R50
 !i113 1
 R12
 R13
 Emem_reg
-Z50 w1621478482
+Z51 w1621707189
 R4
 R3
 R2
 !i122 4
 R0
-Z51 8C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd
-Z52 FC:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd
+Z52 8C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd
+Z53 FC:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd
 l0
 L7 1
 VHfA4BYiNm1YQjHoZ`8zML2
 !s100 XT9H[9M14]TUECmmj^O6`3
 R7
 33
-R17
+R43
 !i10b 1
-R9
-Z53 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd|
-Z54 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd|
+R37
+Z54 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd|
+Z55 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd|
 !i113 1
 R12
 R13
@@ -384,33 +384,33 @@ V`MmkDAimTe<@VnfUNN8@;3
 !s100 NcLcaR?5RRBN=e;>ORWE^2
 R7
 33
-R17
+R43
 !i10b 1
-R9
-R53
+R37
 R54
+R55
 !i113 1
 R12
 R13
 Emux2_32bits
-Z55 w1621537360
+Z56 w1621537360
 R3
 R4
 !i122 3
 R0
-Z56 8C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux2_32bits.vhd
-Z57 FC:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux2_32bits.vhd
+Z57 8C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux2_32bits.vhd
+Z58 FC:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux2_32bits.vhd
 l0
 L6 1
 VW@LULP;THc:=9hCei51`P3
 !s100 _mhUc`aZ>j96OmX]QAoPe3
 R7
 33
-R17
+R43
 !i10b 1
-R9
-Z58 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux2_32bits.vhd|
-Z59 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux2_32bits.vhd|
+R37
+Z59 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux2_32bits.vhd|
+Z60 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux2_32bits.vhd|
 !i113 1
 R12
 R13
@@ -425,33 +425,33 @@ VgjkUH_[<KLMoGV^M0432U3
 !s100 G38O5a4=c[S6;iBECn=4i0
 R7
 33
-R17
+R43
 !i10b 1
-R9
-R58
+R37
 R59
+R60
 !i113 1
 R12
 R13
 Emux8_32bits
-Z60 w1621549546
+Z61 w1621549546
 R3
 R4
 !i122 0
 R0
-Z61 8C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux8_32bits.vhd
-Z62 FC:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux8_32bits.vhd
+Z62 8C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux8_32bits.vhd
+Z63 FC:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux8_32bits.vhd
 l0
 L6 1
 Vz;BOD]amD4HYoc2fNYHo_0
 !s100 KFiLZ>JIgAdAYE8T=[;_=2
 R7
 33
-Z63 !s110 1621686799
+R43
 !i10b 1
-Z64 !s108 1621686799.000000
-Z65 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux8_32bits.vhd|
-Z66 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux8_32bits.vhd|
+R37
+Z64 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux8_32bits.vhd|
+Z65 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mux8_32bits.vhd|
 !i113 1
 R12
 R13
@@ -466,34 +466,34 @@ V@Rz[8j[8jb9KN@aX7lYCG2
 !s100 RAoBmf69z?Ni>PBbXQY_?1
 R7
 33
-R63
+R43
 !i10b 1
+R37
 R64
 R65
-R66
 !i113 1
 R12
 R13
 Epc
-Z67 w1621536387
+Z66 w1621536387
 R2
 R3
 R4
 !i122 2
 R0
-Z68 8C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/pc.vhd
-Z69 FC:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/pc.vhd
+Z67 8C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/pc.vhd
+Z68 FC:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/pc.vhd
 l0
 L7 1
 V9@c5DKd]=K57D[aX7Y2lE2
 !s100 ;BizLE@dn;@TH@NTi5QoW1
 R7
 33
-R17
+R43
 !i10b 1
-R9
-Z70 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/pc.vhd|
-Z71 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/pc.vhd|
+R37
+Z69 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/pc.vhd|
+Z70 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/pc.vhd|
 !i113 1
 R12
 R13
@@ -509,33 +509,33 @@ VHa7ac6LHHIT1_1_7XSz5E1
 !s100 gT0hWZaZM4k@K<DognLKd0
 R7
 33
-R17
+R43
 !i10b 1
-R9
+R37
+R69
 R70
-R71
 !i113 1
 R12
 R13
 Eriscv_processor
-Z72 w1621682631
+Z71 w1621726453
 R3
 R4
 !i122 1
 R0
-Z73 8C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd
-Z74 FC:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd
+Z72 8C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd
+Z73 FC:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd
 l0
 L6 1
 Vg76m0:=1j_jU8akS4jdlP0
 !s100 3eOl7zUKaW=N84@A=88?11
 R7
 33
-R63
+R43
 !i10b 1
-R64
-Z75 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd|
-Z76 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd|
+R37
+Z74 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd|
+Z75 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd|
 !i113 1
 R12
 R13
@@ -544,31 +544,31 @@ R3
 R4
 DEx4 work 15 riscv_processor 0 22 g76m0:=1j_jU8akS4jdlP0
 !i122 1
-l157
-L16 248
-V^NDNCZBTRH8SM6Ti_I5V62
-!s100 QO?L`KdRkg3aazDY5E;of0
+l161
+L16 262
+VMD[Mh0OLGen4NZFRGNczU3
+!s100 MEMXk=CSV>N>Y>zHzU@<m0
 R7
 33
-R63
+R43
 !i10b 1
-R64
+R37
+R74
 R75
-R76
 !i113 1
 R12
 R13
 Etestbench_riscv_processor
-Z77 w1621686789
-Z78 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
-Z79 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
-Z80 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
+Z76 w1621723968
+Z77 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z78 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z79 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
 R3
 R4
 !i122 13
 R0
-Z81 8C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_RiscV_Processor.vhd
-Z82 FC:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_RiscV_Processor.vhd
+Z80 8C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_RiscV_Processor.vhd
+Z81 FC:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_RiscV_Processor.vhd
 l0
 L8 1
 VKb4nOb`R53eg@ZlXHmSn:3
@@ -577,31 +577,31 @@ R7
 33
 R8
 !i10b 1
-Z83 !s108 1621686801.000000
-Z84 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_RiscV_Processor.vhd|
+R9
+Z82 !s90 -reportprogress|300|-2008|-work|work|C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_RiscV_Processor.vhd|
 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_RiscV_Processor.vhd|
 !i113 1
 R12
 R13
 Atestbench_riscv_processor_arch
+R77
 R78
 R79
-R80
 R3
 R4
 DEx4 work 25 testbench_riscv_processor 0 22 Kb4nOb`R53eg@ZlXHmSn:3
 !i122 13
 l30
-L11 162
-V7@0joR7aRHA84Jf_mRJA73
-!s100 _21BDFaS1]G3g?TRgnRQm2
+L11 152
+V^bF6@8>cE5z[U8]>FKG7;1
+!s100 o:k23cz=j<n^>`0^I^nEN3
 R7
 33
 R8
 !i10b 1
-R83
-R84
-Z85 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_RiscV_Processor.vhd|
+R9
+R82
+Z83 !s107 C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/simulation/modelsim/testbench_RiscV_Processor.vhd|
 !i113 1
 R12
 R13

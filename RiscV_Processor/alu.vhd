@@ -21,21 +21,37 @@ BEGIN
   BEGIN
     CASE opcode IS
 
-      WHEN "0000" => Zout <= STD_LOGIC_VECTOR(SIGNED(Ain) + SIGNED(Bin));
+      WHEN "0000" =>
+        Zout <= STD_LOGIC_VECTOR(SIGNED(Ain) + SIGNED(Bin));
+        zeroOut <= '0';
 
-      WHEN "0001" => Zout <= STD_LOGIC_VECTOR(SIGNED(Ain) - SIGNED(Bin));
+      WHEN "0001" =>
+        Zout <= STD_LOGIC_VECTOR(SIGNED(Ain) - SIGNED(Bin));
+        zeroOut <= '0';
 
-      WHEN "0010" => Zout <= Ain AND Bin;
+      WHEN "0010" =>
+        Zout <= Ain AND Bin;
+        zeroOut <= '0';
 
-      WHEN "0011" => Zout <= Ain OR Bin;
+      WHEN "0011" =>
+        Zout <= Ain OR Bin;
+        zeroOut <= '0';
 
-      WHEN "0100" => Zout <= Ain XOR Bin;
+      WHEN "0100" =>
+        Zout <= Ain XOR Bin;
+        zeroOut <= '0';
 
-      WHEN "0101" => Zout <= STD_LOGIC_VECTOR(UNSIGNED(Ain) SLL TO_INTEGER(UNSIGNED(Bin)));
+      WHEN "0101" =>
+        Zout <= STD_LOGIC_VECTOR(UNSIGNED(Ain) SLL TO_INTEGER(UNSIGNED(Bin)));
+        zeroOut <= '0';
 
-      WHEN "0110" => Zout <= STD_LOGIC_VECTOR(UNSIGNED(Ain) SRL TO_INTEGER(UNSIGNED(Bin)));
+      WHEN "0110" =>
+        Zout <= STD_LOGIC_VECTOR(UNSIGNED(Ain) SRL TO_INTEGER(UNSIGNED(Bin)));
+        zeroOut <= '0';
 
-      WHEN "0111" => Zout <= STD_LOGIC_VECTOR(SHIFT_RIGHT(SIGNED(Ain), TO_INTEGER(UNSIGNED(Bin))));
+      WHEN "0111" =>
+        Zout <= STD_LOGIC_VECTOR(SHIFT_RIGHT(SIGNED(Ain), TO_INTEGER(UNSIGNED(Bin))));
+        zeroOut <= '0';
 
       WHEN "1000" =>
         IF SIGNED(Ain) < SIGNED(Bin) THEN
@@ -91,10 +107,17 @@ BEGIN
           zeroOut <= '1';
         END IF;
 
-      --WHEN "1110" =>
-      --WHEN "1111" =>
+      WHEN "1110" =>
+        Zout <= STD_LOGIC_VECTOR(UNSIGNED(Bin));
+        zeroOut <= '0';
 
-      WHEN OTHERS => Zout <= "00000000000000000000000000000000";
+      WHEN "1111" =>
+        Zout <= STD_LOGIC_VECTOR(SIGNED(Ain) + SIGNED(Bin));
+        zeroOut <= '0';
+
+      WHEN OTHERS =>
+        Zout <= "00000000000000000000000000000000";
+        zeroOut <= '0';
 
     END CASE;
   END PROCESS;

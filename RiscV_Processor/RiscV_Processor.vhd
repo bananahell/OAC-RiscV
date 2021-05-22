@@ -34,6 +34,7 @@ SIGNAL branch_signal : STD_LOGIC;
 SIGNAL memToReg_signal : STD_LOGIC;
 SIGNAL memRead_signal : STD_LOGIC;
 SIGNAL memWrite_signal : STD_LOGIC;
+SIGNAL auipc_signal : STD_LOGIC;
 SIGNAL aluSrc_signal : STD_LOGIC;
 SIGNAL regWrite_signal : STD_LOGIC;
 -- pc
@@ -45,6 +46,7 @@ SIGNAL adderOut_signal : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL adder4Out_signal : STD_LOGIC_VECTOR(31 DOWNTO 0);
 
 SIGNAL write_data_signal : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL rs1_signal : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL rs2_signal : STD_LOGIC_VECTOR(31 DOWNTO 0);
 
 SIGNAL data_out_signal : STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -65,6 +67,7 @@ COMPONENT control_alu
   PORT (
     ulaOp : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     funct7 : IN STD_LOGIC;
+    auipcIn : IN STD_LOGIC;
     funct3 : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     opOut : OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
 END COMPONENT;
@@ -75,6 +78,7 @@ COMPONENT control
     branch : OUT STD_LOGIC;
     memRead : OUT STD_LOGIC;
     memToReg : OUT STD_LOGIC;
+    auipc : OUT STD_LOGIC;
     aluOp : OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
     memWrite : OUT STD_LOGIC;
     aluSrc : OUT STD_LOGIC;
@@ -156,6 +160,8 @@ END COMPONENT;
 
 BEGIN
 
+  rst_signal <= '0';
+
   control_inst01 : control
   PORT MAP (
     op => instruction_signal(6 DOWNTO 0),
@@ -163,6 +169,7 @@ BEGIN
     branch => branch_signal,
     memToReg => memToReg_signal,
     memWrite => memWrite_signal,
+    auipc => auipc_signal,
     memRead => memRead_signal,
     aluSrc => aluSrc_signal,
     regWrite => regWrite_signal);
@@ -184,6 +191,7 @@ BEGIN
   PORT MAP (
     ulaOp => aluOp_signal,
     funct7 => instruction_signal(30),
+    auipcIn => auipc_signal,
     funct3 => instruction_signal(14 DOWNTO 12),
     opOut => aluOPout_signal);
 
@@ -229,7 +237,15 @@ BEGIN
     B => data_out_signal,
     Result => write_data_signal);
 
-  mem_reg_inst11 : mem_reg
+  -- mux D
+  muxD_inst11 : mux2_32bits
+  PORT MAP (
+    Sel => auipc_signal,
+    A => rs1_signal,
+    B => addr_out_signal,
+    Result => Ain_signal);
+
+  mem_reg_inst12 : mem_reg
   PORT MAP (
     clock => clock,
     we => regWrite_signal,
@@ -237,10 +253,10 @@ BEGIN
     address2x => instruction_signal(24 DOWNTO 20),
     write_address => instruction_signal(11 DOWNTO 7),
     data_in => write_data_signal,
-    data1_out => Ain_signal,
+    data1_out => rs1_signal,
     data2_out => rs2_signal);
 
-  mem_data_inst12 : mem_data
+  mem_data_inst13 : mem_data
   PORT MAP (
     clock => clock,
     we => memWrite_signal,
@@ -249,14 +265,14 @@ BEGIN
     data_in => rs2_signal,
     data_out => data_out_signal);
 
-  mem_instr_inst13 : mem_instr
+  mem_instr_inst14 : mem_instr
   PORT MAP (
     address => addr_out_signal(11 DOWNTO 0),
     data_out => instruction_signal);
 
   instr_out <= instruction_signal;
   rs1_out <= Ain_signal;
-  rs2_out <= rs2_signal;
+  rs2_out <= Bin_signal;
   rd_out <= write_data_signal;
   data_out <= data_out_signal;
 

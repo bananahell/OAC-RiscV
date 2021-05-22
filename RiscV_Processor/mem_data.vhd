@@ -46,14 +46,13 @@ BEGIN
 
   address_signal <= (TO_INTEGER(UNSIGNED(address)) / 4);
 
+  data_out <= mem_data(address_signal) WHEN re = '1' ELSE x"00000000";
+
   PROCESS (clock)
   BEGIN
     IF RISING_EDGE(clock) THEN
       IF we = '1' THEN
         mem_data(address_signal) <= data_in;
-        data_out <= mem_data(address_signal);
-      ELSIF re = '1' THEN
-        data_out <= mem_data(address_signal);
       END IF;
     END IF;
   END PROCESS;

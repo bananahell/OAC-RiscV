@@ -27,7 +27,7 @@ SIGNAL address1_signal : INTEGER := 0;
 SIGNAL address2_signal : INTEGER := 0;
 SIGNAL write_address_signal : INTEGER := 0;
 
-signal breg : mem_type := (x"00000000",
+SIGNAL breg : mem_type := (x"00000000",
                            others => (others => '0'));
 
 BEGIN
@@ -38,7 +38,7 @@ BEGIN
   data1_out <= breg(address1_signal);
   data2_out <= breg(address2_signal);
 
-  PROCESS (clock)
+  PROCESS (clock, we, write_address_signal)
   BEGIN
     IF RISING_EDGE(clock) AND (we = '1') AND (write_address_signal /= 0) THEN
       breg(write_address_signal) <= data_in;

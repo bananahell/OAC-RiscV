@@ -40,6 +40,10 @@ END COMPONENT;
 
 BEGIN
 
+  zero_bit <= '0';
+  zero_bit_twelve <= "000000000000";
+  zero_bit_thirtytwo <= "00000000000000000000000000000000";
+
   I_type(31) <= instr(31);
   I_type(30) <= instr(31);
   I_type(29) <= instr(31);
@@ -131,13 +135,13 @@ BEGIN
   UJ_type(4 DOWNTO 1) <= instr(24 DOWNTO 21);
   UJ_type(0) <= zero_bit;
 
-  U_type(31 DOWNTO 20) <= instr(31 DOWNTO 20);
-  U_type(19 DOWNTO 12) <= instr(19 DOWNTO 12);
+  U_type(31 DOWNTO 12) <= instr(31 DOWNTO 12);
   U_type(11 DOWNTO 0) <= zero_bit_twelve;
 
   selector(2) <= instr(3);
   selector(1) <= (((instr(6) AND instr(5)) AND NOT(instr(4))) AND NOT(instr(2))) OR
-                 ((instr(5) AND instr(4)) AND instr(2));
+                 ((instr(5) AND instr(4)) AND instr(2)) OR
+                 (NOT instr(6) AND NOT instr(5) AND instr(4) AND NOT instr(3) AND instr(2) AND instr(1) AND instr(1) AND instr(0));
   selector(0) <= ((NOT(instr(6)) AND instr(5)) AND NOT(instr(4))) OR
                  ((instr(5) AND instr(4)) AND instr(2));
 

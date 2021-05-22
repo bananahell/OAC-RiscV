@@ -8,6 +8,7 @@ ENTITY control_alu IS
   PORT (
     ulaOp : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     funct7 : IN STD_LOGIC;
+    auipcIn : IN STD_LOGIC;
     funct3 : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     opOut : OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
 END ENTITY control_alu;
@@ -16,7 +17,7 @@ ARCHITECTURE bdf_type OF control_alu IS
 
 BEGIN
 
-  PROCESS (funct7, funct3, ulaOp)
+  PROCESS (funct7, funct3, ulaOp, auipcIn)
   BEGIN
 
     CASE ulaOp IS
@@ -68,6 +69,12 @@ BEGIN
           WHEN "101" => opOut <= "1010";  -- BGE
           WHEN OTHERS => opOut <= "0000";
         END CASE;
+      WHEN "11" =>
+        IF auipcIn = '0' THEN
+          opOut <= "1110";  -- LUi
+        ELSE
+          opOut <= "1111";  -- AUiPC
+        END IF;
       WHEN OTHERS => opOut <= "0000";
 
     END CASE;
