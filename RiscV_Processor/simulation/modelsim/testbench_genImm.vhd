@@ -13,7 +13,7 @@ ARCHITECTURE testbench_genImm_arch OF testbench_genImm IS
   SIGNAL instr : STD_LOGIC_VECTOR (31 DOWNTO 0);
   SIGNAL result_imm : STD_LOGIC_VECTOR (31 DOWNTO 0);
 
-  COMPONENT genImm32
+  COMPONENT genImm
     PORT (
       instr : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
       result_imm : OUT STD_LOGIC_VECTOR (31 DOWNTO 0));
@@ -21,7 +21,7 @@ ARCHITECTURE testbench_genImm_arch OF testbench_genImm IS
 
 BEGIN
 
-  DUT : genImm32
+  DUT : genImm
     PORT MAP (
       instr => instr,
       result_imm => result_imm);

@@ -39,11 +39,11 @@ BEGIN
 
     address <= "000000001000";
     WAIT FOR 1 us;
-    ASSERT (data_out = "01000000000000000000010000010011") REPORT "Assert 3 (data_out line 3)" SEVERITY ERROR;
+    ASSERT (data_out = x"00002437") REPORT "Assert 3 (data_out line 3)" SEVERITY ERROR;
 
     address <= "000000010000";
     WAIT FOR 1 us;
-    ASSERT (data_out = "01000000000001000000010000010011") REPORT "Assert 4 (data_out line 5)" SEVERITY ERROR;
+    ASSERT (data_out = x"00042483") REPORT "Assert 4 (data_out line 5)" SEVERITY ERROR;
 
     REPORT "mem_instr done" SEVERITY NOTE;
     WAIT;
