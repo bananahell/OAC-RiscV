@@ -84,7 +84,7 @@ BEGIN
     Ain <= x"FEFFFFF0";
     Bin <= x"00000001";
     WAIT FOR 1 us;
-    ASSERT (Zout = x"FF7FFFF8") REPORT "Assert 8 (SRA)" SEVERITY ERROR;
+    ASSERT (Zout = x"FF7FFFF8") REPORT "Assert 8 (SRAI)" SEVERITY ERROR;
 
     opcode <= "1000";
     Ain <= x"F1111101";

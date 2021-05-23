@@ -11,6 +11,7 @@ ENTITY control IS
     memRead : OUT STD_LOGIC;  -- Permite a escrita na memoria
     memToReg : OUT STD_LOGIC;  -- O valor que vem da memoria de dados para se escrita no registrador
     auipc : OUT STD_LOGIC;
+    jal : OUT STD_LOGIC;
     aluOp : OUT STD_LOGIC_VECTOR (1 DOWNTO 0);  -- 2 bits da aluOp
     memWrite : OUT STD_LOGIC;  -- Permite a escrita na memoria
     aluSrc : OUT STD_LOGIC;  -- Se a segunda entrada na ula vira do imediato ou nao
@@ -27,6 +28,7 @@ SIGNAL aluOp_signal : STD_LOGIC_VECTOR(1 DOWNTO 0);
 SIGNAL memWrite_signal : STD_LOGIC;
 SIGNAL aluSrc_signal : STD_LOGIC;
 SIGNAL auipc_signal : STD_LOGIC;
+SIGNAL jal_signal : STD_LOGIC;
 SIGNAL regWrite_signal : STD_LOGIC;
 
 BEGIN
@@ -37,6 +39,7 @@ BEGIN
   memToReg <= memToReg_signal;
   aluOp <= aluOp_signal;
   auipc <= auipc_signal;
+  jal <= jal_signal;
   memWrite <= memWrite_signal;
   aluSrc <= aluSrc_signal;
   regWrite <= regWrite_signal;
@@ -53,6 +56,7 @@ PROCESS (op_signal)
         memToReg_signal <= '0';
         memWrite_signal <= '0';
         auipc_signal <= '0';
+        jal_signal <= '0';
         regWrite_signal <= '1';
         aluSrc_signal <= '0';
         aluOp_signal <= "00";
@@ -64,6 +68,7 @@ PROCESS (op_signal)
         memToReg_signal <= '0';
         memWrite_signal <= '0';
         auipc_signal <= '0';
+        jal_signal <= '0';
         regWrite_signal <= '1';
         aluSrc_signal <= '1';
         aluOp_signal <= "01";
@@ -75,6 +80,7 @@ PROCESS (op_signal)
         memToReg_signal <= '0';
         memWrite_signal <= '0';
         auipc_signal <= '0';
+        jal_signal <= '0';
         regWrite_signal <= '0';
         aluSrc_signal <= '0';
         aluOp_signal <= "10";
@@ -86,6 +92,7 @@ PROCESS (op_signal)
         memToReg_signal <= '1';
         memWrite_signal <= '0';
         auipc_signal <= '0';
+        jal_signal <= '0';
         regWrite_signal <= '1';
         aluSrc_signal <= '1';
         aluOp_signal <= "11";
@@ -97,6 +104,7 @@ PROCESS (op_signal)
         memToReg_signal <= '0';
         memWrite_signal <= '1';
         auipc_signal <= '0';
+        jal_signal <= '0';
         regWrite_signal <= '0';
         aluSrc_signal <= '1';
         aluOp_signal <= "11";
@@ -108,6 +116,7 @@ PROCESS (op_signal)
         memToReg_signal <= '0';
         memWrite_signal <= '0';
         auipc_signal <= '0';
+        jal_signal <= '0';
         regWrite_signal <= '1';
         aluSrc_signal <= '1';
         aluOp_signal <= "11";
@@ -119,7 +128,32 @@ PROCESS (op_signal)
         memToReg_signal <= '0';
         memWrite_signal <= '0';
         auipc_signal <= '1';
+        jal_signal <= '0';
         regWrite_signal <= '1';
+        aluSrc_signal <= '1';
+        aluOp_signal <= "11";
+
+      -- JAL
+      WHEN "1101111" =>
+        branch_signal <= '1';
+        memRead_signal <= '0';
+        memToReg_signal <= '0';
+        memWrite_signal <= '0';
+        auipc_signal <= '0';
+        jal_signal <= '1';
+        regWrite_signal <= '1';
+        aluSrc_signal <= '1';
+        aluOp_signal <= "11";
+
+      -- JALR
+      WHEN "1100111" =>
+        branch_signal <= '1';
+        memRead_signal <= '0';
+        memToReg_signal <= '0';
+        memWrite_signal <= '0';
+        auipc_signal <= '0';
+        jal_signal <= '1';
+        regWrite_signal <= '0';
         aluSrc_signal <= '1';
         aluOp_signal <= "11";
 
@@ -127,6 +161,7 @@ PROCESS (op_signal)
         branch_signal <= '0';
         memRead_signal <= '0';
         memToReg_signal <= '0';
+        jal_signal <= '0';
         aluOp_signal <= "00";
         memWrite_signal <= '0';
         auipc_signal <= '0';

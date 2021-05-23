@@ -131,6 +131,140 @@ BEGIN
     clock <= '1';
     WAIT FOR 1 us;
 
+    -- lui t2, 0xFF000
+    clock <= '0';
+    WAIT FOR 1 us;
+    clock <= '1';
+    WAIT FOR 1 us;
+
+    -- srli t3, t2, 4
+    clock <= '0';
+    WAIT FOR 1 us;
+    clock <= '1';
+    WAIT FOR 1 us;
+
+    -- srai t4, t2, 4
+    clock <= '0';
+    WAIT FOR 1 us;
+    clock <= '1';
+    WAIT FOR 1 us;
+
+    -- slt s0, t0, t1
+    clock <= '0';
+    WAIT FOR 1 us;
+    clock <= '1';
+    WAIT FOR 1 us;
+
+    -- slt s1, t1, t0
+    clock <= '0';
+    WAIT FOR 1 us;
+    clock <= '1';
+    WAIT FOR 1 us;
+
+    -- sltu s3, zero, t0
+    clock <= '0';
+    WAIT FOR 1 us;
+    clock <= '1';
+    WAIT FOR 1 us;
+
+    -- sltu s4, t0, zero
+    clock <= '0';
+    WAIT FOR 1 us;
+    clock <= '1';
+    WAIT FOR 1 us;
+
+
+
+    -- jal ra, testasub linha 23
+    clock <= '0';
+    WAIT FOR 1 us;
+    clock <= '1';
+    WAIT FOR 1 us;
+
+    -- sub t3, t0, t1 linha 25
+    clock <= '0';
+    WAIT FOR 1 us;
+    clock <= '1';
+    WAIT FOR 1 us;
+
+
+
+    -- jalr x0, ra, 0 linha 26
+    clock <= '0';
+    WAIT FOR 1 us;
+    clock <= '1';
+    WAIT FOR 1 us;
+
+
+
+    -- jal ra, testasub linha 24
+    clock <= '0';
+    WAIT FOR 1 us;
+    clock <= '1';
+    WAIT FOR 1 us;
+
+    -- addi t0, zero, -2 linha 27
+    clock <= '0';
+    WAIT FOR 1 us;
+    clock <= '1';
+    WAIT FOR 1 us;
+
+    -- addi t0, t0, 2 linha 28
+    clock <= '0';
+    WAIT FOR 1 us;
+    clock <= '1';
+    WAIT FOR 1 us;
+
+
+
+    -- beq t0, zero, beqsim linha 29
+    clock <= '0';
+    WAIT FOR 1 us;
+    clock <= '1';
+    WAIT FOR 1 us;
+
+    -- addi t0, t0, 2 linha 25
+    clock <= '0';
+    WAIT FOR 1 us;
+    clock <= '1';
+    WAIT FOR 1 us;
+
+
+
+    -- beq t0, zero, beqsim linha 26
+    clock <= '0';
+    WAIT FOR 1 us;
+    clock <= '1';
+    WAIT FOR 1 us;
+
+    -- addi t0, t0, -1 linha 27
+    clock <= '0';
+    WAIT FOR 1 us;
+    clock <= '1';
+    WAIT FOR 1 us;
+
+
+
+    -- bne t0, zero, bnesim linha 28
+    clock <= '0';
+    WAIT FOR 1 us;
+    clock <= '1';
+    WAIT FOR 1 us;
+
+    -- addi t0, t0, -1 linha 27
+    clock <= '0';
+    WAIT FOR 1 us;
+    clock <= '1';
+    WAIT FOR 1 us;
+
+
+
+    -- bne t0, zero, bnesim linha 28
+    clock <= '0';
+    WAIT FOR 1 us;
+    clock <= '1';
+    WAIT FOR 1 us;
+
     REPORT "RiscV_Processor done" SEVERITY NOTE;
     WAIT;
   END PROCESS;

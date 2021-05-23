@@ -65,13 +65,17 @@ BEGIN
     WAIT FOR 1 us;
     ASSERT (result_imm = x"FFFFFFE0") REPORT "Assert 9 (SB type)" SEVERITY ERROR;
 
-    instr <= x"00c000ef";
+    instr <= x"008000ef";
     WAIT FOR 1 us;
-    ASSERT (result_imm = x"0000000C") REPORT "Assert 10 (UJ type)" SEVERITY ERROR;
+    ASSERT (result_imm = 8) REPORT "Assert 10 (JAL)" SEVERITY ERROR;
+
+    instr <= x"00408067";
+    WAIT FOR 1 us;
+    ASSERT (result_imm = 4) REPORT "Assert 11 (JALR)" SEVERITY ERROR;
 
     instr <= "00000000000000000010111100010111";
     WAIT FOR 1 us;
-    ASSERT (result_imm = x"00002000") REPORT "Assert 11 (AUIPC)" SEVERITY ERROR;
+    ASSERT (result_imm = x"00002000") REPORT "Assert 12 (AUIPC)" SEVERITY ERROR;
 
     REPORT "genImm done" SEVERITY NOTE;
     WAIT;

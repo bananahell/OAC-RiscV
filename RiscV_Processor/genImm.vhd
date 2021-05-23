@@ -44,28 +44,28 @@ BEGIN
   zero_bit_twelve <= "000000000000";
   zero_bit_thirtytwo <= "00000000000000000000000000000000";
 
-  I_type(31) <= instr(31);
-  I_type(30) <= instr(31);
-  I_type(29) <= instr(31);
-  I_type(28) <= instr(31);
-  I_type(27) <= instr(31);
-  I_type(26) <= instr(31);
-  I_type(25) <= instr(31);
-  I_type(24) <= instr(31);
-  I_type(23) <= instr(31);
-  I_type(22) <= instr(31);
-  I_type(21) <= instr(31);
-  I_type(20) <= instr(31);
-  I_type(19) <= instr(31);
-  I_type(18) <= instr(31);
-  I_type(17) <= instr(31);
-  I_type(16) <= instr(31);
-  I_type(15) <= instr(31);
-  I_type(14) <= instr(31);
-  I_type(13) <= instr(31);
-  I_type(12) <= instr(31);  -- daqui pra cima é o sinal extendido
-  I_type(11) <= instr(31);  -- sinal
-  I_type(10 DOWNTO 5) <= instr(30 DOWNTO 25);
+  I_type(31) <= instr(31) WHEN instr(14 DOWNTO 12) /= "001" AND instr(14 DOWNTO 12) /= "101" ELSE '0';
+  I_type(30) <= instr(31) WHEN instr(14 DOWNTO 12) /= "001" AND instr(14 DOWNTO 12) /= "101" ELSE '0';
+  I_type(29) <= instr(31) WHEN instr(14 DOWNTO 12) /= "001" AND instr(14 DOWNTO 12) /= "101" ELSE '0';
+  I_type(28) <= instr(31) WHEN instr(14 DOWNTO 12) /= "001" AND instr(14 DOWNTO 12) /= "101" ELSE '0';
+  I_type(27) <= instr(31) WHEN instr(14 DOWNTO 12) /= "001" AND instr(14 DOWNTO 12) /= "101" ELSE '0';
+  I_type(26) <= instr(31) WHEN instr(14 DOWNTO 12) /= "001" AND instr(14 DOWNTO 12) /= "101" ELSE '0';
+  I_type(25) <= instr(31) WHEN instr(14 DOWNTO 12) /= "001" AND instr(14 DOWNTO 12) /= "101" ELSE '0';
+  I_type(24) <= instr(31) WHEN instr(14 DOWNTO 12) /= "001" AND instr(14 DOWNTO 12) /= "101" ELSE '0';
+  I_type(23) <= instr(31) WHEN instr(14 DOWNTO 12) /= "001" AND instr(14 DOWNTO 12) /= "101" ELSE '0';
+  I_type(22) <= instr(31) WHEN instr(14 DOWNTO 12) /= "001" AND instr(14 DOWNTO 12) /= "101" ELSE '0';
+  I_type(21) <= instr(31) WHEN instr(14 DOWNTO 12) /= "001" AND instr(14 DOWNTO 12) /= "101" ELSE '0';
+  I_type(20) <= instr(31) WHEN instr(14 DOWNTO 12) /= "001" AND instr(14 DOWNTO 12) /= "101" ELSE '0';
+  I_type(19) <= instr(31) WHEN instr(14 DOWNTO 12) /= "001" AND instr(14 DOWNTO 12) /= "101" ELSE '0';
+  I_type(18) <= instr(31) WHEN instr(14 DOWNTO 12) /= "001" AND instr(14 DOWNTO 12) /= "101" ELSE '0';
+  I_type(17) <= instr(31) WHEN instr(14 DOWNTO 12) /= "001" AND instr(14 DOWNTO 12) /= "101" ELSE '0';
+  I_type(16) <= instr(31) WHEN instr(14 DOWNTO 12) /= "001" AND instr(14 DOWNTO 12) /= "101" ELSE '0';
+  I_type(15) <= instr(31) WHEN instr(14 DOWNTO 12) /= "001" AND instr(14 DOWNTO 12) /= "101" ELSE '0';
+  I_type(14) <= instr(31) WHEN instr(14 DOWNTO 12) /= "001" AND instr(14 DOWNTO 12) /= "101" ELSE '0';
+  I_type(13) <= instr(31) WHEN instr(14 DOWNTO 12) /= "001" AND instr(14 DOWNTO 12) /= "101" ELSE '0';
+  I_type(12) <= instr(31) WHEN instr(14 DOWNTO 12) /= "001" AND instr(14 DOWNTO 12) /= "101" ELSE '0';  -- daqui pra cima é o sinal extendido
+  I_type(11) <= instr(31) WHEN instr(14 DOWNTO 12) /= "001" AND instr(14 DOWNTO 12) /= "101" ELSE '0';  -- sinal
+  I_type(10 DOWNTO 5) <= instr(30 DOWNTO 25) WHEN instr(14 DOWNTO 12) /= "001" AND instr(14 DOWNTO 12) /= "101" ELSE "000000";
   I_type(4 DOWNTO 0) <= instr(24 DOWNTO 20);
 
   S_type(31) <= instr(31);
