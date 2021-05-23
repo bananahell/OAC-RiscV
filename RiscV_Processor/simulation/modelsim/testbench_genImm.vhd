@@ -69,6 +69,10 @@ BEGIN
     WAIT FOR 1 us;
     ASSERT (result_imm = x"0000000C") REPORT "Assert 10 (UJ type)" SEVERITY ERROR;
 
+    instr <= "00000000000000000010111100010111";
+    WAIT FOR 1 us;
+    ASSERT (result_imm = x"00002000") REPORT "Assert 11 (AUIPC)" SEVERITY ERROR;
+
     REPORT "genImm done" SEVERITY NOTE;
     WAIT;
   END PROCESS;

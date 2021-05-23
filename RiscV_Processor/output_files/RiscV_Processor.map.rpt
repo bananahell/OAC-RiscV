@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RiscV_Processor
-Sun May 23 12:34:18 2021
+Sun May 23 14:49:45 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -47,7 +47,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun May 23 12:34:18 2021       ;
+; Analysis & Synthesis Status     ; Successful - Sun May 23 14:49:45 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; RiscV_Processor                             ;
 ; Top-level Entity Name           ; RiscV_Processor                             ;
@@ -193,31 +193,31 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                       ;
-+---------------------------------------------+---------------------+
-; Resource                                    ; Usage               ;
-+---------------------------------------------+---------------------+
-; Estimate of Logic utilization (ALMs needed) ; 0                   ;
-;                                             ;                     ;
-; Combinational ALUT usage for logic          ; 0                   ;
-;     -- 7 input functions                    ; 0                   ;
-;     -- 6 input functions                    ; 0                   ;
-;     -- 5 input functions                    ; 0                   ;
-;     -- 4 input functions                    ; 0                   ;
-;     -- <=3 input functions                  ; 0                   ;
-;                                             ;                     ;
-; Dedicated logic registers                   ; 0                   ;
-;                                             ;                     ;
-; I/O pins                                    ; 161                 ;
-;                                             ;                     ;
-; Total DSP Blocks                            ; 0                   ;
-;                                             ;                     ;
-; Maximum fan-out node                        ; instr_out[0]~output ;
-; Maximum fan-out                             ; 1                   ;
-; Total fan-out                               ; 161                 ;
-; Average fan-out                             ; 0.50                ;
-+---------------------------------------------+---------------------+
++---------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                         ;
++---------------------------------------------+-----------------------+
+; Resource                                    ; Usage                 ;
++---------------------------------------------+-----------------------+
+; Estimate of Logic utilization (ALMs needed) ; 0                     ;
+;                                             ;                       ;
+; Combinational ALUT usage for logic          ; 0                     ;
+;     -- 7 input functions                    ; 0                     ;
+;     -- 6 input functions                    ; 0                     ;
+;     -- 5 input functions                    ; 0                     ;
+;     -- 4 input functions                    ; 0                     ;
+;     -- <=3 input functions                  ; 0                     ;
+;                                             ;                       ;
+; Dedicated logic registers                   ; 0                     ;
+;                                             ;                       ;
+; I/O pins                                    ; 161                   ;
+;                                             ;                       ;
+; Total DSP Blocks                            ; 0                     ;
+;                                             ;                       ;
+; Maximum fan-out node                        ; instruction[0]~output ;
+; Maximum fan-out                             ; 1                     ;
+; Total fan-out                               ; 161                   ;
+; Average fan-out                             ; 0.50                  ;
++---------------------------------------------+-----------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1342,7 +1342,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun May 23 12:34:09 2021
+    Info: Processing started: Sun May 23 14:49:36 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RiscV_Processor -c RiscV_Processor
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file mux8_32bits.vhd
@@ -1387,7 +1387,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file adder.v
 Info (12127): Elaborating entity "RiscV_Processor" for the top level hierarchy
 Info (12128): Elaborating entity "control" for hierarchy "control:control_inst01" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 165
 Info (12128): Elaborating entity "genImm" for hierarchy "genImm:genImm_inst02" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 177
-Info (12128): Elaborating entity "mux8_32bits" for hierarchy "genImm:genImm_inst02|mux8_32bits:b2v_inst" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/genImm.vhd Line: 148
+Info (12128): Elaborating entity "mux8_32bits" for hierarchy "genImm:genImm_inst02|mux8_32bits:b2v_inst" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/genImm.vhd Line: 149
 Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_inst03" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 182
 Info (12128): Elaborating entity "control_alu" for hierarchy "control_alu:control_alu_inst04" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 190
 Info (12128): Elaborating entity "pc" for hierarchy "pc:pc_inst05" File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 198
@@ -1400,166 +1400,166 @@ Info (12128): Elaborating entity "mem_instr" for hierarchy "mem_instr:mem_instr_
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276004): RAM logic "mem_reg:mem_reg_inst12|breg" is uninferred due to inappropriate RAM size File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/mem_reg.vhd Line: 30
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "instr_out[0]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[1]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[2]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[3]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[4]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[5]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[6]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[7]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[8]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[9]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[10]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[11]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[12]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[13]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[14]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[15]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[16]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[17]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[18]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[19]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[20]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[21]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[22]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[23]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[24]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[25]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[26]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[27]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[28]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[29]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[30]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "instr_out[31]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
-    Warning (13410): Pin "rs1_out[0]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[1]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[2]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[3]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[4]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[5]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[6]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[7]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[8]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[9]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[10]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[11]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[12]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[13]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[14]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[15]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[16]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[17]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[18]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[19]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[20]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[21]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[22]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[23]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[24]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[25]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[26]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[27]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[28]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[29]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[30]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs1_out[31]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
-    Warning (13410): Pin "rs2_out[0]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[1]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[2]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[3]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[4]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[5]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[6]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[7]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[8]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[9]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[10]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[11]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[12]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[13]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[14]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[15]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[16]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[17]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[18]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[19]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[20]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[21]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[22]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[23]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[24]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[25]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[26]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[27]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[28]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[29]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[30]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rs2_out[31]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
-    Warning (13410): Pin "rd_out[0]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[1]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[2]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[3]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[4]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[5]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[6]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[7]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[8]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[9]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[10]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[11]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[12]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[13]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[14]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[15]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[16]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[17]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[18]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[19]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[20]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[21]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[22]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[23]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[24]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[25]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[26]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[27]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[28]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[29]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[30]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "rd_out[31]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
-    Warning (13410): Pin "data_out[0]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[1]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[2]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[3]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[4]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[5]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[6]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[7]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[8]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[9]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[10]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[11]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[12]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[13]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[14]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[15]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[16]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[17]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[18]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[19]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[20]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[21]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[22]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[23]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[24]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[25]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[26]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[27]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[28]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[29]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[30]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
-    Warning (13410): Pin "data_out[31]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
+    Warning (13410): Pin "instruction[0]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
+    Warning (13410): Pin "instruction[1]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
+    Warning (13410): Pin "instruction[2]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
+    Warning (13410): Pin "instruction[3]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
+    Warning (13410): Pin "instruction[4]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
+    Warning (13410): Pin "instruction[5]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
+    Warning (13410): Pin "instruction[6]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
+    Warning (13410): Pin "instruction[7]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
+    Warning (13410): Pin "instruction[8]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
+    Warning (13410): Pin "instruction[9]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
+    Warning (13410): Pin "instruction[10]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
+    Warning (13410): Pin "instruction[11]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
+    Warning (13410): Pin "instruction[12]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
+    Warning (13410): Pin "instruction[13]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
+    Warning (13410): Pin "instruction[14]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
+    Warning (13410): Pin "instruction[15]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
+    Warning (13410): Pin "instruction[16]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
+    Warning (13410): Pin "instruction[17]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
+    Warning (13410): Pin "instruction[18]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
+    Warning (13410): Pin "instruction[19]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
+    Warning (13410): Pin "instruction[20]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
+    Warning (13410): Pin "instruction[21]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
+    Warning (13410): Pin "instruction[22]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
+    Warning (13410): Pin "instruction[23]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
+    Warning (13410): Pin "instruction[24]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
+    Warning (13410): Pin "instruction[25]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
+    Warning (13410): Pin "instruction[26]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
+    Warning (13410): Pin "instruction[27]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
+    Warning (13410): Pin "instruction[28]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
+    Warning (13410): Pin "instruction[29]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
+    Warning (13410): Pin "instruction[30]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
+    Warning (13410): Pin "instruction[31]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 9
+    Warning (13410): Pin "rs1[0]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
+    Warning (13410): Pin "rs1[1]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
+    Warning (13410): Pin "rs1[2]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
+    Warning (13410): Pin "rs1[3]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
+    Warning (13410): Pin "rs1[4]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
+    Warning (13410): Pin "rs1[5]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
+    Warning (13410): Pin "rs1[6]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
+    Warning (13410): Pin "rs1[7]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
+    Warning (13410): Pin "rs1[8]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
+    Warning (13410): Pin "rs1[9]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
+    Warning (13410): Pin "rs1[10]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
+    Warning (13410): Pin "rs1[11]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
+    Warning (13410): Pin "rs1[12]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
+    Warning (13410): Pin "rs1[13]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
+    Warning (13410): Pin "rs1[14]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
+    Warning (13410): Pin "rs1[15]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
+    Warning (13410): Pin "rs1[16]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
+    Warning (13410): Pin "rs1[17]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
+    Warning (13410): Pin "rs1[18]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
+    Warning (13410): Pin "rs1[19]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
+    Warning (13410): Pin "rs1[20]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
+    Warning (13410): Pin "rs1[21]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
+    Warning (13410): Pin "rs1[22]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
+    Warning (13410): Pin "rs1[23]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
+    Warning (13410): Pin "rs1[24]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
+    Warning (13410): Pin "rs1[25]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
+    Warning (13410): Pin "rs1[26]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
+    Warning (13410): Pin "rs1[27]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
+    Warning (13410): Pin "rs1[28]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
+    Warning (13410): Pin "rs1[29]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
+    Warning (13410): Pin "rs1[30]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
+    Warning (13410): Pin "rs1[31]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 10
+    Warning (13410): Pin "rs2[0]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
+    Warning (13410): Pin "rs2[1]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
+    Warning (13410): Pin "rs2[2]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
+    Warning (13410): Pin "rs2[3]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
+    Warning (13410): Pin "rs2[4]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
+    Warning (13410): Pin "rs2[5]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
+    Warning (13410): Pin "rs2[6]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
+    Warning (13410): Pin "rs2[7]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
+    Warning (13410): Pin "rs2[8]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
+    Warning (13410): Pin "rs2[9]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
+    Warning (13410): Pin "rs2[10]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
+    Warning (13410): Pin "rs2[11]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
+    Warning (13410): Pin "rs2[12]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
+    Warning (13410): Pin "rs2[13]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
+    Warning (13410): Pin "rs2[14]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
+    Warning (13410): Pin "rs2[15]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
+    Warning (13410): Pin "rs2[16]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
+    Warning (13410): Pin "rs2[17]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
+    Warning (13410): Pin "rs2[18]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
+    Warning (13410): Pin "rs2[19]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
+    Warning (13410): Pin "rs2[20]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
+    Warning (13410): Pin "rs2[21]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
+    Warning (13410): Pin "rs2[22]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
+    Warning (13410): Pin "rs2[23]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
+    Warning (13410): Pin "rs2[24]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
+    Warning (13410): Pin "rs2[25]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
+    Warning (13410): Pin "rs2[26]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
+    Warning (13410): Pin "rs2[27]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
+    Warning (13410): Pin "rs2[28]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
+    Warning (13410): Pin "rs2[29]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
+    Warning (13410): Pin "rs2[30]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
+    Warning (13410): Pin "rs2[31]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 11
+    Warning (13410): Pin "rd[0]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
+    Warning (13410): Pin "rd[1]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
+    Warning (13410): Pin "rd[2]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
+    Warning (13410): Pin "rd[3]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
+    Warning (13410): Pin "rd[4]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
+    Warning (13410): Pin "rd[5]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
+    Warning (13410): Pin "rd[6]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
+    Warning (13410): Pin "rd[7]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
+    Warning (13410): Pin "rd[8]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
+    Warning (13410): Pin "rd[9]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
+    Warning (13410): Pin "rd[10]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
+    Warning (13410): Pin "rd[11]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
+    Warning (13410): Pin "rd[12]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
+    Warning (13410): Pin "rd[13]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
+    Warning (13410): Pin "rd[14]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
+    Warning (13410): Pin "rd[15]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
+    Warning (13410): Pin "rd[16]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
+    Warning (13410): Pin "rd[17]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
+    Warning (13410): Pin "rd[18]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
+    Warning (13410): Pin "rd[19]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
+    Warning (13410): Pin "rd[20]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
+    Warning (13410): Pin "rd[21]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
+    Warning (13410): Pin "rd[22]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
+    Warning (13410): Pin "rd[23]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
+    Warning (13410): Pin "rd[24]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
+    Warning (13410): Pin "rd[25]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
+    Warning (13410): Pin "rd[26]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
+    Warning (13410): Pin "rd[27]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
+    Warning (13410): Pin "rd[28]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
+    Warning (13410): Pin "rd[29]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
+    Warning (13410): Pin "rd[30]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
+    Warning (13410): Pin "rd[31]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 12
+    Warning (13410): Pin "immediate[0]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
+    Warning (13410): Pin "immediate[1]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
+    Warning (13410): Pin "immediate[2]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
+    Warning (13410): Pin "immediate[3]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
+    Warning (13410): Pin "immediate[4]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
+    Warning (13410): Pin "immediate[5]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
+    Warning (13410): Pin "immediate[6]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
+    Warning (13410): Pin "immediate[7]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
+    Warning (13410): Pin "immediate[8]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
+    Warning (13410): Pin "immediate[9]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
+    Warning (13410): Pin "immediate[10]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
+    Warning (13410): Pin "immediate[11]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
+    Warning (13410): Pin "immediate[12]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
+    Warning (13410): Pin "immediate[13]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
+    Warning (13410): Pin "immediate[14]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
+    Warning (13410): Pin "immediate[15]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
+    Warning (13410): Pin "immediate[16]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
+    Warning (13410): Pin "immediate[17]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
+    Warning (13410): Pin "immediate[18]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
+    Warning (13410): Pin "immediate[19]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
+    Warning (13410): Pin "immediate[20]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
+    Warning (13410): Pin "immediate[21]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
+    Warning (13410): Pin "immediate[22]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
+    Warning (13410): Pin "immediate[23]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
+    Warning (13410): Pin "immediate[24]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
+    Warning (13410): Pin "immediate[25]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
+    Warning (13410): Pin "immediate[26]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
+    Warning (13410): Pin "immediate[27]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
+    Warning (13410): Pin "immediate[28]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
+    Warning (13410): Pin "immediate[29]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
+    Warning (13410): Pin "immediate[30]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
+    Warning (13410): Pin "immediate[31]" is stuck at GND File: C:/Users/Pedro Nogueira/Documents/projects/unb-2020_2/OAC-RiscV/RiscV_Processor/RiscV_Processor.vhd Line: 13
 Info (17049): 1024 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -1570,7 +1570,7 @@ Info (21057): Implemented 161 device resources after synthesis - the final resou
     Info (21059): Implemented 160 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 163 warnings
     Info: Peak virtual memory: 4851 megabytes
-    Info: Processing ended: Sun May 23 12:34:18 2021
+    Info: Processing ended: Sun May 23 14:49:45 2021
     Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:19
 

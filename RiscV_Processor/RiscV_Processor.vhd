@@ -6,11 +6,11 @@ LIBRARY work;
 ENTITY RiscV_Processor IS
   PORT (
     clock : IN STD_LOGIC;
-    instr_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    rs1_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    rs2_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    rd_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    data_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
+    instruction : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    rs1 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    rs2 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    rd : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    immediate : OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
 END RiscV_Processor;
 
 ARCHITECTURE bdf_type OF RiscV_Processor IS
@@ -270,10 +270,10 @@ BEGIN
     address => addr_out_signal(11 DOWNTO 0),
     data_out => instruction_signal);
 
-  instr_out <= instruction_signal;
-  rs1_out <= Ain_signal;
-  rs2_out <= Bin_signal;
-  rd_out <= write_data_signal;
-  data_out <= data_out_signal;
+  instruction <= instruction_signal;
+  rs1 <= rs1_signal;
+  rs2 <= rs2_signal;
+  rd <= write_data_signal;
+  immediate <= immOut_signal;
 
 END bdf_type;

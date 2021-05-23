@@ -141,9 +141,10 @@ BEGIN
   selector(2) <= instr(3);
   selector(1) <= (((instr(6) AND instr(5)) AND NOT(instr(4))) AND NOT(instr(2))) OR
                  ((instr(5) AND instr(4)) AND instr(2)) OR
-                 (NOT instr(6) AND NOT instr(5) AND instr(4) AND NOT instr(3) AND instr(2) AND instr(1) AND instr(1) AND instr(0));
+                 (NOT instr(6) AND NOT instr(5) AND instr(4) AND NOT instr(3) AND instr(2) AND instr(1) AND instr(0));
   selector(0) <= ((NOT(instr(6)) AND instr(5)) AND NOT(instr(4))) OR
-                 ((instr(5) AND instr(4)) AND instr(2));
+                 ((instr(5) AND instr(4)) AND instr(2)) OR
+                 (NOT instr(6) AND NOT instr(5) AND instr(4) AND NOT instr(3) AND instr(2) AND instr(1) AND instr(0));
 
   b2v_inst : mux8_32bits
   PORT MAP (

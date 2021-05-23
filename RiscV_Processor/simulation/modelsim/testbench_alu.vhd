@@ -122,6 +122,18 @@ BEGIN
     WAIT FOR 1 us;
     ASSERT (Zout = x"00000001" AND zeroOut = '1') REPORT "Assert 14 (SNE)" SEVERITY ERROR;
 
+    opcode <= "1110";
+    Ain <= x"00000001";
+    Bin <= x"00002000";
+    WAIT FOR 1 us;
+    ASSERT (Zout = x"00002000" AND zeroOut = '0') REPORT "Assert 15 (LUI)" SEVERITY ERROR;
+
+    opcode <= "1111";
+    Ain <= x"00000008";
+    Bin <= x"00002000";
+    WAIT FOR 1 us;
+    ASSERT (Zout = x"00002008" AND zeroOut = '0') REPORT "Assert 16 (AUIPC)" SEVERITY ERROR;
+
     REPORT "alu done" SEVERITY NOTE;
     WAIT;
 
